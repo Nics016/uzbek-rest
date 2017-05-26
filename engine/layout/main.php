@@ -16,7 +16,7 @@ if ($result = $sql->query("SELECT * FROM Content where Parent = $menupath[1] ord
 	</paralax>
 
 	<div id="content">
-		<div class="circleBox">
+		<div class="circleBox hidden-xs">
 			<div id="circle">
 				<div class="center">
 					<ul class="jump">

@@ -1,9 +1,9 @@
 
-	<paralax>
+	<paralax class="hidden-sm">
 		<div src="img/page/<?=$menupath[1]?>.jpg" apply="none"></div>
 	</paralax>
 
-	<div class="circleBox">
+	<div class="circleBox hidden-sm">
 		<div id="circle">
 			<div class="center">
 				<ul class="jump">
@@ -19,7 +19,7 @@ if ($result = $sql->query("SELECT * FROM MenuTree where Parent = 0 and Active = 
 		</div>
 	</div>
 
-	<div id="content" class="home">
+	<div id="content" class="home hidden-sm">
 		<div class="menu" id="menu" type="paralax">
 			<div id="circleContent">
 				<ul>
@@ -118,7 +118,7 @@ END;
 ?>				
 				</ul>
 			</div>
-			<div id="circleBar">
+			<div id="circleBar" class="hidden-sm">
 				<ul>
 <?php
 if ($result = $sql->query("SELECT * FROM MenuTree where Parent = 0 order by Sort")) {

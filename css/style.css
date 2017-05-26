@@ -31,7 +31,7 @@ enter {
   position: fixed;
   z-index: 1;
   width: 100%;
-  height: 150px;
+  min-height: 150px;
   transition: none;
 }
 enter .go {
@@ -199,8 +199,8 @@ enter .menu li {
   padding: 0px;
 }
 enter .menu ul {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 enter .menu li a {
   position: relative;
@@ -232,7 +232,7 @@ enter .menu li a:after {
 }
 enter .menu li:before {
   content: '&';
-  margin-right: 6px;
+  margin-right: 0px;
   color: #FFF;
 }
 enter .menu li:first-of-type:before {
@@ -415,6 +415,93 @@ enter[animate] .container {
   transition: 1s;
   transition-delay: 0.5s;
 }
+
+/* enter-mobile */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; 
+}
+enter.visible-sm {
+  background-image: url("../img/page/31.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+enter.visible-sm .logo{
+  position: relative;
+}
+enter.visible-sm .contact{
+  display: block;
+  min-width: 300px;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 40px;
+  color: #f8ac39;
+}
+enter.visible-sm .contact .phone{
+  display: block;
+  float: left;
+  width: 150px;
+  margin-left: 20px;
+  padding-left: 30px;
+  background: url('../img/phone.svg') no-repeat;
+}
+enter.visible-sm .contact .delivery-link{
+  color: #f8ac39;
+  text-decoration:none;
+}
+enter.visible-sm .contact .delivery-link .delivery{
+  display: block;
+  width: 120px;
+  float: right;
+  padding-left: 40px;
+  background: url(../img/icon_delivery.svg) no-repeat;
+  margin-left: 0px;
+  margin-right: 10px;
+}
+enter.visible-sm .menu{
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 80px;
+  padding: 0 10%;
+  padding-right: 0;
+  font-size: 14px;
+  line-height: 40px;
+}
+enter.visible-sm .menu .jump{
+  display: block;
+}
+enter.visible-sm .menu .left{
+  width: 40%;
+}
+enter.visible-sm .menu .right{
+  width: 40%;
+}
+enter.visible-sm .menu .left .jump:nth-child(2){
+  text-align: left;
+}
+enter.visible-sm .menu .right .jump:first-child{
+  text-align: left
+}
+enter.visible-sm .menu li a{
+}
+enter.visible-sm {
+  
+}
+enter.visible-sm {
+  
+}
+enter.visible-sm {
+  
+}
+enter.visible-sm {
+  
+}
+
+/* end of enter-mobile */
+
 #content[sync] {
   transform: translateY(110%) translateZ(0) !important;
   transition: 0s !important;
@@ -425,7 +512,7 @@ enter[animate] .container {
   content: '';
 }
 @media (max-width: 1000px) {
-  enter .menu {
+/*  enter .menu {
     bottom: 3px;
   }
   enter .menu .left,
@@ -446,7 +533,7 @@ enter[animate] .container {
   enter + paralax + .jump {
     opacity: 0;
     visibility: visible;
-  }
+  }*/
 }
 paralax {
   position: absolute;

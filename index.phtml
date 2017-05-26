@@ -72,6 +72,11 @@ if($menupath[0] == 14) $nameadd = "En";
 	<head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <script src="js/bootstrap.min.js"></script>
+  <!-- END OF BOOTSTRAP -->
 	<link rel="favicon" href="favicon.ico" /> 
 	<meta property="og:title" content="Ресторан «Узбекистан»"/>
 	<meta property="og:description" content="«Узбекистан» — ресторан изысканной восточной кухни с 66-летней историей в самом центре Москвы. © 1951–2017" />
@@ -84,15 +89,17 @@ if($menupath[0] == 14) $nameadd = "En";
 	<link href="https://fonts.googleapis.com/css?family=Tenor+Sans" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css?renew=<?php echo filemtime("css/style.css")?>>">
 	<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="js/jquery.mCustomScrollbar.js"></script>
 	<script src="js/jquery.touchSwipe.min.js"></script>
+
 	<script src="js/appRefactor.js" type="text/javascript"></script>
 	<script src="js/newApp.js" type="text/javascript"></script>
 	<script src="js/slider.js"></script>
-	<script type="text/javascript" src="highslide/highslide-full.js"></script>
+	<script type="text/javascript" src="highslide/highslide-full.js" class="hidden-sm"></script>
 	<script src="js/conf.js"></script>
-	<link rel="stylesheet" type="text/css" href="highslide/highslide.css" />
+	<link rel="stylesheet" type="text/css" href="highslide/highslide.css" class="hidden-sm" />
+  <link rel="stylesheet" href="css/media.css">
 		<meta name="Description" content="<?php echo ($pmetadesc != '') ? $pmetadesc : $MetaDesc ?>"/>
 		<meta name="Keywords" content="<?php echo ($pmetakey != '') ? $pmetakey : $MetaKey ?>"/>
 		<title><?php echo $ptitle; ?></title>
@@ -100,5 +107,6 @@ if($menupath[0] == 14) $nameadd = "En";
 <body>
 <?php include("engine/layout/header.php"); ?>
 <?php include("engine/layout/".$pmech.".php"); ?>
+
 </body>
 </html>
