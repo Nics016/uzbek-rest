@@ -1,0 +1,1 @@
+<?php printf('<script src="%sjs/jquery.js" type="text/javascript"></script>', $homeurl); ?>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--	created with www.mysitemapgenerator.com -->
+<urlset xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <url>
+        <loc>http://uzbek-rest.ru/</loc>
+        <lastmod>2017-05-12T10:08:29+01:00</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>http://uzbek-rest.ru/en/cuisine_bar/</loc>
+        <lastmod>2017-05-12T10:08:30+01:00</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://uzbek-rest.ru/ru/kuhnya_bar/</loc>
+        <lastmod>2017-05-12T10:08:31+01:00</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://uzbek-rest.ru/ru/zaly_pro_hist_team/</loc>
+        <lastmod>2017-05-12T10:08:31+01:00</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://uzbek-rest.ru/ru/cater_cul_cont/</loc>
+        <lastmod>2017-05-12T10:08:32+01:00</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://uzbek-rest.ru/en/halls_events_history/</loc>
+        <lastmod>2017-05-12T10:08:34+01:00</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>http://uzbek-rest.ru/en/team_catering_contacts/</loc>
+        <lastmod>2017-05-12T10:08:34+01:00</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>http://uzbek-rest.ru/uploads/files/menu_kulinary.pdf</loc>
+        <lastmod>2017-05-12T10:08:55+01:00</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>http://uzbek-rest.ru/menu/menu_uzbek.pdf</loc>
+        <lastmod>2017-05-12T10:08:55+01:00</lastmod>
+        <priority>0.6</priority>
+    </url>
+</urlset>
