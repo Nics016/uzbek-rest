@@ -1,7 +1,7 @@
 
 	<enter>
 	<video loop="loop" id="bgvid">
-    	<source src="/img/enter_background3.mp4" type="video/mp4" /> 
+    	<source src="img/enter_background3.mp4" type="video/mp4" /> 
   	</video>
   	<script>
   		if(document.getElementById('bgvid')){

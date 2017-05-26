@@ -1,6 +1,6 @@
 
 	<paralax>
-		<div src="/img/page/<?=$menupath[1]?>.jpg" apply="none"></div>
+		<div src="img/page/<?=$menupath[1]?>.jpg" apply="none"></div>
 	</paralax>
 
 	<div class="circleBox">
@@ -77,7 +77,7 @@ END;
 echo <<<END
 											</ul>
 											<div class="download">
-												<a href="/menu/menu_uzbek${nameadd}.pdf" style='color:#966'>$dl</a>
+												<a href="menu/menu_uzbek${nameadd}.pdf" style='color:#966'>$dl</a>
 											</div>
 										</div>
 										<div tabsbody="tabs-${m[0]}" class="rightBox">
@@ -129,11 +129,11 @@ echo <<<END
 						<div class="circle">
 							<a hook href="#"></a>
 							<div class="titleBox">
-								<div class="circleTitle" style="background: url(/img/circle/${row['ClassMenu']}${nameadd}.svg);"></div>
+								<div class="circleTitle" style="background: url(img/circle/${row['ClassMenu']}${nameadd}.svg);"></div>
 								<div class="title">${row['NameLong'.$nameadd]}</div>
 							</div>
 							<div class="image">
-								<img src="/img/menu/${row['ClassMenu']}.jpg">
+								<img src="img/menu/${row['ClassMenu']}.jpg">
 							</div>
 						</div>
 					</li>
@@ -179,7 +179,7 @@ END;
 	if(file_exists('img/menupic/'.$row['Id'].".jpg"))
 		echo <<<END
 												<div class="image">
-													<img src="/img/menupic/${row['Id']}.jpg">
+													<img src="img/menupic/${row['Id']}.jpg">
 												</div>
 END;
 		}
