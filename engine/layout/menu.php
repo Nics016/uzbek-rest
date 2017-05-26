@@ -19,7 +19,7 @@ if ($result = $sql->query("SELECT * FROM MenuTree where Parent = 0 and Active = 
 		</div>
 	</div>
 
-	<div id="content" class="home hidden-sm">
+	<div id="content" class="home mCustomScrollbar _mCS_1 hidden-sm" style="overflow: visible">
 		<div class="menu" id="menu" type="paralax">
 			<div id="circleContent">
 				<ul>
@@ -147,6 +147,12 @@ END;
 		</div>
 <?php include("engine/layout/footer.php"); ?>
 	</div>
+
+	<div id="content" class="home visible-sm visible-xs">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laudantium amet officia error tempora omnis ipsa corporis maiores non facilis, officiis nobis quasi illum doloribus, sequi voluptatem libero blanditiis et voluptatum ipsam quia. Ut illo, maxime, est iure ullam consequatur nobis. Suscipit dicta impedit eveniet nostrum porro ducimus, quisquam obcaecati assumenda accusamus sint culpa architecto earum molestiae? Corrupti, quis nesciunt in ab. Molestiae ullam eveniet, tempora repellat libero, vero obcaecati animi repellendus. Odio architecto nesciunt ipsum a, mollitia vitae nemo velit eligendi commodi pariatur consequatur consectetur saepe. Ratione aut harum, ipsam nostrum eligendi, adipisci explicabo quos, deserunt soluta quod assumenda.
+	</div>
+
+
 <?php 
 function postMenuPos($sql,$parent,$part){
 	global $nameadd;

@@ -14,8 +14,9 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-	#content{
-		margin-top: 300px;
+
+	body{
+		overflow: auto;
 	}
 }
 

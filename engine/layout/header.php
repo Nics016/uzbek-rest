@@ -294,4 +294,3 @@ if ($result = $sql->query("SELECT * FROM Content where Parent = $menupath[0] ord
         </div>
 </enter>
 <!-- END OF MOBILE -->
-<h1 style="display: block; position: relative; margin-top: 200px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo dignissimos perspiciatis error totam reprehenderit aliquid asperiores velit, vel, expedita iste beatae at libero cupiditate doloribus sunt illum explicabo exercitationem suscipit eligendi! Eos sed rem perspiciatis amet, soluta, minus cum impedit sint fugiat mollitia vel, aspernatur quasi esse, ipsam. Architecto, error eligendi, nulla ipsum magnam, ab praesentium autem molestias vel blanditiis ut fugit, nam soluta perspiciatis optio dolore iusto odit expedita dicta incidunt sit sequi numquam. Molestiae repellendus soluta consequatur illum accusantium minus beatae vero maxime facilis. Quas repellat, iste! Cum beatae accusamus, iure quod quasi magni. Minus doloremque eius sapiente!</h1>

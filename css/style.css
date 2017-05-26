@@ -423,10 +423,12 @@ enter[animate] .container {
   clear: both; 
 }
 enter.visible-sm {
+  position: relative;
   background-image: url("../img/page/31.jpg");
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
+  padding-bottom: 100px;
 }
 enter.visible-sm .logo{
   position: relative;
@@ -461,20 +463,23 @@ enter.visible-sm .contact .delivery-link .delivery{
   margin-right: 10px;
 }
 enter.visible-sm .menu{
-  position: relative;
+  position: static;
   max-width: 500px;
   margin: 0 auto;
   margin-top: 80px;
-  padding: 0 10%;
+  padding: 5% 0%;
   padding-right: 0;
   font-size: 14px;
   line-height: 40px;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 10px
 }
 enter.visible-sm .menu .jump{
   display: block;
 }
 enter.visible-sm .menu .left{
-  width: 40%;
+  width: 50%;
+  padding-left: 10%;
 }
 enter.visible-sm .menu .right{
   width: 40%;
@@ -486,6 +491,7 @@ enter.visible-sm .menu .right .jump:first-child{
   text-align: left
 }
 enter.visible-sm .menu li a{
+  font-weight: bold;
 }
 enter.visible-sm {
   
@@ -499,8 +505,14 @@ enter.visible-sm {
 enter.visible-sm {
   
 }
-
 /* end of enter-mobile */
+
+/* content-mobile */
+#content.home.visible-sm{
+  top: 0;
+  overflow: scroll;
+}
+/* end of content-mobile */
 
 #content[sync] {
   transform: translateY(110%) translateZ(0) !important;
@@ -1538,7 +1550,8 @@ paralax div:after {
 footer {
   position: fixed;
   width: 100%;
-  height: 45px;
+  /*height: 45px;*/
+  height: 0;
   bottom: 0px;
   background: #1e303e;
   transition: 0.5s;
