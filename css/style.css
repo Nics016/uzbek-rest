@@ -514,6 +514,10 @@ enter.visible-sm {
 }
 /* end of content-mobile */
 
+/* tabs */
+.categories-wrapper .active { color: red; }
+/* end of tabs */
+
 #content[sync] {
   transform: translateY(110%) translateZ(0) !important;
   transition: 0s !important;

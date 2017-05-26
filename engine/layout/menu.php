@@ -19,6 +19,7 @@ if ($result = $sql->query("SELECT * FROM MenuTree where Parent = 0 and Active = 
 		</div>
 	</div>
 
+	<!-- DESKTOP-CONTENT -->
 	<div id="content" class="home mCustomScrollbar _mCS_1 hidden-sm" style="overflow: visible">
 		<div class="menu" id="menu" type="paralax">
 			<div id="circleContent">
@@ -147,10 +148,84 @@ END;
 		</div>
 <?php include("engine/layout/footer.php"); ?>
 	</div>
+	<!-- END OF DESKTOP-CONTENT -->
 
+	<!-- MOBILE-CONTENT -->
 	<div id="content" class="home visible-sm visible-xs">
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laudantium amet officia error tempora omnis ipsa corporis maiores non facilis, officiis nobis quasi illum doloribus, sequi voluptatem libero blanditiis et voluptatum ipsam quia. Ut illo, maxime, est iure ullam consequatur nobis. Suscipit dicta impedit eveniet nostrum porro ducimus, quisquam obcaecati assumenda accusamus sint culpa architecto earum molestiae? Corrupti, quis nesciunt in ab. Molestiae ullam eveniet, tempora repellat libero, vero obcaecati animi repellendus. Odio architecto nesciunt ipsum a, mollitia vitae nemo velit eligendi commodi pariatur consequatur consectetur saepe. Ratione aut harum, ipsam nostrum eligendi, adipisci explicabo quos, deserunt soluta quod assumenda.
+		<?php 
+			// Главная категория
+			if ($result = $sql->query("SELECT * FROM MenuTree where Parent = 0 and Active = 1 order by Sort")):
+				// Get data
+				$categories = [];
+					while ($row = $result->fetch_assoc()):
+						$curCategory = [];
+						$curCategory["Name"] = $row["Name"];
+						$curCategory["Id"] = $row["Id"];
+						$curCategory["subcats"] = [];
+						// Подкатегория
+						$curCatId = $row["Id"];
+					 	if ($resultScat = $sql->query("SELECT * FROM MenuTree where Parent = $curCatId and Active = 1 order by Sort")):
+								$subcats = [];
+							while ($rowScat = $resultScat->fetch_assoc()):
+								$subcat = [];
+								$subcat["Name"] = $rowScat["Name"];
+								$subcat["Id"] = $rowScat["Id"];
+								$subcat["dishes"] = [];
+								// Блюда
+								$curId = $rowScat["Id"];
+								if ($resultBl = $sql->query("SELECT * FROM MenuTree where Parent = $curId and Active = 1 order by Sort")):
+										$dishes = [];
+									while ($rowBl = $resultBl->fetch_assoc()):
+										$dish = [];
+										$dish["Name"] = $rowBl["Name"];
+										$dish["Id"] = $rowBl["Id"];
+										$dishes[] = $dish;
+									endwhile; // Блюда 
+										$subcat["dishes"] = $dishes;
+								endif; // Блюда
+								$subcats[] = $subcat;
+								$curCategory["subcats"] = $subcats;
+							endwhile; // Подкатегории
+						endif; // Подкатегория
+
+						$categories[] = $curCategory;
+					endwhile; // Категория
+				endif; // Категория
+			 ?>
+
+			<?php // Output data ?>
+			<div class="categories-wrapper">
+			    <div class="tabs">
+			    	<?php foreach($categories as $cat): ?>
+			        	<span class="tab"><?= $cat["Name"] ?></span>  
+			        <?php endforeach; ?>     
+			    </div>
+			    <div class="tab_content">
+			    	<?php foreach($categories as $cat): ?>
+				        <div class="tab_item">
+				        	<?php foreach($cat["subcats"] as $subcat): ?>
+								<?= $subcat["Name"] ?>
+				        	<?php endforeach; ?>
+				        </div>
+			        <?php endforeach; ?>  
+			    </div>
+			</div>
+			<script>
+				$(".categories-wrapper .tab_item").not(":first").hide();
+				$(".categories-wrapper .tab").click(function() {
+					$(".categories-wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
+					$(".categories-wrapper .tab_item").hide().eq($(this).index()).fadeIn()
+				}).eq(0).addClass("active");
+			</script>
+			
+		 </div>
+
+		</div>
+		<!-- END OF CATEGORY-WRAPPER -->
+
+		  <br> <br>
 	</div>
+	<!-- END OF MOBILE-CONTENT -->
 
 
 <?php 
