@@ -515,7 +515,35 @@ enter.visible-sm {
 /* end of content-mobile */
 
 /* tabs */
-.categories-wrapper .active { color: red; }
+.categories-wrapper{
+  margin-top: 5%;
+}
+.categories-wrapper .cat-tabs{
+  text-align: center;
+  font-size: 24px;
+  color: #2a4057;
+}
+.categories-wrapper .cat-tabs .cat-tab{
+  cursor: pointer;
+}
+.categories-wrapper .cat-tabs .cat-tab.active { 
+  font-weight: bold;
+}
+
+.subcategories-wrapper .subcat-tabs{
+  text-align: center;
+  font-size: 16px;
+  color: #9E9FA5;
+  padding: 0 3% 3%;
+  border-bottom: 2px solid #F8AD38;
+}
+.subcategories-wrapper .subcat-tabs .subcat-tab{
+  cursor: pointer;
+}
+.subcategories-wrapper .subcat-tabs .subcat-tab.active { 
+  font-weight: bold;
+  color: #2a4057;
+}
 /* end of tabs */
 
 #content[sync] {

@@ -195,26 +195,55 @@ END;
 
 			<?php // Output data ?>
 			<div class="categories-wrapper">
-			    <div class="tabs">
+			    <div class="cat-tabs">
 			    	<?php foreach($categories as $cat): ?>
-			        	<span class="tab"><?= $cat["Name"] ?></span>  
+			        	<span class="cat-tab"><?= $cat["Name"] ?></span>  
 			        <?php endforeach; ?>     
 			    </div>
-			    <div class="tab_content">
+			    <div class="cat-tab_content">
 			    	<?php foreach($categories as $cat): ?>
-				        <div class="tab_item">
-				        	<?php foreach($cat["subcats"] as $subcat): ?>
-								<?= $subcat["Name"] ?>
-				        	<?php endforeach; ?>
+				        <div class="cat-tab_item">
+				        	<div class="subcategories-wrapper">
+							    <div class="subcat-tabs">
+							    	<?php foreach($cat["subcats"] as $subcat): ?>
+							        	<span class="subcat-tab"><?= $subcat["Name"] ?></span>  
+							        <?php endforeach; ?>     
+							    </div>
+							    <div class="subcat-tab_content">
+							    	<?php foreach($cat["subcats"] as $subcat): ?>
+								        <div class="subcat-tab_item">
+								        	<?php foreach($subcat["dishes"] as $dish): ?>
+												<?php echo $dish["Name"] . "<br>" ?>
+								        	<?php endforeach; ?>
+								        </div>
+								        <!-- subcategories /.tab_item -->
+							        <?php endforeach; ?>  
+							    </div>
+							    <!-- subcategories /.tab_content -->
+							</div>
 				        </div>
+				        <!-- categories /.tab_item -->
 			        <?php endforeach; ?>  
-			    </div>
+			    </div> 
+			    <!-- categories /.tab_content -->
 			</div>
 			<script>
-				$(".categories-wrapper .tab_item").not(":first").hide();
-				$(".categories-wrapper .tab").click(function() {
-					$(".categories-wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
-					$(".categories-wrapper .tab_item").hide().eq($(this).index()).fadeIn()
+				// categories
+				$(".categories-wrapper .cat-tab_item").not(":first").hide();
+				$(".categories-wrapper .cat-tab").click(function() {
+					$(".categories-wrapper .cat-tab").removeClass("active").eq($(this).index()).addClass("active");
+					$(".categories-wrapper .cat-tab_item").hide().eq($(this).index()).fadeIn(1000);
+					// click on first subcat to init
+					$(".subcat-tab").eq(4).click().addClass("active")
+				}).eq(0).addClass("active");
+
+				// subcategories
+				$(".subcat-tab_item").not(":first").hide();
+				$(".subcat-tab").click(function() {
+					$(".subcat-tab").removeClass("active").eq($(this).index()).addClass("active");
+					$(this).addClass("active");
+					$(".subcat-tab_item").hide().eq($(this).index()).fadeIn(500);
+					$(".subcat-tab_item").eq($(this).index()+4).fadeIn(500);
 				}).eq(0).addClass("active");
 			</script>
 			
