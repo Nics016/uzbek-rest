@@ -10,11 +10,90 @@
 	.hidden-sm{
 		display: none;
 	}
+
+	#content{
+	  overflow: visible;
+	  height: 50%;
+	}
+	#content .circleBox{
+		margin-top: -20%;
+		margin-bottom: 30%;
+	}
+	#content footer{
+		display: none;
+	}
+
+	#content .big[type="twink"]{
+		height: 5%;
+	}
+	.blockBox .textContainer{
+		height: 100%;
+		width: 100%;
+	}
+	.blockBox .leftSide{
+		width: 100%;
+		float: none;
+		height: 450px;
+		overflow: hidden;
+	}
+	.blockBox .leftSide .image img{
+		height: 100vh;
+	}
+	.blockBox .rightSide{
+		padding-top: 10%;
+		width: 100%;
+		float: none;
+		/*margin-top: ;*/
+	}
+
+	/* reverse-slider fix */
+	#catering .blockBox .leftSide,
+	#history .blockBox .leftSide{
+		padding-top: 10%;
+		width: 100%;
+		float: none;
+		overflow-x: hidden;
+		overflow-y: visible;
+		height: auto;
+	}
+	#catering .blockBox .rightSide,
+	#history .blockBox .rightSide{
+		padding-top: 0;
+		width: 100%;
+		float: none;
+		height: 450px;
+		overflow: hidden;
+	}
+	#catering .dots,
+	#history .dots{
+		display: none;
+	}
+	#history .slider{
+		height: auto;
+	}
+	#history .slider .image img{
+		margin-left: 10%;
+	}
+	.slider .sliderBox{
+		overflow-x: hidden;
+		overflow-y: visible;
+	}
+	.blockBox{
+		overflow-x: hidden;
+		overflow-y: visible;
+	}
+	div#halls.halls{
+		display: none;
+	}
+	/* erases scrolling! */
+	#content [type="paralax"]{
+		height: auto;
+	}
+
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-
 	body{
 		overflow: auto;
 	}
@@ -22,7 +101,19 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-
+	#history .slider .image img{
+		margin-left: 0;
+	}
+	#history .slider{
+		height: 140vh;
+	}
+	.blockBox .leftSide{
+		height: 300px;
+	}
+	#catering .blockBox .rightSide,
+	#history .blockBox .rightSide{
+		height: 300px;
+	}
 }
 
 /* Custom, iPhone Retina */

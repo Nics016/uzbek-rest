@@ -95,14 +95,20 @@ if($menupath[0] == 14) $nameadd = "En";
 	<script src="/js/jquery.touchSwipe.min.js"></script>
 	<!-- <script src="/js/appRefactor.js" type="text/javascript"></script> -->
   <script>
+    // screen.width - dependent scripts
     if (screen && screen.width > 992) {
       document.write('<script type="text/javascript" src="/js/appRefactor.js"><\/script>');
     }
-    </script>
+    // makes anchor links for sm and lower screens
+    if (screen && screen.width < 992) {
+      document.write('<script type="text/javascript" src="/js/linksFix.js"><\/script>');
+    }
+  </script>
 	<script src="/js/newApp.js" type="text/javascript"></script>
 	<script src="/js/slider.js"></script>
 	<script type="text/javascript" src="/highslide/highslide-full.js"></script>
-	<script src="/js/conf.js"></script>
+  <script src="/js/conf.js"></script>
+	<script src="/js/scroll.js"></script>
 	<link rel="stylesheet" type="text/css" href="/highslide/highslide.css" />
   <link rel="stylesheet" href="/css/media.css">
 		<meta name="Description" content="<?php echo ($pmetadesc != '') ? $pmetadesc : $MetaDesc ?>"/>

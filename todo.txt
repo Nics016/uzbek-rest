@@ -1,0 +1,5 @@
+- fix scrolling history
+- make similar order picture-text for sliders
+- weird dots in left bottom corner
+- return logo!
+- make transparent black for all area (including phone, etc)

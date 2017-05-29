@@ -10,6 +10,15 @@
 	.hidden-sm{
 		display: none;
 	}
+
+	#content{
+	  overflow: visible;
+	  height: 100%;
+	}
+
+	#content .big[type="twink"]{
+		height: 10px;
+	}
 }
 
 /* Small Devices, Tablets */
