@@ -179,6 +179,32 @@ END;
 										$dish = [];
 										$dish["Name"] = $rowBl["Name"];
 										$dish["Id"] = $rowBl["Id"];
+										$dish["items"] = [];
+										$curDishId = $dish["Id"];
+										if ($resultItem = $sql->query("SELECT * FROM MenuItems where Parent = $curDishId and Active = 1 order by Sort")):
+											$items = [];
+											while ($rowItem = $resultItem->fetch_assoc()):
+												$item = [];
+												$item["Price"] = $rowItem["Price"];
+												$item["Descr"] = $rowItem["Descr"];
+												$item["Weight"] = $rowItem["Weight"];
+												// Kitchen
+												if ($curCatId == 1){
+													$item["Name"] = $rowItem['Name'];
+												}
+												else{
+												// Bar 
+													if ($rowItem["NameEn"])
+														$item["Name"] = $rowItem['NameEn']." / ".$rowItem['Name'];
+													else
+														$item["Name"] = $rowItem["Name"];
+													$item['Weight'] .= $rowItem['Weight']==""?"":" ml";
+												}
+
+												$items[] = $item;
+											endwhile; // Menu Item
+											$dish["items"] = $items;
+										endif; // Menu Item
 										$dishes[] = $dish;
 									endwhile; // Блюда 
 										$subcat["dishes"] = $dishes;
@@ -212,9 +238,33 @@ END;
 							    <div class="subcat-tab_content">
 							    	<?php foreach($cat["subcats"] as $subcat): ?>
 								        <div class="subcat-tab_item">
-								        	<?php foreach($subcat["dishes"] as $dish): ?>
-												<?php echo $dish["Name"] . "<br>" ?>
-								        	<?php endforeach; ?>
+								        	<div class="dishes-wrapper clearfix">
+								        		<div class="dishes-tabs">
+								        			<?php foreach($subcat["dishes"] as $dish): ?>
+								        				<div class="dishes-tab"><?= $dish["Id"] ?><?= $dish["Name"] ?></div>
+										        	<?php endforeach; ?>
+								        		</div>
+								        		<div class="dishes-tab_content">	        		
+									        		<?php foreach($subcat["dishes"] as $dish): ?>
+									        				<div class="dishes-tab_item">
+									        					<?php foreach($dish["items"] as $item): ?>
+									        						<div class="item-box clearfix">
+										        						<div class="left">
+											        						<span class="item-name"><?= $item["Name"] ?></span>
+											        						<span class="item-weight"><?= $item["Weight"] ?></span>
+											        						<span class="item-descr"><?= $item["Descr"] ?></span>
+										        						</div>
+										        						<div class="right">
+										        							<span class="item-price"><?= $item["Price"] ?></span>
+										        						</div>
+									        						</div>
+									        					<?php endforeach; ?>
+									        				</div>
+											        <?php endforeach; ?>
+										        </div>
+								        		<!-- /.dishes-tab_content -->
+								        	</div>
+								        	<!-- /.dishes-wrapper -->
 								        </div>
 								        <!-- subcategories /.tab_item -->
 							        <?php endforeach; ?>  
@@ -227,15 +277,35 @@ END;
 			    </div> 
 			    <!-- categories /.tab_content -->
 			</div>
+			<div id="debugging"></div>
 			<script>
+				// generate count arrays
+				var subcats_count = [];
+				var dishes_count = [];
+				var cur_cat = 0;
+				var cur_subcat = 0;
+
+				<?php foreach($categories as $cat): ?>
+					subcats_count.push(<?= count($cat["subcats"]) ?>);
+					var cur_dishes_count = [];
+					var cur_count = 0;
+					<?php foreach($cat["subcats"] as $subcat): ?>
+						cur_count += <?= count($subcat['dishes']) ?>;
+						var push_count = cur_count;
+						cur_dishes_count.push(push_count);
+					<?php endforeach; // subcats ?>
+					dishes_count.push(cur_dishes_count);
+				<?php endforeach; // cats ?>
+
 				// categories
 				$(".categories-wrapper .cat-tab_item").not(":first").hide();
 				$(".categories-wrapper .cat-tab").click(function() {
 					$(".categories-wrapper .cat-tab").removeClass("active").eq($(this).index()).addClass("active");
 					$(".categories-wrapper .cat-tab_item").hide().eq($(this).index()).fadeIn(1000);
 					// click on first subcat to init
-					$(".subcat-tab").eq(4).click().addClass("active")
-				}).eq(0).addClass("active");
+					cur_cat = $(this).index();
+					$(".subcat-tab").eq(subcats_count[cur_cat]).click().addClass("active");
+				}).eq(0).click().addClass("active");
 
 				// subcategories
 				$(".subcat-tab_item").not(":first").hide();
@@ -244,7 +314,28 @@ END;
 					$(this).addClass("active");
 					$(".subcat-tab_item").hide().eq($(this).index()).fadeIn(500);
 					$(".subcat-tab_item").eq($(this).index()+4).fadeIn(500);
-				}).eq(0).addClass("active");
+					cur_subcat = $(this).index();					
+					$(".dishes-tab").eq(dishes_count[cur_cat][cur_subcat-1]).click().addClass("active");
+					// $(".dishes-tab").eq(9).click().addClass("active");
+				}).eq(0).click().addClass("active");
+
+				// dishes
+				$(".dishes-tab_item").not(":first").hide();
+				$(".dishes-tab").click(function() {
+					$(".dishes-tab").removeClass("active").eq($(this).index());
+					$(this).addClass("active");
+					$(".dishes-tab_item").hide().eq($(this).index()).fadeIn(500);
+					var plusIndex = dishes_count[cur_cat][cur_subcat-1];
+					// for Bar
+					if (cur_cat == 1){
+						plusIndex += 16;
+						// for Bar / Wine
+						if (cur_subcat == 0)
+							plusIndex = 16;
+					}
+					// $("#debugging").html(plusIndex);
+					$(".dishes-tab_item").eq($(this).index()+plusIndex).fadeIn(500);
+				});
 			</script>
 			
 		 </div>

@@ -1,0 +1,104 @@
+<?
+//ini_set('display_errors', 1);
+//error_reporting(E_ALL); 
+
+
+//Костыль для мультиязычности
+if($_SERVER['QUERY_STRING'] === 'urien=en/' || $_SERVER['QUERY_STRING'] === 'urien=en'){
+  header("location:http://uzbek-rest.ru/en/cuisine_bar/");
+}
+
+if($_SERVER['QUERY_STRING'] === 'urien=ru/' || $_SERVER['QUERY_STRING'] === 'urien=ru'){
+  header("location:http://uzbek-rest.ru/");
+}
+
+session_start();
+if (!isset($_SESSION['referer'])) $_SESSION['referer'] = $_SERVER['HTTP_REFERER'];
+//echo $_GET['urien'];
+include("engine/dbopen.php");
+include("engine/func.php");
+include("engine/globalfunc/func.php");
+include("engine/globalfunc/uriconvert.php");
+include("engine/globalfunc/uriredirect.php");
+if(!$pageId) $pageId = $dpage;
+if (isset($_REQUEST['state']))
+  $state = $_REQUEST['state'];
+
+$query = "select * from Content where Id = $pageId";
+$result = mysql_query($query);
+if ($result) {
+  $row = mysql_fetch_array($result);
+  $CP = $row; //текущая страница
+  if ($row['Mirror'] != 0) {
+    $query = "select * from Content where Id = " . $row["Mirror"];
+    $subresult = mysql_query($query);
+    if ($subresult) {
+      $subrow = mysql_fetch_array($subresult);
+      $row['Content'] = $subrow['Content'];
+      $row['Title'] = $subrow['Title'];
+      $row['Url'] = $subrow['Url'];
+    }
+  }
+  $ptitle = $row["Title"];
+  $pcomment = $row["Comment"];
+  $MenuName = $row['MenuName'];
+  $pcounters = str_replace("&#039;", "'", $row["Counters"]);
+  $pmetadesc = $row["MetaDescr"];
+  $pmetakey = $row["MetaKey"];
+  $pcontent = $row["Content"];
+  $pmech = $row['Mech'];
+  $printable = $row['Printable'];
+  $feedback = ($row['Feedback'] == '1') ? true : false;
+  $current_url = $row['Url'];
+  //echo $row['Title']."111";
+            if($row['Title'] != ''){
+                $ptitle = $row["Title"];
+            } else {
+                $ptitle = $row['MenuName'];
+            }
+}
+
+
+$query = "select Value from Prop where Name = 'Address'";
+$result = mysql_query($query);
+$address = mysql_fetch_assoc($result);
+$address = $address['Value'];
+$menupath = getPathWay($pageId);
+$nameadd = "";
+if($menupath[0] == 14) $nameadd = "En";
+?>
+<!doctype html>
+<html xml:lang="ru-ru">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="favicon" href="/favicon.ico" /> 
+	<meta property="og:title" content="Ресторан «Узбекистан»"/>
+	<meta property="og:description" content="«Узбекистан» — ресторан изысканной восточной кухни с 66-летней историей в самом центре Москвы. © 1951–2017" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content=" " />
+	<meta property="og:image" content="/img/og.jpg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="675" />
+	
+	<link href="https://fonts.googleapis.com/css?family=Tenor+Sans" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/style.css?renew=<?php echo filemtime("css/style.css")?>>">
+	<link rel="stylesheet" type="text/css" href="/css/jquery.mCustomScrollbar.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="/js/jquery.mCustomScrollbar.js"></script>
+	<script src="/js/jquery.touchSwipe.min.js"></script>
+	<script src="/js/appRefactor.js" type="text/javascript"></script>
+	<script src="/js/newApp.js" type="text/javascript"></script>
+	<script src="/js/slider.js"></script>
+	<script type="text/javascript" src="/highslide/highslide-full.js"></script>
+	<script src="/js/conf.js"></script>
+	<link rel="stylesheet" type="text/css" href="/highslide/highslide.css" />
+		<meta name="Description" content="<?php echo ($pmetadesc != '') ? $pmetadesc : $MetaDesc ?>"/>
+		<meta name="Keywords" content="<?php echo ($pmetakey != '') ? $pmetakey : $MetaKey ?>"/>
+		<title><?php echo $ptitle; ?></title>
+	</head>
+<body>
+<?php include("engine/layout/header.php"); ?>
+<?php include("engine/layout/".$pmech.".php"); ?>
+</body>
+</html>

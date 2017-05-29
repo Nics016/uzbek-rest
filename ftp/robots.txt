@@ -1,0 +1,18 @@
+User-agent: *
+Disallow: /addons
+Disallow: /css
+Disallow: /highslide
+Disallow: /js
+Disallow: /assets
+
+
+User-agent: Yandex
+Disallow: /addons
+Disallow: /css
+Disallow: /highslide
+Disallow: /js
+Disallow: /assets
+
+Sitemap: http://uzbek-rest.ru/robots.txt
+
+Host: uzbek-rest.ru
