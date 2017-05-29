@@ -1,9 +1,8 @@
-
-	<paralax>
-		<div src="/img/page/<?=$menupath[1]?>.jpg" apply="none"></div>
+	<paralax class="hidden-sm">
+		<div src="img/page/<?=$menupath[1]?>.jpg" apply="none"></div>
 	</paralax>
 
-	<div class="circleBox">
+	<div class="circleBox hidden-sm">
 		<div id="circle">
 			<div class="center">
 				<ul class="jump">
@@ -19,7 +18,8 @@ if ($result = $sql->query("SELECT * FROM MenuTree where Parent = 0 and Active = 
 		</div>
 	</div>
 
-	<div id="content" class="home">
+	<!-- DESKTOP-CONTENT -->
+	<div id="content" class="home mCustomScrollbar _mCS_1 hidden-sm" style="overflow: visible">
 		<div class="menu" id="menu" type="paralax">
 			<div id="circleContent">
 				<ul>
@@ -77,7 +77,7 @@ END;
 echo <<<END
 											</ul>
 											<div class="download">
-												<a href="/menu/menu_uzbek${nameadd}.pdf" style='color:#966'>$dl</a>
+												<a href="menu/menu_uzbek${nameadd}.pdf" style='color:#966'>$dl</a>
 											</div>
 										</div>
 										<div tabsbody="tabs-${m[0]}" class="rightBox">
@@ -118,7 +118,7 @@ END;
 ?>				
 				</ul>
 			</div>
-			<div id="circleBar">
+			<div id="circleBar" class="hidden-sm">
 				<ul>
 <?php
 if ($result = $sql->query("SELECT * FROM MenuTree where Parent = 0 order by Sort")) {
@@ -129,11 +129,11 @@ echo <<<END
 						<div class="circle">
 							<a hook href="#"></a>
 							<div class="titleBox">
-								<div class="circleTitle" style="background: url(/img/circle/${row['ClassMenu']}${nameadd}.svg);"></div>
+								<div class="circleTitle" style="background: url(img/circle/${row['ClassMenu']}${nameadd}.svg);"></div>
 								<div class="title">${row['NameLong'.$nameadd]}</div>
 							</div>
 							<div class="image">
-								<img src="/img/menu/${row['ClassMenu']}.jpg">
+								<img src="img/menu/${row['ClassMenu']}.jpg">
 							</div>
 						</div>
 					</li>
@@ -147,7 +147,8 @@ END;
 		</div>
 <?php include("engine/layout/footer.php"); ?>
 	</div>
-<?php 
+
+	<?php 
 function postMenuPos($sql,$parent,$part){
 	global $nameadd;
 	if ($result = $sql->query("SELECT * FROM MenuItems where Parent = $parent and Active = 1 order by Sort")) {
@@ -179,7 +180,7 @@ END;
 	if(file_exists('img/menupic/'.$row['Id'].".jpg"))
 		echo <<<END
 												<div class="image">
-													<img src="/img/menupic/${row['Id']}.jpg">
+													<img src="img/menupic/${row['Id']}.jpg">
 												</div>
 END;
 		}
@@ -214,3 +215,201 @@ END;
 	}
 }
 ?>
+	<!-- END OF DESKTOP-CONTENT -->
+
+<!-- MOBILE-CONTENT -->
+	<div id="content" class="home visible-sm visible-xs">
+		<?php 
+			// Главная категория
+			if ($result = $sql->query("SELECT * FROM MenuTree where Parent = 0 and Active = 1 order by Sort")):
+				// Get data
+				$categories = array();
+					while ($row = $result->fetch_assoc()):
+						$curCategory = array();
+						$curCategory["Name"] = $row["Name"];
+						$curCategory["Id"] = $row["Id"];
+						$curCategory["subcats"] = array();
+						// Подкатегория
+						$curCatId = $row["Id"];
+					 	if ($resultScat = $sql->query("SELECT * FROM MenuTree where Parent = $curCatId and Active = 1 order by Sort")):
+								$subcats = array();
+							while ($rowScat = $resultScat->fetch_assoc()):
+								$subcat = array();
+								$subcat["Name"] = $rowScat["Name"];
+								$subcat["Id"] = $rowScat["Id"];
+								$subcat["dishes"] = array();
+								// Блюда
+								$curId = $rowScat["Id"];
+								if ($resultBl = $sql->query("SELECT * FROM MenuTree where Parent = $curId and Active = 1 order by Sort")):
+										$dishes = array();
+									while ($rowBl = $resultBl->fetch_assoc()):
+										$dish = array();
+										$dish["Name"] = $rowBl["Name"];
+										$dish["Id"] = $rowBl["Id"];
+										$dish["items"] = array();
+										$curDishId = $dish["Id"];
+										if ($resultItem = $sql->query("SELECT * FROM MenuItems where Parent = $curDishId and Active = 1 order by Sort")):
+											$items = array();
+											while ($rowItem = $resultItem->fetch_assoc()):
+												$item = array();
+												$item["Price"] = $rowItem["Price"];
+												$item["Descr"] = $rowItem["Descr"];
+												$item["Weight"] = $rowItem["Weight"];
+												// Kitchen
+												if ($curCatId == 1){
+													$item["Name"] = $rowItem['Name'];
+												}
+												else{
+												// Bar 
+													if ($rowItem["NameEn"])
+														$item["Name"] = $rowItem['NameEn']." / ".$rowItem['Name'];
+													else
+														$item["Name"] = $rowItem["Name"];
+													$item['Weight'] .= $rowItem['Weight']==""?"":" ml";
+												}
+
+												$items[] = $item;
+											endwhile; // Menu Item
+											$dish["items"] = $items;
+										endif; // Menu Item
+										$dishes[] = $dish;
+									endwhile; // Блюда 
+										$subcat["dishes"] = $dishes;
+								endif; // Блюда
+								$subcats[] = $subcat;
+								$curCategory["subcats"] = $subcats;
+							endwhile; // Подкатегории
+						endif; // Подкатегория
+
+						$categories[] = $curCategory;
+					endwhile; // Категория
+				endif; // Категория
+			 ?>
+
+			<?php // Output data ?>
+			<div class="categories-wrapper">
+			    <div class="cat-tabs">
+			    	<?php foreach($categories as $cat): ?>
+			        	<span class="cat-tab"><?= $cat["Name"] ?></span>  
+			        <?php endforeach; ?>     
+			    </div>
+			    <div class="cat-tab_content">
+			    	<?php foreach($categories as $cat): ?>
+				        <div class="cat-tab_item">
+				        	<div class="subcategories-wrapper">
+							    <div class="subcat-tabs">
+							    	<?php foreach($cat["subcats"] as $subcat): ?>
+							        	<span class="subcat-tab"><?= $subcat["Name"] ?></span>  
+							        <?php endforeach; ?>     
+							    </div>
+							    <div class="subcat-tab_content">
+							    	<?php foreach($cat["subcats"] as $subcat): ?>
+								        <div class="subcat-tab_item">
+								        	<div class="dishes-wrapper clearfix">
+								        		<div class="dishes-tabs">
+								        			<?php foreach($subcat["dishes"] as $dish): ?>
+								        				<div class="dishes-tab"><?= $dish["Name"] ?></div>
+										        	<?php endforeach; ?>
+								        		</div>
+								        		<div class="dishes-tab_content">	        		
+									        		<?php foreach($subcat["dishes"] as $dish): ?>
+									        				<div class="dishes-tab_item">
+									        					<?php foreach($dish["items"] as $item): ?>
+									        						<div class="item-box clearfix">
+										        						<div class="left">
+											        						<span class="item-name"><?= $item["Name"] ?></span>
+											        						<span class="item-weight"><?= $item["Weight"] ?></span>
+											        						<span class="item-descr"><?= $item["Descr"] ?></span>
+										        						</div>
+										        						<div class="right">
+										        							<span class="item-price"><?= $item["Price"] ?></span>
+										        						</div>
+									        						</div>
+									        					<?php endforeach; ?>
+									        				</div>
+											        <?php endforeach; ?>
+										        </div>
+								        		<!-- /.dishes-tab_content -->
+								        	</div>
+								        	<!-- /.dishes-wrapper -->
+								        </div>
+								        <!-- subcategories /.tab_item -->
+							        <?php endforeach; ?>  
+							    </div>
+							    <!-- subcategories /.tab_content -->
+							</div>
+				        </div>
+				        <!-- categories /.tab_item -->
+			        <?php endforeach; ?>  
+			    </div> 
+			    <!-- categories /.tab_content -->
+			</div>
+			<div id="debugging"></div>
+			<script>
+				// generate count arrays
+				var subcats_count = [];
+				var dishes_count = [];
+				var cur_cat = 0;
+				var cur_subcat = 0;
+
+				<?php foreach($categories as $cat): ?>
+					subcats_count.push(<?= count($cat["subcats"]) ?>);
+					var cur_dishes_count = [];
+					var cur_count = 0;
+					<?php foreach($cat["subcats"] as $subcat): ?>
+						cur_count += <?= count($subcat['dishes']) ?>;
+						var push_count = cur_count;
+						cur_dishes_count.push(push_count);
+					<?php endforeach; // subcats ?>
+					dishes_count.push(cur_dishes_count);
+				<?php endforeach; // cats ?>
+
+				// categories
+				$(".categories-wrapper .cat-tab_item").not(":first").hide();
+				$(".categories-wrapper .cat-tab").click(function() {
+					$(".categories-wrapper .cat-tab").removeClass("active").eq($(this).index()).addClass("active");
+					$(".categories-wrapper .cat-tab_item").hide().eq($(this).index()).fadeIn(1000);
+					// click on first subcat to init
+					cur_cat = $(this).index();
+					$(".subcat-tab").eq(subcats_count[cur_cat]).click().addClass("active");
+				}).eq(0).click().addClass("active");
+
+				// subcategories
+				$(".subcat-tab_item").not(":first").hide();
+				$(".subcat-tab").click(function() {
+					$(".subcat-tab").removeClass("active").eq($(this).index()).addClass("active");
+					$(this).addClass("active");
+					$(".subcat-tab_item").hide().eq($(this).index()).fadeIn(500);
+					$(".subcat-tab_item").eq($(this).index()+4).fadeIn(500);
+					cur_subcat = $(this).index();					
+					$(".dishes-tab").eq(dishes_count[cur_cat][cur_subcat-1]).click().addClass("active");
+					// $(".dishes-tab").eq(9).click().addClass("active");
+				}).eq(0).click().addClass("active");
+
+				// dishes
+				$(".dishes-tab_item").not(":first").hide();
+				$(".dishes-tab").click(function() {
+					$(".dishes-tab").removeClass("active").eq($(this).index());
+					$(this).addClass("active");
+					$(".dishes-tab_item").hide().eq($(this).index()).fadeIn(500);
+					var plusIndex = dishes_count[cur_cat][cur_subcat-1];
+					// for Bar
+					if (cur_cat == 1){
+						plusIndex += 16;
+						// for Bar / Wine
+						if (cur_subcat == 0)
+							plusIndex = 16;
+					}
+					// $("#debugging").html(plusIndex);
+					$(".dishes-tab_item").eq($(this).index()+plusIndex).fadeIn(500);
+				});
+			</script>
+			
+		 </div>
+
+		</div>
+		<!-- END OF CATEGORY-WRAPPER -->
+
+		  <br> <br>
+	</div>
+	<!-- END OF MOBILE-CONTENT -->

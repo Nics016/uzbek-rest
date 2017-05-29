@@ -1,4 +1,3 @@
-
 	<paralax class="hidden-sm">
 		<div src="img/page/<?=$menupath[1]?>.jpg" apply="none"></div>
 	</paralax>
@@ -148,6 +147,74 @@ END;
 		</div>
 <?php include("engine/layout/footer.php"); ?>
 	</div>
+
+	<?php 
+function postMenuPos($sql,$parent,$part){
+	global $nameadd;
+	if ($result = $sql->query("SELECT * FROM MenuItems where Parent = $parent and Active = 1 order by Sort")) {
+		while ($row = $result->fetch_assoc()) {
+			if($part == 1 && $row['NameEn'] != "" && $nameadd == ""){ 
+				$row['Name'] = $row['NameEn']."/".$row['Name'];
+				$row['Weight'] .= $row['Weight']==""?"":" ml";
+			}elseif($nameadd == "En" && $part == 1){
+				$row['Weight'] .= $row['Weight']==""?"":" ml";
+			}
+			if($row['Name'.$nameadd] == "")
+				$name = $row['Name'];
+			else 
+				$name = $row['Name'.$nameadd];
+				
+			if($row["Weight"] != "" && $row['Weight'] != " ml")$row["Weight"] = "(".$row["Weight"].")";
+echo <<<END
+													<div class="row">
+														<div class="con">
+															<div class="name">${name}
+																<span class='weight'>${row['Weight']}</span>
+															</div>
+															<div class="desc">${row['Descr'.$nameadd]}</div>
+														</div>
+														<div class="prise">${row['Price']}</div>
+													</div>
+
+END;
+	if(file_exists('img/menupic/'.$row['Id'].".jpg"))
+		echo <<<END
+												<div class="image">
+													<img src="img/menupic/${row['Id']}.jpg">
+												</div>
+END;
+		}
+	}
+}
+function postCatHeader($sql,$parent,$part){
+	global $nameadd;
+	if ($result = $sql->query("SELECT * FROM MenuTree where Parent = ".$parent." and Active = 1 order by Sort")) {
+		if($result->num_rows > 0){
+			while ($row = $result->fetch_assoc()) {
+				if($nameadd == ""):
+				echo <<<END
+								 					<div class="weaning">
+														${row['NameEn']}/${row['Name']}
+													</div>
+
+END;
+				else:
+				echo <<<END
+								 					<div class="weaning">
+														${row['NameEn']}
+													</div>
+
+END;
+				endif;
+				postCatHeader($sql,$row['Id'],$row['EnShow']);
+				//postMenuPos($sql,$row['Id'],$row['EnShow']);
+			}
+		}else{
+			postMenuPos($sql,$parent,$part);
+		}
+	}
+}
+?>
 	<!-- END OF DESKTOP-CONTENT -->
 
 	<!-- MOBILE-CONTENT -->
@@ -241,7 +308,7 @@ END;
 								        	<div class="dishes-wrapper clearfix">
 								        		<div class="dishes-tabs">
 								        			<?php foreach($subcat["dishes"] as $dish): ?>
-								        				<div class="dishes-tab"><?= $dish["Id"] ?><?= $dish["Name"] ?></div>
+								        				<div class="dishes-tab"><?= $dish["Name"] ?></div>
 										        	<?php endforeach; ?>
 								        		</div>
 								        		<div class="dishes-tab_content">	        		
@@ -346,72 +413,3 @@ END;
 		  <br> <br>
 	</div>
 	<!-- END OF MOBILE-CONTENT -->
-
-
-<?php 
-function postMenuPos($sql,$parent,$part){
-	global $nameadd;
-	if ($result = $sql->query("SELECT * FROM MenuItems where Parent = $parent and Active = 1 order by Sort")) {
-		while ($row = $result->fetch_assoc()) {
-			if($part == 1 && $row['NameEn'] != "" && $nameadd == ""){ 
-				$row['Name'] = $row['NameEn']."/".$row['Name'];
-				$row['Weight'] .= $row['Weight']==""?"":" ml";
-			}elseif($nameadd == "En" && $part == 1){
-				$row['Weight'] .= $row['Weight']==""?"":" ml";
-			}
-			if($row['Name'.$nameadd] == "")
-				$name = $row['Name'];
-			else 
-				$name = $row['Name'.$nameadd];
-				
-			if($row["Weight"] != "" && $row['Weight'] != " ml")$row["Weight"] = "(".$row["Weight"].")";
-echo <<<END
-													<div class="row">
-														<div class="con">
-															<div class="name">${name}
-																<span class='weight'>${row['Weight']}</span>
-															</div>
-															<div class="desc">${row['Descr'.$nameadd]}</div>
-														</div>
-														<div class="prise">${row['Price']}</div>
-													</div>
-
-END;
-	if(file_exists('img/menupic/'.$row['Id'].".jpg"))
-		echo <<<END
-												<div class="image">
-													<img src="img/menupic/${row['Id']}.jpg">
-												</div>
-END;
-		}
-	}
-}
-function postCatHeader($sql,$parent,$part){
-	global $nameadd;
-	if ($result = $sql->query("SELECT * FROM MenuTree where Parent = ".$parent." and Active = 1 order by Sort")) {
-		if($result->num_rows > 0){
-			while ($row = $result->fetch_assoc()) {
-				if($nameadd == ""):
-				echo <<<END
-								 					<div class="weaning">
-														${row['NameEn']}/${row['Name']}
-													</div>
-
-END;
-				else:
-				echo <<<END
-								 					<div class="weaning">
-														${row['NameEn']}
-													</div>
-
-END;
-				endif;
-				postCatHeader($sql,$row['Id'],$row['EnShow']);
-				//postMenuPos($sql,$row['Id'],$row['EnShow']);
-			}
-		}else{
-			postMenuPos($sql,$parent,$part);
-		}
-	}
-}
-?>
