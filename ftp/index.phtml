@@ -90,10 +90,15 @@ if($menupath[0] == 14) $nameadd = "En";
 	<link href="https://fonts.googleapis.com/css?family=Tenor+Sans" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/css/style.css?renew=<?php echo filemtime("css/style.css")?>>">
 	<link rel="stylesheet" type="text/css" href="/css/jquery.mCustomScrollbar.css">
-	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<script src="/js/jquery.mCustomScrollbar.js"></script>
 	<script src="/js/jquery.touchSwipe.min.js"></script>
-	<script src="/js/appRefactor.js" type="text/javascript"></script>
+	<!-- <script src="/js/appRefactor.js" type="text/javascript"></script> -->
+  <script>
+    if (screen && screen.width > 992) {
+      document.write('<script type="text/javascript" src="/js/appRefactor.js"><\/script>');
+    }
+    </script>
 	<script src="/js/newApp.js" type="text/javascript"></script>
 	<script src="/js/slider.js"></script>
 	<script type="text/javascript" src="/highslide/highslide-full.js"></script>
