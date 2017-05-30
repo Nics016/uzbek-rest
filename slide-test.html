@@ -1,0 +1,37 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/swipe.js"></script>
+<div id='slider' class='swipe'>
+  <div class='swipe-wrap'>
+    <div><img src="img/enterbg.jpg" width="100%" height="350"></div>
+    <div><img src="img/interior.jpg" width="100%" height="350"></div>
+    <div><img src="img/fortheir.jpg" width="100%" height="350"></div>
+  </div>
+</div>
+
+<style>
+	.swipe {
+  overflow: hidden;
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+  height: 350px;
+  margin: 100px auto 0;
+}
+	.swipe-wrap {
+	  overflow: hidden;
+	  position: relative;
+	}
+	.swipe-wrap > div {
+	  float: left;
+	  width: 100%;
+	  position: relative;
+	}
+</style>
+
+<script>
+	$(document).ready(function(){
+	  // we add the code here
+	  Slider = $('#slider').Swipe().data('Swipe');
+	});
+
+</script>

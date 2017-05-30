@@ -18,7 +18,7 @@
 	html, body {
 	    max-width: 100%;
 	    overflow-x: hidden;
-	    overflow-y: hidden;
+	    overflow-y: auto;
 	}
 	.hidden-sm{
 		display: none;
@@ -119,6 +119,15 @@
 		padding-top: 10%;
 	}
 
+	#catering .blockBox .textContainer,
+	#history .blockBox .textContainer{
+		height: auto;
+	}
+	#history .rightSide .image img{
+		width: 100%;
+		margin-left: 0;
+	}
+
 	.slider .sliderBox{
 		overflow-x: hidden;
 		overflow-y: visible;
@@ -174,7 +183,7 @@
 	}
 
 	/* padding-left fix */
-	#history .leftSide,
+	/*#history .leftSide,
 	#halls .leftSide{
 		padding-left: 10%;
 	}
@@ -183,9 +192,16 @@
 	}
 	#tour{
 		padding-left: 20%;
+	}*/
+	.blockBox .leftSide .textBox, .blockBox .rightSide .textBox{
+		padding: 0 10%;
+		width: 100%;
 	}
-	#tour .scroll{
-		/*display: none;*/
+	.blockBox .leftSide .textContainer{
+		float: none;
+	}
+	.tour{
+		display: none;
 	}
 
 	/* bottom-line fix */
@@ -220,9 +236,6 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-	body{
-		overflow-y: auto;
-	}
 }
 
 /* Extra Small Devices, Phones */

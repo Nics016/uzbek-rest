@@ -1,1 +1,5 @@
-- force menu to display all the items, icluding child cats
+- make pictures in sliders 100% width
+- force displaying mobile version on md
+- make pictures 100% in #history slider
+- make circle a circle on tablet
+- create a swiper for sliders
