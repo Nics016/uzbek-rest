@@ -7,6 +7,18 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+	.blackbox{
+		background-color: rgba(0,0,0,0.5);
+		padding-top: 10px;
+	}
+	.logo-img{
+		display: block;
+		margin: 0 auto 5%;
+	}
+	html, body {
+	    max-width: 100%;
+	    overflow-x: hidden;
+	}
 	.hidden-sm{
 		display: none;
 	}
@@ -45,8 +57,29 @@
 		float: none;
 		/*margin-top: ;*/
 	}
-
+	.slider .dots{
+		display: none;
+	}
 	/* reverse-slider fix */
+	#catering .blockBox,
+	#history .blockBox{
+		display: -webkit-box;
+	    display: -moz-box;
+	    display: -ms-flexbox;
+	    display: -webkit-flex;
+	    display: flex;
+	    -webkit-box-orient: vertical;
+	    -moz-box-orient: vertical;
+	    -webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	    flex-direction: column;
+	    /* optional */
+	    -webkit-box-align: start;
+	    -moz-box-align: start;
+	    -ms-flex-align: start;
+	    -webkit-align-items: flex-start;
+	    align-items: flex-start;
+	}
 	#catering .blockBox .leftSide,
 	#history .blockBox .leftSide{
 		padding-top: 10%;
@@ -55,6 +88,11 @@
 		overflow-x: hidden;
 		overflow-y: visible;
 		height: auto;
+		-webkit-box-ordinal-group: 2;
+	    -moz-box-ordinal-group: 2;
+	    -ms-flex-order: 2;
+	    -webkit-order: 2;
+	    order: 2;
 	}
 	#catering .blockBox .rightSide,
 	#history .blockBox .rightSide{
@@ -63,10 +101,11 @@
 		float: none;
 		height: 450px;
 		overflow: hidden;
-	}
-	#catering .dots,
-	#history .dots{
-		display: none;
+		-webkit-box-ordinal-group: 1;
+	    -moz-box-ordinal-group: 1;
+	    -ms-flex-order: 2;
+	    -webkit-order: 1;
+	    order: 1;
 	}
 	#history .slider{
 		height: auto;
@@ -74,28 +113,82 @@
 	#history .slider .image img{
 		margin-left: 10%;
 	}
+	#catering .blockBox .leftSide .textBox,
+	#history .blockBox .leftSide .textBox{
+		padding-top: 10%;
+	}
+
 	.slider .sliderBox{
 		overflow-x: hidden;
 		overflow-y: visible;
+		padding-bottom: 5%;
 	}
 	.blockBox{
 		overflow-x: hidden;
 		overflow-y: visible;
 	}
-	div#halls.halls{
-		display: none;
-	}
+
 	/* erases scrolling! */
 	#content [type="paralax"]{
 		height: auto;
 	}
 
+	/* halls-fix */
+	#halls.halls .blockBox .leftSide{
+		height: auto;
+	}
+	#halls .blockBox .leftSide{
+		padding-top: 10%;
+		width: 100%;
+		float: none;
+		overflow-x: hidden;
+		overflow-y: visible;
+		height: auto;
+		-webkit-box-ordinal-group: 2;
+	    -moz-box-ordinal-group: 2;
+	    -ms-flex-order: 2;
+	    -webkit-order: 2;
+	    order: 2;
+	}
+	#halls .blockBox .rightSide{
+		padding-top: 0;
+		width: 100%;
+		float: none;
+		height: 450px;
+		overflow: hidden;
+		-webkit-box-ordinal-group: 1;
+	    -moz-box-ordinal-group: 1;
+	    -ms-flex-order: 2;
+	    -webkit-order: 1;
+	    order: 1;
+	}
+	#halls .tour{
+		width: 100%;
+	}
+	.blockBox .leftSide .textBox{
+		padding-left: 0;
+	}
+	#halls .textContainer{
+		width: 100%;
+	}
+
+	/* padding-left fix */
+	#history .leftSide,
+	#halls .leftSide{
+		padding-left: 10%;
+	}
+	#tour{
+		padding-left: 20%;
+	}
+	#tour .scroll{
+		/*display: none;*/
+	}
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
 	body{
-		overflow: auto;
+		overflow-y: auto;
 	}
 }
 
@@ -105,7 +198,7 @@
 		margin-left: 0;
 	}
 	#history .slider{
-		height: 140vh;
+		height: auto;
 	}
 	.blockBox .leftSide{
 		height: 300px;
@@ -113,6 +206,18 @@
 	#catering .blockBox .rightSide,
 	#history .blockBox .rightSide{
 		height: 300px;
+	}
+	/* padding-left fix */
+	#halls .leftSide{
+		padding-left: 0;
+	}
+	#halls #totalGallery,
+	#halls .tour .title
+	{
+		padding-left: 10%;
+	}
+	#tour{
+		padding-left: 0;
 	}
 }
 

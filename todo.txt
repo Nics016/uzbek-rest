@@ -1,5 +1,2 @@
-- fix scrolling history
-- make similar order picture-text for sliders
-- weird dots in left bottom corner
-- return logo!
-- make transparent black for all area (including phone, etc)
+- force menu to display all the items, icluding child cats
+- make links Bar & Kitchen work properly

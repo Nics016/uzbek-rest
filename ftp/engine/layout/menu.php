@@ -238,8 +238,9 @@ END;
 								$subcat["Name"] = $rowScat["Name"];
 								$subcat["Id"] = $rowScat["Id"];
 								$subcat["dishes"] = array();
-								// Блюда
 								$curId = $rowScat["Id"];
+								// Сорты подкатегорий
+								// Блюда
 								if ($resultBl = $sql->query("SELECT * FROM MenuTree where Parent = $curId and Active = 1 order by Sort")):
 										$dishes = array();
 									while ($rowBl = $resultBl->fetch_assoc()):
