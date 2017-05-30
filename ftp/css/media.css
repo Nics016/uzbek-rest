@@ -18,6 +18,7 @@
 	html, body {
 	    max-width: 100%;
 	    overflow-x: hidden;
+	    overflow-y: hidden;
 	}
 	.hidden-sm{
 		display: none;
@@ -177,11 +178,35 @@
 	#halls .leftSide{
 		padding-left: 10%;
 	}
+	#catering .leftSide{
+		padding-left: 20%;
+	}
 	#tour{
 		padding-left: 20%;
 	}
 	#tour .scroll{
 		/*display: none;*/
+	}
+
+	/* bottom-line fix */
+	paralax{
+		display: none;
+	}
+	.highslide-container{
+		display: none;
+	}
+	#content::after{
+		display: none;
+	}
+
+	/* menu items */
+	.dishes-tab_item strong{
+		display: block;
+		background-color: #EEEEEE;
+		padding: 2px;
+		font-family: 'Merriweather', serif;
+		font-style: italic;
+		font-size: 14px;
 	}
 }
 

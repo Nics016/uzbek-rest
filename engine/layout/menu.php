@@ -223,59 +223,23 @@ END;
 			// Главная категория
 			if ($result = $sql->query("SELECT * FROM MenuTree where Parent = 0 and Active = 1 order by Sort")):
 				// Get data
-				$categories = [];
+				$categories = array();
 					while ($row = $result->fetch_assoc()):
-						$curCategory = [];
+						$curCategory = array();
 						$curCategory["Name"] = $row["Name"];
 						$curCategory["Id"] = $row["Id"];
-						$curCategory["subcats"] = [];
+						$curCategory["subcats"] = array();
 						// Подкатегория
 						$curCatId = $row["Id"];
 					 	if ($resultScat = $sql->query("SELECT * FROM MenuTree where Parent = $curCatId and Active = 1 order by Sort")):
-								$subcats = [];
+								$subcats = array();
 							while ($rowScat = $resultScat->fetch_assoc()):
-								$subcat = [];
+								$subcat = array();
 								$subcat["Name"] = $rowScat["Name"];
 								$subcat["Id"] = $rowScat["Id"];
-								$subcat["dishes"] = [];
-								// Блюда
-								$curId = $rowScat["Id"];
-								if ($resultBl = $sql->query("SELECT * FROM MenuTree where Parent = $curId and Active = 1 order by Sort")):
-										$dishes = [];
-									while ($rowBl = $resultBl->fetch_assoc()):
-										$dish = [];
-										$dish["Name"] = $rowBl["Name"];
-										$dish["Id"] = $rowBl["Id"];
-										$dish["items"] = [];
-										$curDishId = $dish["Id"];
-										if ($resultItem = $sql->query("SELECT * FROM MenuItems where Parent = $curDishId and Active = 1 order by Sort")):
-											$items = [];
-											while ($rowItem = $resultItem->fetch_assoc()):
-												$item = [];
-												$item["Price"] = $rowItem["Price"];
-												$item["Descr"] = $rowItem["Descr"];
-												$item["Weight"] = $rowItem["Weight"];
-												// Kitchen
-												if ($curCatId == 1){
-													$item["Name"] = $rowItem['Name'];
-												}
-												else{
-												// Bar 
-													if ($rowItem["NameEn"])
-														$item["Name"] = $rowItem['NameEn']." / ".$rowItem['Name'];
-													else
-														$item["Name"] = $rowItem["Name"];
-													$item['Weight'] .= $rowItem['Weight']==""?"":" ml";
-												}
-
-												$items[] = $item;
-											endwhile; // Menu Item
-											$dish["items"] = $items;
-										endif; // Menu Item
-										$dishes[] = $dish;
-									endwhile; // Блюда 
-										$subcat["dishes"] = $dishes;
-								endif; // Блюда
+								// Сорты подкатегорий
+								$subcat["dishes"] = getSubcatChilds($sql, $subcat, $curCatId);
+								
 								$subcats[] = $subcat;
 								$curCategory["subcats"] = $subcats;
 							endwhile; // Подкатегории
@@ -284,6 +248,83 @@ END;
 						$categories[] = $curCategory;
 					endwhile; // Категория
 				endif; // Категория
+
+				/**
+				 * Рекурсивно получает все подкатегории данной категории и возвращет их.
+				 * Также находит блюда и присваивает их в $subcat["dishes"].
+				 */
+				function getSubcatChilds($sql, &$subcat, $curCatId){
+					$curId = $subcat["Id"];
+					$childs = false;
+
+					if ($result = $sql->query("SELECT * FROM MenuTree where Parent = $curId and Active = 1 order by Sort")):
+						$childs = array();
+						while ($row = $result->fetch_assoc()):
+							$child = array();
+							$child["Id"] = $row["Id"];
+							$child["Name"] = $row["Name"];
+							$child["childs"] = getSubcatChilds($sql, $child, $curCatId);
+							$childs[] = $child;
+						endwhile; // childs
+					endif; // childs
+
+					$subcat["items"] = getCatItems($sql, $subcat["Id"], $curCatId);
+
+					return $childs;
+				}
+
+				function getCatItems($sql, $curId, $curCatId){
+					// Блюда
+					$items = false;
+					if ($resultItem = $sql->query("SELECT * FROM MenuItems where Parent = $curId and Active = 1 order by Sort")):
+						$items = array();
+						while ($rowItem = $resultItem->fetch_assoc()):
+							$item = array();
+							$item["Price"] = $rowItem["Price"];
+							$item["Descr"] = $rowItem["Descr"];
+							$item["Weight"] = $rowItem["Weight"];
+							// Kitchen
+							if ($curCatId == 1){
+								$item["Name"] = $rowItem['Name'];
+							}
+							else{
+							// Bar 
+								if ($rowItem["NameEn"])
+									$item["Name"] = $rowItem['NameEn']." / ".$rowItem['Name'];
+								else
+									$item["Name"] = $rowItem["Name"];
+								$item['Weight'] .= $rowItem['Weight']==""?"":" ml";
+							}
+
+							$items[] = $item;
+						endwhile; // Menu Item
+						$dish["items"] = $items;
+					endif; // Menu Item
+					return $items;
+				}
+
+				function outputDishes($dishes){
+					foreach($dishes as $dish):
+						if (!is_array($dish["childs"])):
+		    				echo '<div class="dishes-tab_item">';
+		    					foreach($dish["items"] as $item):
+		    						echo '<div class="item-box clearfix">';
+		        						echo '<div class="left">';
+			        						echo '<span class="item-name">' . $item["Name"] . '</span>';
+			        						echo '<span class="item-weight">' . $item["Weight"] . '</span>';
+			        						echo '<span class="item-descr">' . $item["Descr"] . '</span>';
+		        						echo '</div>';
+		        						echo '<div class="right">';
+		        							echo '<span class="item-price">' . $item["Price"] . '</span>';
+		        						echo '</div>';
+		    						echo '</div>';
+		    					endforeach;
+		    				echo '</div>';
+		    			else:
+		    				outputDishes($dish["childs"]);
+		    			endif; // has childs
+			        endforeach;
+				}
 			 ?>
 
 			<?php // Output data ?>
@@ -312,22 +353,7 @@ END;
 										        	<?php endforeach; ?>
 								        		</div>
 								        		<div class="dishes-tab_content">	        		
-									        		<?php foreach($subcat["dishes"] as $dish): ?>
-									        				<div class="dishes-tab_item">
-									        					<?php foreach($dish["items"] as $item): ?>
-									        						<div class="item-box clearfix">
-										        						<div class="left">
-											        						<span class="item-name"><?= $item["Name"] ?></span>
-											        						<span class="item-weight"><?= $item["Weight"] ?></span>
-											        						<span class="item-descr"><?= $item["Descr"] ?></span>
-										        						</div>
-										        						<div class="right">
-										        							<span class="item-price"><?= $item["Price"] ?></span>
-										        						</div>
-									        						</div>
-									        					<?php endforeach; ?>
-									        				</div>
-											        <?php endforeach; ?>
+									        		<?php outputDishes($subcat["dishes"]) ?>
 										        </div>
 								        		<!-- /.dishes-tab_content -->
 								        	</div>

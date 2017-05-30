@@ -1,2 +1,1 @@
 - force menu to display all the items, icluding child cats
-- make links Bar & Kitchen work properly
