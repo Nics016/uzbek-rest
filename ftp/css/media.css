@@ -193,7 +193,6 @@
 		display: none;
 	}
 	.highslide-container{
-		display: none;
 	}
 	#content::after{
 		display: none;
@@ -207,6 +206,15 @@
 		font-family: 'Merriweather', serif;
 		font-style: italic;
 		font-size: 14px;
+	}
+
+	/* circle width */
+	.circleBox #circle{
+		width: 100%;
+		height: 345px;
+	}
+	.circleBox #circle .center{
+		width: 100%;
 	}
 }
 

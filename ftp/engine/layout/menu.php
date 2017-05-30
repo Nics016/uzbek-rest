@@ -335,6 +335,8 @@ END;
 			
 			<?php // Output data ?>
 			<div class="categories-wrapper">
+			<div id="bar"></div>
+			<div id="kitchen"></div>
 			    <div class="cat-tabs">
 			    	<?php foreach($categories as $cat): ?>
 			        	<span class="cat-tab"><?= $cat["Name"] ?></span>  
