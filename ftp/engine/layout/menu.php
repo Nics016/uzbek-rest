@@ -133,7 +133,7 @@ echo <<<END
 								<div class="title">${row['NameLong'.$nameadd]}</div>
 							</div>
 							<div class="image">
-								<img src="img/menu/${row['ClassMenu']}.jpg">
+								<img src="../../img/menu/${row['ClassMenu']}.jpg">
 							</div>
 						</div>
 					</li>

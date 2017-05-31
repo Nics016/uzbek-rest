@@ -5,7 +5,6 @@ Disallow: /highslide
 Disallow: /js
 Disallow: /assets
 
-
 User-agent: Yandex
 Disallow: /addons
 Disallow: /css

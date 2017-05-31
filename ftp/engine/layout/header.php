@@ -182,7 +182,7 @@
             <div class="rus"><a href="/ru/kuhnya_bar/">РУС</a></div>
           </div>
           <!-- <div class="booking"><?=$menupath[0] == 14?"Book table":"Бронирование"; ?></div> --> 
-          <a href="http://novikovgroup.ru/delivery/food/uzbekistan/" target="_blank" style='color: #f8ac39;text-decoration:none'><div class="delivery"><?=$menupath[0] == 14?"Delivery":"Доставка"; ?></div></a>
+          <a href="http://novikovgroup.ru/delivery/food/uzbekistan/" target="_blank" style='color: #f8ac39;text-decoration:none' rel="nofollow" title='Ресторан "Узбекистан" - доставка блюд на дом'><div class="delivery"><?=$menupath[0] == 14?"Delivery":"Доставка"; ?></div></a>
         </div>
         <div class="menu">
           <div class="left">
@@ -244,7 +244,7 @@ if ($result = $sql->query("SELECT * FROM Content where Parent = $menupath[0] ord
   <div class="blackbox">
     <div class="contact clearfix">
       <div class="phone"><?=$Phone?></div>
-      <a href="http://novikovgroup.ru/delivery/food/uzbekistan/" target="_blank" class="delivery-link">
+      <a href="http://novikovgroup.ru/delivery/food/uzbekistan/" target="_blank" class="delivery-link" rel="nofollow">
         <div class="delivery"><?=$menupath[0] == 14?"Delivery":"Доставка"; ?></div>
       </a>
     </div>
