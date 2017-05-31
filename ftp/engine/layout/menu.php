@@ -454,7 +454,7 @@ END;
 					$(".dishes-tab_item").eq($(this).index()+plusIndex).fadeIn(500);
 				});
 			</script>
-			
+
 		 </div>
 
 		</div>

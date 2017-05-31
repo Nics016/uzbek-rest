@@ -14,6 +14,7 @@ $(document).ready(function(){
 				} else if (hash === "#kitchen"){
 					$(".cat-tabs .cat-tab").eq(1).click();
 				}
+				window.location = attrHref;
 			});
 		}		
 	});
@@ -26,6 +27,9 @@ $(document).ready(function(){
 			attrHref += "#" + attrJump;
 			$(this).attr("href", attrHref);
 			$(this).addClass("scroll");
+			$(this).bind("click", function(){
+				window.location = attrHref;
+			});
 		}		
 	});
 

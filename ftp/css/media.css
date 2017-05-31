@@ -1,12 +1,12 @@
 /*==========  Desktop First Method  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px) {
+@media only screen and (max-width : 1250px) {
 
 }
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) {
+@media only screen and (max-width : 1200px) {
 	.blackbox{
 		background-color: rgba(0,0,0,0.5);
 		padding-top: 10px;
@@ -123,7 +123,8 @@
 	#history .blockBox .textContainer{
 		height: auto;
 	}
-	#history .rightSide .image img{
+	#history .rightSide .image img,
+	#catering .rightSide .image img{
 		width: 100%;
 		margin-left: 0;
 	}
@@ -225,12 +226,35 @@
 	}
 
 	/* circle width */
+	#content .circleBox{
+		margin-top: -10%;
+		margin-bottom: 10%;
+		min-height: 350px;
+	}
 	.circleBox #circle{
-		width: 100%;
+		width: 345px;
 		height: 345px;
+		max-width: 140%;
+		max-height: 140%;
 	}
 	.circleBox #circle .center{
 		width: 100%;
+	}
+	.big[type="twink"]{
+		line-height: 20px;
+	}
+	
+	/* History img fix */
+	#history .blockBox .rightSide{
+		height: 550px;
+	}
+	#history .rightSide .image img{
+		height: auto;
+	}
+	
+	/* weird box from jquery */
+	.ui-loader.ui-corner-all{
+		display: none;
 	}
 }
 
@@ -253,6 +277,9 @@
 	#history .blockBox .rightSide{
 		height: 300px;
 	}
+	#history .rightSide .image img{
+		height: 100%;
+	}
 	/* padding-left fix */
 	#halls .leftSide{
 		padding-left: 0;
@@ -264,6 +291,16 @@
 	}
 	#tour{
 		padding-left: 0;
+	}
+	#content .circleBox{
+		margin-top: -15%;
+		margin-bottom: 15%;
+	}
+	.circleBox #circle{
+		width: 345px;
+		height: 345px;
+		max-width: 100%;
+		max-height: 120%;
 	}
 }
 

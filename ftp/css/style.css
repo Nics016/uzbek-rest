@@ -523,11 +523,23 @@ enter.visible-sm {
   font-size: 24px;
   color: #2a4057;
 }
+.categories-wrapper .cat-tabs .cat-tab::before{
+  content: " & ";
+  font-weight: normal;
+  font-size: 24px;
+  color: #2a4057;
+}
+.categories-wrapper .cat-tabs .cat-tab:first-child::before{
+  content: "";
+}
 .categories-wrapper .cat-tabs .cat-tab{
   cursor: pointer;
 }
 .categories-wrapper .cat-tabs .cat-tab.active { 
   font-weight: bold;
+  font-size: 30px;
+  color: #132436;
+  letter-spacing: 2px;
 }
 
 .subcategories-wrapper .subcat-tabs{
@@ -543,7 +555,7 @@ enter.visible-sm {
   padding-left: 2%;
 }
 .subcategories-wrapper .subcat-tabs .subcat-tab.active { 
-  color: #2A4057;
+  color: #132436;
 }
 .dishes-wrapper{
   background-color: #fff;
@@ -564,7 +576,7 @@ enter.visible-sm {
   padding-top: 10%;
 }
 .dishes-wrapper .dishes-tabs .dishes-tab.active { 
-  color: #2A4057;
+  color: #132436;
 }
 .dishes-wrapper .dishes-tab_content:last-child{
   padding-bottom: 20%;

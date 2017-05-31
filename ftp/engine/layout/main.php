@@ -50,3 +50,14 @@ foreach($menuarr as $val){
 <?php include("engine/layout/footer.php"); ?>
 	</div>
 	
+<script>
+	// SCRIPT FOR SLIDING
+	$('#content [type="paralax"] .sliderBox').on("swipeleft", function(){
+		$(this).parent(".slider").children(".forward").click();	
+	});
+	$('#content [type="paralax"] .sliderBox').on("swiperight", function(){
+		// $(prev).animate({"margin-left": '+=1024'});
+		$(this).parent(".slider").children(".backward").click();	
+	});
+	 
+</script>
