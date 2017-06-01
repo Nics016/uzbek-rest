@@ -32,7 +32,7 @@ END;
 						</div>
 						<div class="rightSide">
 							<div id="changeScene" class="changeScene">
-								<div class="background"></div>
+								<!-- <div class="background"></div> -->
 								<div class="image">
 									<img src="/img/gallery/<?=$defid ?>.jpg">
 								</div>

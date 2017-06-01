@@ -129,7 +129,7 @@ echo <<<END
 						<div class="circle">
 							<a hook href="#"></a>
 							<div class="titleBox">
-								<div class="circleTitle" style="background: url(img/circle/${row['ClassMenu']}${nameadd}.svg);"></div>
+								<div class="circleTitle" style="background: url(../../img/circle/${row['ClassMenu']}${nameadd}.svg);"></div>
 								<div class="title">${row['NameLong'.$nameadd]}</div>
 							</div>
 							<div class="image">

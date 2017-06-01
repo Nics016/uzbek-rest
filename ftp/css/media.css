@@ -46,11 +46,16 @@
 	.blockBox .leftSide{
 		width: 100%;
 		float: none;
-		height: 450px;
+		// height: 450px;
 		overflow: hidden;
 	}
 	.blockBox .leftSide .image img{
-		height: 100vh;
+		// height: 100vh;
+		height: auto;
+	}
+	#catering .blockBox .rightSide .image img,
+	#history .blockBox .rightSide .image img{
+		height: auto;
 	}
 	.blockBox .rightSide{
 		padding-top: 10%;
@@ -100,7 +105,7 @@
 		padding-top: 0;
 		width: 100%;
 		float: none;
-		height: 450px;
+		// height: 450px;
 		overflow: hidden;
 		-webkit-box-ordinal-group: 1;
 	    -moz-box-ordinal-group: 1;
@@ -127,6 +132,11 @@
 	#catering .rightSide .image img{
 		width: 100%;
 		margin-left: 0;
+	}
+	.leftSide .image img{
+		width: 100%;
+		margin-left: 0;
+		height: auto;
 	}
 
 	.slider .sliderBox{
@@ -246,20 +256,36 @@
 	
 	/* History img fix */
 	#history .blockBox .rightSide{
-		height: 550px;
+		height: auto;
+		min-height: 650px;
+		max-height: 750px;
 	}
 	#history .rightSide .image img{
 		height: auto;
+		width: auto;
+		max-width: 100%;
+		min-width: 60%;
 	}
 	
 	/* weird box from jquery */
 	.ui-loader.ui-corner-all{
 		display: none;
 	}
+
+	/* Hiding circle-menu */
+	#content .circleBox{
+		display: none;
+	}
+	#content{
+		margin-top: -13%;
+	}
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+	#content{
+		margin-top: -17%;
+	}
 }
 
 /* Extra Small Devices, Phones */
@@ -301,6 +327,16 @@
 		height: 345px;
 		max-width: 100%;
 		max-height: 120%;
+	}
+
+	#history .blockBox .rightSide {
+	    height: auto;
+	    min-height: 250px;
+	    max-height: 750px;
+	}
+
+	#content{
+		margin-top: -30%;
 	}
 }
 
