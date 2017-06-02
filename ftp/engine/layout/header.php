@@ -240,9 +240,13 @@ if ($result = $sql->query("SELECT * FROM Content where Parent = $menupath[0] ord
 
 <!-- MOBILE -->
 <enter class="visible-sm visible-xs">
-  <img class="logo-img" src="/img/logo1.png" alt="">
-  <div class="blackbox">
+  <img class="logo-img" src="/img/logo1.svg" alt="">
+  <div class="blackbox" id="gotop">
     <div class="contact clearfix">
+      <div class="language">
+        <div class="eng"><a href="/en/cuisine_bar/">ENG</a></div>
+        <div class="rus"><a href="/ru/kuhnya_bar/">РУС</a></div>
+      </div>
       <div class="phone"><?=$Phone?></div>
       <a href="http://novikovgroup.ru/delivery/food/uzbekistan/" target="_blank" class="delivery-link" rel="nofollow">
         <div class="delivery"><?=$menupath[0] == 14?"Delivery":"Доставка"; ?></div>
@@ -293,6 +297,11 @@ if ($result = $sql->query("SELECT * FROM Content where Parent = $menupath[0] ord
               </ul>
             </div>
           </div>
+  </div>
+  <div class="gotop-streaks">
+    <a href="#gotop" class="scroll">
+      <img src="/img/mobile-menu-button.png" alt="">
+    </a>
   </div>
 </enter>
 <!-- END OF MOBILE -->

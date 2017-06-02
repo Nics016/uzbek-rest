@@ -220,13 +220,14 @@ END;
 <!-- MOBILE-CONTENT -->
 	<div id="content" class="home visible-sm visible-xs">
 		<?php 
+			$lang = $menupath[0] == 14 ? "en" : "ru";
 			// Главная категория
 			if ($result = $sql->query("SELECT * FROM MenuTree where Parent = 0 and Active = 1 order by Sort")):
 				// Get data
 				$categories = array();
 					while ($row = $result->fetch_assoc()):
 						$curCategory = array();
-						$curCategory["Name"] = $row["Name"];
+						$curCategory["Name"] = $lang == "en" ? $row["NameEn"] : $row["Name"];
 						$curCategory["Id"] = $row["Id"];
 						$curCategory["subcats"] = array();
 						// Подкатегория
@@ -235,10 +236,10 @@ END;
 								$subcats = array();
 							while ($rowScat = $resultScat->fetch_assoc()):
 								$subcat = array();
-								$subcat["Name"] = $rowScat["Name"];
+								$subcat["Name"] = $lang == "en" ? $rowScat["NameEn"] : $rowScat["Name"];
 								$subcat["Id"] = $rowScat["Id"];
 								// Сорты подкатегорий
-								$subcat["dishes"] = getSubcatChilds($sql, $subcat, $curCatId);
+								$subcat["dishes"] = getSubcatChilds($sql, $subcat, $curCatId, $lang);
 								
 								$subcats[] = $subcat;
 								$curCategory["subcats"] = $subcats;
@@ -253,7 +254,7 @@ END;
 				 * Рекурсивно получает все подкатегории данной категории и возвращет их.
 				 * Также находит блюда и присваивает их в $subcat["dishes"].
 				 */
-				function getSubcatChilds($sql, &$subcat, $curCatId){
+				function getSubcatChilds($sql, &$subcat, $curCatId, $lang){
 					$curId = $subcat["Id"];
 					$childs = false;
 
@@ -262,18 +263,18 @@ END;
 						while ($row = $result->fetch_assoc()):
 							$child = array();
 							$child["Id"] = $row["Id"];
-							$child["Name"] = $row["Name"];
-							$child["childs"] = getSubcatChilds($sql, $child, $curCatId);
+							$child["Name"] = $lang == "en" ? $row["NameEn"] : $row["Name"];
+							$child["childs"] = getSubcatChilds($sql, $child, $curCatId, $lang);
 							$childs[] = $child;
 						endwhile; // childs
 					endif; // childs
 
-					$subcat["items"] = getCatItems($sql, $subcat["Id"], $curCatId);
+					$subcat["items"] = getCatItems($sql, $subcat["Id"], $curCatId, $lang);
 
 					return $childs;
 				}
 
-				function getCatItems($sql, $curId, $curCatId){
+				function getCatItems($sql, $curId, $curCatId, $lang){
 					// Блюда
 					$items = false;
 					if ($resultItem = $sql->query("SELECT * FROM MenuItems where Parent = $curId and Active = 1 order by Sort")):
@@ -281,16 +282,19 @@ END;
 						while ($rowItem = $resultItem->fetch_assoc()):
 							$item = array();
 							$item["Price"] = $rowItem["Price"];
-							$item["Descr"] = $rowItem["Descr"];
+							$item["Descr"] = $lang == "en" ? $rowItem["DescrEn"] : $rowItem["Descr"];
 							$item["Weight"] = $rowItem["Weight"];
 							// Kitchen
 							if ($curCatId == 1){
-								$item["Name"] = $rowItem['Name'];
+								$item["Name"] = $lang == "en" ? $rowItem["NameEn"] : $rowItem["Name"];;
 							}
 							else{
 							// Bar 
-								if ($rowItem["NameEn"])
+								if ($rowItem["NameEn"] && $lang == "ru")
 									$item["Name"] = $rowItem['NameEn']." / ".$rowItem['Name'];
+								elseif ($rowItem["NameEn"]) {
+									$item["Name"] = $rowItem['NameEn'];
+								}
 								else
 									$item["Name"] = $rowItem["Name"];
 								$item['Weight'] .= $rowItem['Weight']==""?"":" ml";
@@ -349,7 +353,7 @@ END;
 							    <div class="subcat-tabs">
 							    	<?php foreach($cat["subcats"] as $subcat): ?>
 							        	<span class="subcat-tab"><?= $subcat["Name"] ?></span>  
-							        <?php endforeach; ?>     
+							        <?php endforeach; ?> 
 							    </div>
 							    <div class="subcat-tab_content">
 							    	<?php foreach($cat["subcats"] as $subcat): ?>
@@ -359,6 +363,11 @@ END;
 								        			<?php foreach($subcat["dishes"] as $dish): ?>
 								        				<div class="dishes-tab"><?= $dish["Name"] ?></div>
 										        	<?php endforeach; ?>
+										        	<?php // Меню ?>
+										        	<?php $dl = $menupath[0] == 14?"Download Menu":"Скачать меню"; ?>
+													<div class="download">
+														<a href="../../uploads/files/menu_kulinary.pdf" style='color:#966'><?= $dl ?></a>
+													</div>
 								        		</div>
 								        		<div class="dishes-tab_content">	        		
 									        		<?php outputDishes($subcat["dishes"]) ?>

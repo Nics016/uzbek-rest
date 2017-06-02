@@ -492,17 +492,42 @@ enter.visible-sm .menu .right .jump:first-child{
 enter.visible-sm .menu li a{
   font-weight: bold;
 }
-enter.visible-sm {
-  
+enter.visible-sm .language{
+  text-align: center;
+  margin-bottom: 20px;
 }
-enter.visible-sm {
-  
+enter.visible-sm .rus,
+enter.visible-sm .eng {
+  display: inline-block;
+  margin-left: 15px;
+  opacity: 0.5;
 }
-enter.visible-sm {
-  
+enter.visible-sm .rus a,
+enter.visible-sm .eng a {
+  color: #FFF;
+  display: block;
+  font-size: 14px;
+  vertical-align: middle;
+  text-decoration: none;
 }
-enter.visible-sm {
-  
+enter.visible-sm .rus a:after,
+enter.visible-sm .eng a:after {
+  content: '';
+  margin-left: 5px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  background: url(../img/language.png);
+}
+enter.visible-sm .rus.active,
+enter.visible-sm .eng.active,
+enter.visible-sm .rus:hover,
+enter.visible-sm .eng:hover {
+  opacity: 1;
+}
+enter.visible-sm .eng a:after {
+  background-position: -16px 0;
 }
 /* end of enter-mobile */
 

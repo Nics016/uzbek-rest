@@ -15,10 +15,10 @@
 		display: block;
 		margin: 0 auto 5%;
 	}
-	html, body {
+	body {
 	    max-width: 100%;
 	    overflow-x: hidden;
-	    overflow-y: auto;
+	    overflow-y: scroll;
 	}
 	.hidden-sm{
 		display: none;
@@ -37,7 +37,7 @@
 	}
 
 	#content .big[type="twink"]{
-		height: 5%;
+		height: 0;
 	}
 	.blockBox .textContainer{
 		height: 100%;
@@ -46,19 +46,46 @@
 	.blockBox .leftSide{
 		width: 100%;
 		float: none;
-		// height: 450px;
+		height: 450px;
 		overflow: hidden;
 	}
-	.blockBox .leftSide .image img{
-		// height: 100vh;
+	#catering .blockBox .rightSide,
+	#history .blockBox .rightSide{
+		height: 450px;
+	}
+	#history .blockBox .leftSide{
 		height: auto;
+	}
+	.blockBox .leftSide .image img{
+		width: auto;
+		max-width: 150%;
+		min-width: 100%;
+		height: auto;
+		max-height: 150%;
+		min-height: 100%;
+		margin-left: 0;
+	}
+	#history .blockBox .rightSide .image{
+		height: 100%;
 	}
 	#catering .blockBox .rightSide .image img,
 	#history .blockBox .rightSide .image img{
-		height: auto;
+		height: inherit;
+		width: auto;
+		margin-left: 0;
 	}
+	#catering .blockBox .rightSide .image img,
+	#history .blockBox .rightSide .image img{
+		width: auto;
+		max-width: 150%;
+		min-width: 100%;
+		height: auto;
+		max-height: 130%;
+		min-height: 100%;
+	}
+	
 	.blockBox .rightSide{
-		padding-top: 10%;
+		// padding-top: 10%;
 		width: 100%;
 		float: none;
 		/*margin-top: ;*/
@@ -88,12 +115,12 @@
 	}
 	#catering .blockBox .leftSide,
 	#history .blockBox .leftSide{
-		padding-top: 10%;
+		// padding-top: 10%;
 		width: 100%;
 		float: none;
 		overflow-x: hidden;
 		overflow-y: visible;
-		height: auto;
+		height: inherit;
 		-webkit-box-ordinal-group: 2;
 	    -moz-box-ordinal-group: 2;
 	    -ms-flex-order: 2;
@@ -116,26 +143,8 @@
 	#history .slider{
 		height: auto;
 	}
-	#history .slider .image img{
-		margin-left: 10%;
-	}
-	#catering .blockBox .leftSide .textBox,
-	#history .blockBox .leftSide .textBox{
-		padding-top: 10%;
-	}
-
 	#catering .blockBox .textContainer,
 	#history .blockBox .textContainer{
-		height: auto;
-	}
-	#history .rightSide .image img,
-	#catering .rightSide .image img{
-		width: 100%;
-		margin-left: 0;
-	}
-	.leftSide .image img{
-		width: 100%;
-		margin-left: 0;
 		height: auto;
 	}
 
@@ -254,19 +263,6 @@
 		line-height: 20px;
 	}
 	
-	/* History img fix */
-	#history .blockBox .rightSide{
-		height: auto;
-		min-height: 650px;
-		max-height: 750px;
-	}
-	#history .rightSide .image img{
-		height: auto;
-		width: auto;
-		max-width: 100%;
-		min-width: 60%;
-	}
-	
 	/* weird box from jquery */
 	.ui-loader.ui-corner-all{
 		display: none;
@@ -277,43 +273,99 @@
 		display: none;
 	}
 	#content{
+		// margin-top: -13%;
+	}
+	#halls, #team{
 		margin-top: -13%;
+	}
+
+	/* Sliders size */
+	.slider .backward{
+		left: 0;
+	}
+	.slider .forward{
+		right: 0;
+	}
+	.slider .backward:hover, 
+	.slider .forward:hover{
+		background: none;
+	}
+	.slider .backward, 
+	.slider .forward{
+		width: 35px;
+		height: 35px;
+		background: none;
+	}
+
+	.gotop-streaks{
+		display: none;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		height: 40px;
+		overflow: hidden;
+		background-color: rgba(30,48,62,0.6);
+	}
+	.gotop-streaks a{
+		display: block;
+		text-align: center;
+	}
+	.gotop-streaks a img{
+		width: 50px;
+		height: 50px;
+		margin-top: -5px;
+	}
+
+	.logo-img{
+		width: 90%;
+		max-width: 350px;
+	}
+
+	/* меню */
+	.dishes-wrapper .dishes-tabs{
+		overflow: visible;
+	}
+	#content .download a{
+		margin-top: 20px;
+		line-height: 24px;
+		height: auto;
 	}
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
 	#content{
-		margin-top: -17%;
+		// margin-top: -17%;
 	}
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-	#history .slider .image img{
-		margin-left: 0;
-	}
-	#history .slider{
-		height: auto;
-	}
 	.blockBox .leftSide{
 		height: 300px;
 	}
 	#catering .blockBox .rightSide,
-	#history .blockBox .rightSide{
-		height: 300px;
+	#history .blockBox .rightSide {
+	    height: 300px;
+	}
+	#catering .blockBox .leftSide,
+	#history .blockBox .leftSide {
+	    height: auto;
+	}
+	#history .slider .image img{
+		margin-left: 0;
 	}
 	#history .rightSide .image img{
 		height: 100%;
 	}
+	#history .slider{
+		height: auto;
+	}
+	
+	
 	/* padding-left fix */
 	#halls .leftSide{
 		padding-left: 0;
-	}
-	#halls #totalGallery,
-	#halls .tour .title
-	{
-		padding-left: 10%;
 	}
 	#tour{
 		padding-left: 0;
@@ -329,14 +381,8 @@
 		max-height: 120%;
 	}
 
-	#history .blockBox .rightSide {
-	    height: auto;
-	    min-height: 250px;
-	    max-height: 750px;
-	}
-
-	#content{
-		margin-top: -30%;
+	#halls, #team{
+		margin-top: -33%;
 	}
 }
 
