@@ -424,7 +424,7 @@ enter[animate] .container {
 }
 enter.visible-sm {
   position: relative;
-  background-image: url("../img/page/31.jpg");
+  background-image: url("../img/mobile_bg.jpg");
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;

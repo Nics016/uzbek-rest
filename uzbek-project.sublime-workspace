@@ -142,7 +142,6 @@
 	"expanded_folders":
 	[
 		"/opt/lampp/htdocs/uzbek",
-		"/opt/lampp/htdocs/uzbek/engine/layout",
 		"/opt/lampp/htdocs/uzbek/ftp",
 		"/opt/lampp/htdocs/uzbek/ftp/engine",
 		"/opt/lampp/htdocs/uzbek/ftp/engine/core",
@@ -151,9 +150,9 @@
 	],
 	"file_history":
 	[
+		"/opt/lampp/htdocs/uzbek/ftp/js/linksFix.js",
 		"/opt/lampp/htdocs/uzbek/ftp/css/media.css",
 		"/opt/lampp/htdocs/uzbek/ftp/engine/layout/menu.php",
-		"/opt/lampp/htdocs/uzbek/ftp/js/linksFix.js",
 		"/opt/lampp/htdocs/uzbek/ftp/index.phtml",
 		"/opt/lampp/htdocs/uzbek/index.phtml",
 		"/opt/lampp/htdocs/uzbek/ftp/engine/layout/header.php",
