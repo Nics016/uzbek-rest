@@ -198,6 +198,9 @@
 	.blockBox .leftSide .textBox{
 		padding-left: 0;
 	}
+	#halls .blockBox{
+		width: 100%;
+	}
 	#halls .textContainer{
 		width: 100%;
 	}
@@ -317,8 +320,8 @@
 	}
 
 	.logo-img{
-		width: 90%;
-		max-width: 350px;
+		width: 50%;
+		max-width: 200px;
 	}
 
 	/* меню */
@@ -381,8 +384,9 @@
 		max-height: 120%;
 	}
 
-	#halls, #team{
-		margin-top: -33%;
+	#team,
+	#halls{
+		margin-top: -32.5%;
 	}
 }
 

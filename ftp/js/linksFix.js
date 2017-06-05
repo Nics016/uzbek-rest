@@ -9,10 +9,12 @@ $(document).ready(function(){
 			// $(this).addClass("scroll");
 			$(this).bind("click", function(){
 				var hash = window.location.hash;
-				if (hash === "#bar"){
+				if (hash == "#bar"){
 					$(".cat-tabs .cat-tab").eq(0).click();
-				} else if (hash === "#kitchen"){
+					$(".ui-mobile-viewport").scrollTop($("enter.visible-sm").height() + 100);
+				} else if (hash == "#kitchen"){
 					$(".cat-tabs .cat-tab").eq(1).click();
+					$(".ui-mobile-viewport").scrollTop($("enter.visible-sm").height() + 100);
 				}
 				window.location = attrHref;
 			});
@@ -101,10 +103,10 @@ $(document).ready(function(){
 	}
 
 	// show bottom streaks
-    $("#content div").on("touchmove", function(){
+    $("#programs div, #history div, .subcat-tab_content div, #catering div, #coolinary div, #contacts div").on("touchmove", function(){
 		$(".gotop-streaks").slideDown();
     });
-    $("enter").on("touchmove", function(){
+    $("enter, #halls, #team").on("touchmove", function(){
 		$(".gotop-streaks").slideUp();
     });
 

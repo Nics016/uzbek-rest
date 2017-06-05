@@ -77,7 +77,7 @@ END;
 echo <<<END
 											</ul>
 											<div class="download">
-												<a href="menu/menu_uzbek${nameadd}.pdf" style='color:#966'>$dl</a>
+												<a href="../../menu/menu_uzbek${nameadd}.pdf" style='color:#966'>$dl</a>
 											</div>
 										</div>
 										<div tabsbody="tabs-${m[0]}" class="rightBox">
@@ -338,9 +338,7 @@ END;
 			 ?>
 			
 			<?php // Output data ?>
-			<div class="categories-wrapper">
-			<div id="bar"></div>
-			<div id="kitchen"></div>
+			<div class="categories-wrapper" id="kitchen">
 			    <div class="cat-tabs">
 			    	<?php foreach($categories as $cat): ?>
 			        	<span class="cat-tab"><?= $cat["Name"] ?></span>  
@@ -365,8 +363,9 @@ END;
 										        	<?php endforeach; ?>
 										        	<?php // Меню ?>
 										        	<?php $dl = $menupath[0] == 14?"Download Menu":"Скачать меню"; ?>
+										        	<?php $dlLink = $menupath[0] == 14?"../..//menu/menu_uzbekEn.pdf":"../..//menu/menu_uzbek.pdf"; ?>
 													<div class="download">
-														<a href="../../uploads/files/menu_kulinary.pdf" style='color:#966'><?= $dl ?></a>
+														<a href="<?= $dlLink ?>" style='color:#966'><?= $dl ?></a>
 													</div>
 								        		</div>
 								        		<div class="dishes-tab_content">	        		

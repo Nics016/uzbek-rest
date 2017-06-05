@@ -19,7 +19,7 @@ class PDF extends FPDF
     	if(isset($_GET['en']))
 	    	$this->Cell(0,10,date("H:i:s").'                                                                                                   Page '.$this->PageNo(). "                                                                                               ".date("d.m.Y"),0,0,'C');
     	else
-	    	$this->Cell(0,10,date("H:i:s").'                                                                                                 Ã‘Ã²Ã°Ã Ã­Ã¨Ã¶Ã  '.$this->PageNo(). "                                                                                              ".date("d.m.Y"),0,0,'C');
+	    	$this->Cell(0,10,date("H:i:s").'                                                                                                 ñòðàíèöà '.$this->PageNo(). "                                                                                              ".date("d.m.Y"),0,0,'C');
 	}	
 /*	function Header()
 	{
