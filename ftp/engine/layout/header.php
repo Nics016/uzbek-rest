@@ -297,6 +297,8 @@ if ($result = $sql->query("SELECT * FROM Content where Parent = $menupath[0] ord
               </ul>
             </div>
           </div>
+          <div id="bar"> </div>
+          <div id="kitchen"> </div>
   </div>
   <div class="gotop-streaks">
     <a href="#gotop" class="scroll">

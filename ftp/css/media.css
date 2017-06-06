@@ -120,7 +120,7 @@
 		float: none;
 		overflow-x: hidden;
 		overflow-y: visible;
-		height: inherit;
+		height: auto;
 		-webkit-box-ordinal-group: 2;
 	    -moz-box-ordinal-group: 2;
 	    -ms-flex-order: 2;
@@ -328,10 +328,17 @@
 	.dishes-wrapper .dishes-tabs{
 		overflow: visible;
 	}
+	#content .download{
+		margin-top: 10px;
+		border-top: 1px solid #061928;
+		padding-top: 10px;
+	}
 	#content .download a{
-		margin-top: 20px;
 		line-height: 24px;
 		height: auto;
+	}
+	.dishes-tabs .dishes-tab:first-child{
+		border-top: 1px solid #061928;
 	}
 }
 
@@ -350,10 +357,6 @@
 	#catering .blockBox .rightSide,
 	#history .blockBox .rightSide {
 	    height: 300px;
-	}
-	#catering .blockBox .leftSide,
-	#history .blockBox .leftSide {
-	    height: auto;
 	}
 	#history .slider .image img{
 		margin-left: 0;

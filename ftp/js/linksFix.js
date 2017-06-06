@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	var hash = window.location.hash;
 	// main menu
 	$("enter.visible-sm .menu a").each(function(){
 		var attrJump = $(this).attr("jump");
