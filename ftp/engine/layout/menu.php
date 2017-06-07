@@ -390,15 +390,16 @@ END;
 			<script>
 				// SCRIPT FOR TABS
 				// generate count arrays
-				var subcats_count = [];
-				var dishes_count = [];
-				var cur_cat = 0;
-				var cur_subcat = 0;
+				var subcats_count = []; // global
+				var dishes_count = []; // global
+				var cur_cat = 0; // global
+				var cur_subcat = 0; // global
+
+				var cur_count = 0; // used in cycle
 
 				<?php foreach($categories as $cat): ?>
 					subcats_count.push(<?= count($cat["subcats"]) ?>);
 					var cur_dishes_count = [];
-					var cur_count = 0;
 					<?php foreach($cat["subcats"] as $subcat): ?>
 						cur_count += <?= count($subcat['dishes']) ?>;
 						var push_count = cur_count;
@@ -414,7 +415,12 @@ END;
 					$(".categories-wrapper .cat-tab_item").hide().eq($(this).index()).fadeIn(1000);
 					// click on first subcat to init
 					cur_cat = $(this).index();
-					$(".subcat-tab").eq(subcats_count[cur_cat]).click().addClass("active");
+					var prevCat = cur_cat - 1;
+					var eqCat = subcats_count[prevCat];
+					if (prevCat < 0){ // Kitchen
+						eqCat = 0;
+					}
+					$(".subcat-tab").eq(eqCat).click().addClass("active");
 				}).eq(0).click().addClass("active");
 
 				// subcategories
@@ -423,25 +429,16 @@ END;
 					$(".subcat-tab").removeClass("active").eq($(this).index()).addClass("active");
 					$(this).addClass("active");
 					$(".subcat-tab_item").hide().eq($(this).index()).fadeIn(300);
-					$(".subcat-tab_item").eq($(this).index()+4).fadeIn(300);
+					$(".subcat-tab_item").eq($(this).index() + subcats_count[0]).fadeIn(300);
 					cur_subcat = $(this).index();			
-					if (cur_cat == 0 && cur_subcat == 0)		
-						$(".dishes-tab").eq(0).click().addClass("active");
-					else{
-						// Kitchen
-						if (cur_cat == 0){
-							$(".dishes-tab").eq(dishes_count[cur_cat][cur_subcat-1]).click().addClass("active");
-						} else{ // Bar
-							if (cur_subcat === 0)
-								$(".dishes-tab").eq(16).click().addClass("active");
-							else if (cur_subcat === 1)
-								$(".dishes-tab").eq(22).click().addClass("active");
-							else if (cur_subcat === 2)
-								$(".dishes-tab").eq(38).click().addClass("active");
-							else if (cur_subcat === 3)
-								$(".dishes-tab").eq(41).click().addClass("active");
-						}
+							
+					var eqDishes = dishes_count[cur_cat][cur_subcat-1];
+					if (cur_cat == 0 && cur_subcat == 0){ // Kitchen
+						eqDishes = 0;
+					} else if (cur_cat > 0 && cur_subcat == 0){ // Bar
+						eqDishes = dishes_count[cur_cat - 1][subcats_count[cur_cat - 1] - 1];
 					}
+					$(".dishes-tab").eq(eqDishes).click().addClass("active");
 				}).eq(0).click().addClass("active");
 
 				// dishes
@@ -449,17 +446,12 @@ END;
 				$(".dishes-tab").click(function() {
 					$(".dishes-tab").removeClass("active").eq($(this).index());
 					$(this).addClass("active");
-					$(".dishes-tab_item").hide().eq($(this).index()).fadeIn(100);
+					$(".dishes-tab_item").hide().eq($(this).index()).show();
+
 					var plusIndex = dishes_count[cur_cat][cur_subcat-1];
-					// for Bar
-					if (cur_cat == 1){
-						plusIndex += 16;
-						// for Bar / Wine
-						if (cur_subcat == 0)
-							plusIndex = 16;
-					}
-					// $("#debugging").html(plusIndex);
-					$(".dishes-tab_item").eq($(this).index()+plusIndex).fadeIn(500);
+					if (cur_cat > 0 && cur_subcat == 0)
+						plusIndex = dishes_count[cur_cat - 1][subcats_count[cur_cat - 1] - 1];
+					$(".dishes-tab_item").eq($(this).index()+plusIndex).show();
 				});
 			</script>
 
