@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"prev",
+				"prevSubcatDishes"
+			],
+			[
+				"cur",
+				"cur_cat"
+			],
+			[
+				"subcats",
+				"subcats_count"
+			],
+			[
 				"scr",
 				"scrolled"
 			],
@@ -104,12 +116,48 @@
 	"buffers":
 	[
 		{
-			"file": "ftp/css/media.css",
+			"file": "ftp/engine/layout/main.php",
 			"settings":
 			{
-				"buffer_size": 7267,
+				"buffer_size": 1569,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ftp/engine/layout/menu.php",
+			"settings":
+			{
+				"buffer_size": 15013,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ftp/engine/layout/header.php",
+			"settings":
+			{
+				"buffer_size": 52749,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 1657 files for \"jump\"\n\n/opt/lampp/htdocs/uzbek/css/style.css:\n  248    transform: translateY(0) translateZ(0);\n  249  }\n  250: enter + paralax + .jump {\n  251    opacity: 1;\n  252    visibility: visible;\n  ...\n  375    transform: translateY(0) translateZ(0);\n  376  }\n  377: enter[show] + paralax + .jump {\n  378    opacity: 0;\n  379    visibility: visible;\n  ...\n  475    border-radius: 10px\n  476  }\n  477: enter.visible-sm .menu .jump{\n  478    display: block;\n  479  }\n  ...\n  485    width: 40%;\n  486  }\n  487: enter.visible-sm .menu .left .jump:nth-child(2){\n  488    text-align: left;\n  489  }\n  490: enter.visible-sm .menu .right .jump:first-child{\n  491    text-align: left\n  492  }\n  ...\n  644      text-align: right;\n  645    }\n  646:   enter + paralax + .jump {\n  647      opacity: 0;\n  648      visibility: visible;\n  ...\n  764    display: block;\n  765  }\n  766: .circleBox .jump {\n  767    margin: 0px;\n  768    padding: 0px;\n  ...\n  772    height: 100%;\n  773  }\n  774: .circleBox .jump li {\n  775    text-align: center;\n  776    display: block;\n  777    line-height: 60px;\n  778  }\n  779: .circleBox .jump li:after {\n  780    content: '';\n  781    display: block;\n  ...\n  785    margin: auto;\n  786  }\n  787: .circleBox .jump li:last-of-type:after {\n  788    display: none;\n  789  }\n  790: .circleBox .jump a {\n  791    font-family: 'Tenor Sans', sans-serif;\n  792    color: #FFF;\n\n/opt/lampp/htdocs/uzbek/css/style.less:\n  238  \t& + paralax {\n  239  \t\ttransform: translateY(0) translateZ(0);\n  240: \t\t& + .jump {\n  241  \t\t\topacity: 1;\n  242  \t\t\tvisibility: visible;\n  ...\n  354  \t& + paralax {\n  355  \t\ttransform: translateY(0) translateZ(0);\n  356: \t\t& + .jump {\n  357  \t\t\topacity: 0;\n  358  \t\t\tvisibility: visible;\n  ...\n  434  \t\t}\n  435  \t\t& + paralax {\n  436: \t\t\t& + .jump {\n  437  \t\t\t\topacity: 0;\n  438  \t\t\t\tvisibility: visible;\n  ...\n  557  \t\t\tdisplay: block;\n  558  \t\t}\n  559: \t\t.jump {\n  560  \t\t\tmargin: 0px;\n  561  \t\t\tpadding: 0px;\n\n/opt/lampp/htdocs/uzbek/engine/func.php:\n  203  }\n  204  function genMenuItem($item) {\n  205: \treturn '<li><a jump=\"'.$item[1].'\" href=\"'.$item[0].'\">'.$item[2].'</a></li>';\n  206  }\n  207  \n\n/opt/lampp/htdocs/uzbek/engine/globalfunc/core/classes/getid3/module.audio-video.asf.php:\n   47  \t\t//   * Content Description Object          (bibliographic information)\n   48  \t\t//   * Script Command Object               (commands for during playback)\n   49: \t\t//   * Marker Object                       (named jumped points within the file)\n   50  \t\t// * Data Object [required]\n   51  \t\t//   * Data Packets\n\n/opt/lampp/htdocs/uzbek/engine/globalfunc/core/classes/getid3/module.audio-video.riff.php:\n  299  \t\t\t\tif (isset($thisfile_riff_raw['fmt ']['wFormatTag'])) {\n  300  \t\t\t\t\tswitch ($thisfile_riff_raw['fmt ']['wFormatTag']) {\n  301: \t\t\t\t\t\tcase 0x08AE: // ClearJump LiteWave\n  302  \t\t\t\t\t\t\t$thisfile_audio['bitrate_mode'] = 'vbr';\n  303  \t\t\t\t\t\t\t$thisfile_audio_dataformat   = 'litewave';\n  ...\n 1553  \t\t\t0x0680\tVME VMPCM\n 1554  \t\t\t0x0681\tAT&T Labs TPC\n 1555: \t\t\t0x08AE\tClearJump LiteWave\n 1556  \t\t\t0x1000\tOlivetti GSM\n 1557  \t\t\t0x1001\tOlivetti ADPCM\n\n/opt/lampp/htdocs/uzbek/engine/globalfunc/core/classes/getid3/module.audio.mp3.php:\n  616  \t\t\t\t//  Each Byte has a value according this formula:\n  617  \t\t\t\t//  (TOC[i] / 256) * fileLenInBytes\n  618: \t\t\t\t//  So if song lasts eg. 240 sec. and you want to jump to 60. sec. (and file is 5 000 000 Bytes length) you can use:\n  619  \t\t\t\t//  TOC[(60/240)*100] = TOC[25]\n  620  \t\t\t\t//  and corresponding Byte in file is then approximately at:\n\n/opt/lampp/htdocs/uzbek/engine/globalfunc/pear/Archive/Tar.php:\n  791      // }}}\n  792  \n  793:     // {{{ _jumpBlock()\n  794:     function _jumpBlock($p_len=null)\n  795      {\n  796        if (is_resource($this->_file)) {\n  ...\n 1379                }\n 1380            } else {\n 1381:               $this->_jumpBlock(ceil(($v_header['size']/512)));\n 1382            }\n 1383          }\n ....\n 1575            }\n 1576          } else {\n 1577:           $this->_jumpBlock(ceil(($v_header['size']/512)));\n 1578          }\n 1579        } else {\n 1580:           $this->_jumpBlock(ceil(($v_header['size']/512)));\n 1581        }\n 1582  \n\n/opt/lampp/htdocs/uzbek/engine/globalfunc/pear/PEAR/Dependency2.php:\n 1137                                          '\", version \"' . $packd->getVersion() . '\" will be ' .\n 1138                                          'downloaded and installed');\n 1139:                             continue 2; // jump to next package\n 1140                          }\n 1141                      }\n\n/opt/lampp/htdocs/uzbek/engine/globalfunc/pear/PEAR/Downloader/Package.php:\n  660                  $chan = 'pear.php.net';\n  661                  if (PEAR::isError($url)) {\n  662:                     // check to see if this is a pecl package that has jumped\n  663                      // from pear.php.net to pecl.php.net channel\n  664                      if (!class_exists('PEAR_Dependency2')) {\n  ...\n 1049                  $newdep['max'] = '100000000000000000000';\n 1050              }\n 1051:             // use magic to support pecl packages suddenly jumping to the pecl channel\n 1052              // we need to support both dependency possibilities\n 1053              if ($channel == 'pear.php.net' && $this->getChannel() == 'pecl.php.net') {\n ....\n 1066                  version_compare($newdep['max'], $this->getVersion(), '>='));\n 1067          }\n 1068:         // use magic to support pecl packages suddenly jumping to the pecl channel\n 1069          if ($channel == 'pecl.php.net' && $this->getChannel() == 'pear.php.net') {\n 1070              if (strtolower($package) == strtolower($this->getPackage())) {\n\n/opt/lampp/htdocs/uzbek/engine/globalfunc/pear/docs/Archive_Tar/docs/Archive_Tar.txt:\n  250  How it works :\n  251    If the archive does not exists it create it and add the files.\n  252:   If the archive does exists and is not compressed, it open it, jump\n  253    before the last empty 512 bytes block (tar footer) and add the files\n  254    at this point.\n\n/opt/lampp/htdocs/uzbek/engine/layout/header.php:\n  201  //print_r($menuarr);\n  202  \t\t\t\t\t?>\n  203: \t\t\t\t\t\t<ul class=\"jump\">\n  204  \t\t\t\t\t\t\t<?=genMenuItem($menuarr[0])?>\n  205  \t\t\t\t\t\t\t<?=genMenuItem($menuarr[1])?>\n  206  \t\t\t\t\t\t</ul>\n  207: \t\t\t\t\t\t<ul class=\"jump\">\n  208  \t\t\t\t\t\t\t<?=genMenuItem($menuarr[2])?>\n  209  \t\t\t\t\t\t</ul>\n  210: \t\t\t\t\t\t<ul class=\"jump\">\n  211  \t\t\t\t\t\t\t<?=genMenuItem($menuarr[3])?>\n  212  \t\t\t\t\t\t</ul>\n  213: \t\t\t\t\t\t<ul class=\"jump\">\n  214  \t\t\t\t\t\t\t<?=genMenuItem($menuarr[4])?>\n  215  \t\t\t\t\t\t</ul>\n  216  \t\t\t\t\t</div>\n  217  \t\t\t\t\t<div class=\"right\">\n  218: \t\t\t\t\t\t<ul class=\"jump\">\n  219  \t\t\t\t\t\t\t<?=genMenuItem($menuarr[5])?>\n  220  \t\t\t\t\t\t</ul>\n  221: \t\t\t\t\t\t<ul class=\"jump\">\n  222  \t\t\t\t\t\t\t<?=genMenuItem($menuarr[6])?>\n  223  \t\t\t\t\t\t</ul>\n  224: \t\t\t\t\t\t<ul class=\"jump\">\n  225  \t\t\t\t\t\t\t<?=genMenuItem($menuarr[7])?>\n  226  \t\t\t\t\t\t</ul>\n  227: \t\t\t\t\t\t<ul class=\"jump\">\n  228  \t\t\t\t\t\t\t<?=genMenuItem($menuarr[8])?>\n  229  \t\t\t\t\t\t</ul>\n  ...\n  264  //print_r($menuarr);\n  265            ?>\n  266:             <ul class=\"jump\">\n  267                <?=genMenuItem($menuarr[0])?>\n  268                <?=genMenuItem($menuarr[1])?>\n  269              </ul>\n  270:             <ul class=\"jump\">\n  271                <?=genMenuItem($menuarr[2])?>\n  272              </ul>\n  273:             <ul class=\"jump\">\n  274                <?=genMenuItem($menuarr[3])?>\n  275              </ul>\n  276:             <ul class=\"jump\">\n  277                <?=genMenuItem($menuarr[4])?>\n  278              </ul>\n  279            </div>\n  280            <div class=\"right\">\n  281:             <ul class=\"jump\">\n  282                <?=genMenuItem($menuarr[5])?>\n  283              </ul>\n  284:             <ul class=\"jump\">\n  285                <?=genMenuItem($menuarr[6])?>\n  286              </ul>\n  287:             <ul class=\"jump\">\n  288                <?=genMenuItem($menuarr[7])?>\n  289              </ul>\n  290:             <ul class=\"jump\">\n  291                <?=genMenuItem($menuarr[8])?>\n  292              </ul>\n\n/opt/lampp/htdocs/uzbek/engine/layout/main.php:\n   20  \t\t\t<div id=\"circle\">\n   21  \t\t\t\t<div class=\"center\">\n   22: \t\t\t\t\t<ul class=\"jump\">\n   23  <?php \n   24  foreach($menuarr as $val){\n\n/opt/lampp/htdocs/uzbek/engine/layout/menu.php:\n    6  \t\t<div id=\"circle\">\n    7  \t\t\t<div class=\"center\">\n    8: \t\t\t\t<ul class=\"jump\">\n    9  <?php \n   10  if ($result = $sql->query(\"SELECT * FROM MenuTree where Parent = 0 and Active = 1 order by Sort\")) {\n   11  \twhile ($row = $result->fetch_assoc()) {\n   12: \t\tprintf(\"\\t\\t\\t\\t\\t\\t<li><a jump=\\\"%s\\\" href=\\\"#\\\">%s</a></li>\",$row['Class'],$row['Name'.$nameadd]);\n   13  \t}\n   14  } \n\n/opt/lampp/htdocs/uzbek/engine/layout/old_header.php:\n   37  //print_r($menuarr);\n   38  \t\t\t\t\t?>\n   39: \t\t\t\t\t\t<ul class=\"jump\">\n   40  \t\t\t\t\t\t\t<?=genMenuItem($menuarr[0])?>\n   41  \t\t\t\t\t\t\t<?=genMenuItem($menuarr[1])?>\n   42  \t\t\t\t\t\t</ul>\n   43: \t\t\t\t\t\t<ul class=\"jump\">\n   44  \t\t\t\t\t\t\t<?=genMenuItem($menuarr[2])?>\n   45  \t\t\t\t\t\t</ul>\n   46: \t\t\t\t\t\t<ul class=\"jump\">\n   47  \t\t\t\t\t\t\t<?=genMenuItem($menuarr[3])?>\n   48  \t\t\t\t\t\t</ul>\n   49: \t\t\t\t\t\t<ul class=\"jump\">\n   50  \t\t\t\t\t\t\t<?=genMenuItem($menuarr[4])?>\n   51  \t\t\t\t\t\t</ul>\n   52  \t\t\t\t\t</div>\n   53  \t\t\t\t\t<div class=\"right\">\n   54: \t\t\t\t\t\t<ul class=\"jump\">\n   55  \t\t\t\t\t\t\t<?=genMenuItem($menuarr[5])?>\n   56  \t\t\t\t\t\t</ul>\n   57: \t\t\t\t\t\t<ul class=\"jump\">\n   58  \t\t\t\t\t\t\t<?=genMenuItem($menuarr[6])?>\n   59  \t\t\t\t\t\t</ul>\n   60: \t\t\t\t\t\t<ul class=\"jump\">\n   61  \t\t\t\t\t\t\t<?=genMenuItem($menuarr[7])?>\n   62  \t\t\t\t\t\t</ul>\n   63: \t\t\t\t\t\t<ul class=\"jump\">\n   64  \t\t\t\t\t\t\t<?=genMenuItem($menuarr[8])?>\n   65  \t\t\t\t\t\t</ul>\n\n/opt/lampp/htdocs/uzbek/ftp/css/style.css:\n  248    transform: translateY(0) translateZ(0);\n  249  }\n  250: enter + paralax + .jump {\n  251    opacity: 1;\n  252    visibility: visible;\n  ...\n  375    transform: translateY(0) translateZ(0);\n  376  }\n  377: enter[show] + paralax + .jump {\n  378    opacity: 0;\n  379    visibility: visible;\n  ...\n  474    border-radius: 10px\n  475  }\n  476: enter.visible-sm .menu .jump{\n  477    display: block;\n  478  }\n  ...\n  484    width: 40%;\n  485  }\n  486: enter.visible-sm .menu .left .jump:nth-child(2){\n  487    text-align: left;\n  488  }\n  489: enter.visible-sm .menu .right .jump:first-child{\n  490    text-align: left\n  491  }\n  ...\n  681      text-align: right;\n  682    }\n  683:   enter + paralax + .jump {\n  684      opacity: 0;\n  685      visibility: visible;\n  ...\n  801    display: block;\n  802  }\n  803: .circleBox .jump {\n  804    margin: 0px;\n  805    padding: 0px;\n  ...\n  809    height: 100%;\n  810  }\n  811: .circleBox .jump li {\n  812    text-align: center;\n  813    display: block;\n  814    line-height: 60px;\n  815  }\n  816: .circleBox .jump li:after {\n  817    content: '';\n  818    display: block;\n  ...\n  822    margin: auto;\n  823  }\n  824: .circleBox .jump li:last-of-type:after {\n  825    display: none;\n  826  }\n  827: .circleBox .jump a {\n  828    font-family: 'Tenor Sans', sans-serif;\n  829    color: #FFF;\n\n/opt/lampp/htdocs/uzbek/ftp/css/style.less:\n  238  \t& + paralax {\n  239  \t\ttransform: translateY(0) translateZ(0);\n  240: \t\t& + .jump {\n  241  \t\t\topacity: 1;\n  242  \t\t\tvisibility: visible;\n  ...\n  354  \t& + paralax {\n  355  \t\ttransform: translateY(0) translateZ(0);\n  356: \t\t& + .jump {\n  357  \t\t\topacity: 0;\n  358  \t\t\tvisibility: visible;\n  ...\n  434  \t\t}\n  435  \t\t& + paralax {\n  436: \t\t\t& + .jump {\n  437  \t\t\t\topacity: 0;\n  438  \t\t\t\tvisibility: visible;\n  ...\n  557  \t\t\tdisplay: block;\n  558  \t\t}\n  559: \t\t.jump {\n  560  \t\t\tmargin: 0px;\n  561  \t\t\tpadding: 0px;\n\n/opt/lampp/htdocs/uzbek/ftp/engine/func.php:\n  203  }\n  204  function genMenuItem($item) {\n  205: \treturn '<li><a jump=\"'.$item[1].'\" href=\"'.$item[0].'\">'.$item[2].'</a></li>';\n  206  }\n  207  \n\n/opt/lampp/htdocs/uzbek/ftp/engine/layout/header.php:\n  201  //print_r($menuarr);\n  202            ?>\n  203:             <ul class=\"jump\">\n  204                <?=genMenuItem($menuarr[0])?>\n  205                <?=genMenuItem($menuarr[1])?>\n  206              </ul>\n  207:             <ul class=\"jump\">\n  208                <?=genMenuItem($menuarr[2])?>\n  209              </ul>\n  210:             <ul class=\"jump\">\n  211                <?=genMenuItem($menuarr[3])?>\n  212              </ul>\n  213:             <ul class=\"jump\">\n  214                <?=genMenuItem($menuarr[4])?>\n  215              </ul>\n  216            </div>\n  217            <div class=\"right\">\n  218:             <ul class=\"jump\">\n  219                <?=genMenuItem($menuarr[5])?>\n  220              </ul>\n  221:             <ul class=\"jump\">\n  222                <?=genMenuItem($menuarr[6])?>\n  223              </ul>\n  224:             <ul class=\"jump\">\n  225                <?=genMenuItem($menuarr[7])?>\n  226              </ul>\n  227:             <ul class=\"jump\">\n  228                <?=genMenuItem($menuarr[8])?>\n  229              </ul>\n  ...\n  269    //print_r($menuarr);\n  270              ?>\n  271:               <ul class=\"jump\">\n  272                  <?=genMenuItem($menuarr[0])?>\n  273                  <?=genMenuItem($menuarr[1])?>\n  274                </ul>\n  275:               <ul class=\"jump\">\n  276                  <?=genMenuItem($menuarr[2])?>\n  277                </ul>\n  278:               <ul class=\"jump\">\n  279                  <?=genMenuItem($menuarr[3])?>\n  280                </ul>\n  281:               <ul class=\"jump\">\n  282                  <?=genMenuItem($menuarr[4])?>\n  283                </ul>\n  284              </div>\n  285              <div class=\"right\">\n  286:               <ul class=\"jump\">\n  287                  <?=genMenuItem($menuarr[5])?>\n  288                </ul>\n  289:               <ul class=\"jump\">\n  290                  <?=genMenuItem($menuarr[6])?>\n  291                </ul>\n  292:               <ul class=\"jump\">\n  293                  <?=genMenuItem($menuarr[7])?>\n  294                </ul>\n  295:               <ul class=\"jump\">\n  296                  <?=genMenuItem($menuarr[8])?>\n  297                </ul>\n\n/opt/lampp/htdocs/uzbek/ftp/engine/layout/main.php:\n   20  \t\t\t<div id=\"circle\">\n   21  \t\t\t\t<div class=\"center\">\n   22: \t\t\t\t\t<ul class=\"jump\">\n   23  <?php \n   24  foreach($menuarr as $val){\n\n/opt/lampp/htdocs/uzbek/ftp/engine/layout/menu.php:\n    6  \t\t<div id=\"circle\">\n    7  \t\t\t<div class=\"center\">\n    8: \t\t\t\t<ul class=\"jump\">\n    9  <?php \n   10  if ($result = $sql->query(\"SELECT * FROM MenuTree where Parent = 0 and Active = 1 order by Sort\")) {\n   11  \twhile ($row = $result->fetch_assoc()) {\n   12: \t\tprintf(\"\\t\\t\\t\\t\\t\\t<li><a jump=\\\"%s\\\" href=\\\"#\\\">%s</a></li>\",$row['Class'],$row['Name'.$nameadd]);\n   13  \t}\n   14  } \n\n/opt/lampp/htdocs/uzbek/ftp/engine/layout/old_header.php:\n   37  //print_r($menuarr);\n   38  \t\t\t\t\t?>\n   39: \t\t\t\t\t\t<ul class=\"jump\">\n   40  \t\t\t\t\t\t\t<?=genMenuItem($menuarr[0])?>\n   41  \t\t\t\t\t\t\t<?=genMenuItem($menuarr[1])?>\n   42  \t\t\t\t\t\t</ul>\n   43: \t\t\t\t\t\t<ul class=\"jump\">\n   44  \t\t\t\t\t\t\t<?=genMenuItem($menuarr[2])?>\n   45  \t\t\t\t\t\t</ul>\n   46: \t\t\t\t\t\t<ul class=\"jump\">\n   47  \t\t\t\t\t\t\t<?=genMenuItem($menuarr[3])?>\n   48  \t\t\t\t\t\t</ul>\n   49: \t\t\t\t\t\t<ul class=\"jump\">\n   50  \t\t\t\t\t\t\t<?=genMenuItem($menuarr[4])?>\n   51  \t\t\t\t\t\t</ul>\n   52  \t\t\t\t\t</div>\n   53  \t\t\t\t\t<div class=\"right\">\n   54: \t\t\t\t\t\t<ul class=\"jump\">\n   55  \t\t\t\t\t\t\t<?=genMenuItem($menuarr[5])?>\n   56  \t\t\t\t\t\t</ul>\n   57: \t\t\t\t\t\t<ul class=\"jump\">\n   58  \t\t\t\t\t\t\t<?=genMenuItem($menuarr[6])?>\n   59  \t\t\t\t\t\t</ul>\n   60: \t\t\t\t\t\t<ul class=\"jump\">\n   61  \t\t\t\t\t\t\t<?=genMenuItem($menuarr[7])?>\n   62  \t\t\t\t\t\t</ul>\n   63: \t\t\t\t\t\t<ul class=\"jump\">\n   64  \t\t\t\t\t\t\t<?=genMenuItem($menuarr[8])?>\n   65  \t\t\t\t\t\t</ul>\n\n/opt/lampp/htdocs/uzbek/ftp/js/appRefactor.js:\n  179  \t\n  180  \t$('#return').on('click', function(){\n  181: \t\tsessionStorage.setItem('jump', null);\n  182  \t});\n  183  \n  184:   var jump = function(selector){\n  185      if(selector != null) {\n  186  \t\t\tif($(selector).attr('type') == 'circleMenu'){\n  ...\n  213  \t});\n  214  \n  215:   $('.jump a').on('click', function(){\n  216:     //let selector = `#${$(this).attr('jump')}`;  \n  217      console.info(sessionStorage.getItem('_kitchen'));\n  218:     let selector = '#' + $(this).attr('jump');\t\n  219      if(window.location.pathname == $(this).attr('href') || $(this).attr('href') == '#') {\n  220:       jump(selector);\n  221        if(window.location.pathname.indexOf('kuhnya_bar')){\n  222:         if($(this).attr('jump') === 'bar'){\n  223            sessionStorage.setItem('_kitchen', 'bar');\n  224            $('#bar').trigger('click');\n  ...\n  228          }\n  229        }else{\n  230:         sessionStorage.setItem('_kitchen', $(this).attr('jump'));\n  231        }\n  232        return false;\n  233      } else {\n  234:       if($(this).attr('jump') == 'bar' || $(this).attr('jump') == 'kitchen'){\n  235:         sessionStorage.setItem('_kitchen', $(this).attr('jump'));\n  236:         //alert('WRITE BAR: ' + $(this).attr('jump'));\n  237        }\n  238:       sessionStorage.setItem('jump', selector);\n  239      }\n  240    });\n  ...\n  361        });\n  362  \t\t\tsetTimeout(function(){\n  363:       \tjump(sessionStorage.getItem('jump'));\n  364  \t\t\t}, 700);\n  365      },\n  ...\n  376        }\n  377      },\n  378:     jump: function(obj, cell){\n  379        let from = obj.offset().top + 200;\n  380        let item = obj.attr('id');\n  381        if(obj.offset().top < contentHeight / 2){\n  382:         $('.jump .active').removeClass('active');\n  383:         $('.jump').find('[jump=' + item + ']').parent().addClass('active');\n  384        }\n  385      },\n  ...\n  402        for(key in o.paralaxObj) {\n  403          this.paralaxEngine(o.paralaxObj[key], cell);\n  404:         this.jump(o.paralaxObj[key], cell);\n  405        }\n  406        for(key in o.twinkObj){\n\n/opt/lampp/htdocs/uzbek/ftp/js/linksFix.js:\n    3  \t// main menu\n    4  \t$(\"enter.visible-sm .menu a\").each(function(){\n    5: \t\tvar attrJump = $(this).attr(\"jump\");\n    6  \t\tvar attrHref = $(this).attr(\"href\");\n    7: \t\tif (attrJump != \"\"){\n    8: \t\t\tattrHref += \"#\" + attrJump;\n    9  \t\t\t$(this).attr(\"href\", attrHref);\n   10  \t\t\t// $(this).addClass(\"scroll\");\n   ..\n   25  \t// circle\n   26  \t$(\".circleBox #circle a\").each(function(){\n   27: \t\tvar attrJump = $(this).attr(\"jump\");\n   28  \t\tvar attrHref = $(this).attr(\"href\");\n   29: \t\tif (attrJump != \"\"){\n   30: \t\t\tattrHref += \"#\" + attrJump;\n   31  \t\t\t$(this).attr(\"href\", attrHref);\n   32  \t\t\t$(this).bind(\"click\", function(){\n\n/opt/lampp/htdocs/uzbek/js/appRefactor.js:\n  179  \t\n  180  \t$('#return').on('click', function(){\n  181: \t\tsessionStorage.setItem('jump', null);\n  182  \t});\n  183  \n  184:   var jump = function(selector){\n  185      if(selector != null) {\n  186  \t\t\tif($(selector).attr('type') == 'circleMenu'){\n  ...\n  213  \t});\n  214  \n  215:   $('.jump a').on('click', function(){\n  216:     //let selector = `#${$(this).attr('jump')}`;  \n  217      console.info(sessionStorage.getItem('_kitchen'));\n  218:     let selector = '#' + $(this).attr('jump');\t\n  219      if(window.location.pathname == $(this).attr('href') || $(this).attr('href') == '#') {\n  220:       jump(selector);\n  221        if(window.location.pathname.indexOf('kuhnya_bar')){\n  222:         if($(this).attr('jump') === 'bar'){\n  223            sessionStorage.setItem('_kitchen', 'bar');\n  224            $('#bar').trigger('click');\n  ...\n  228          }\n  229        }else{\n  230:         sessionStorage.setItem('_kitchen', $(this).attr('jump'));\n  231        }\n  232        return false;\n  233      } else {\n  234:       if($(this).attr('jump') == 'bar' || $(this).attr('jump') == 'kitchen'){\n  235:         sessionStorage.setItem('_kitchen', $(this).attr('jump'));\n  236:         //alert('WRITE BAR: ' + $(this).attr('jump'));\n  237        }\n  238:       sessionStorage.setItem('jump', selector);\n  239      }\n  240    });\n  ...\n  361        });\n  362  \t\t\tsetTimeout(function(){\n  363:       \tjump(sessionStorage.getItem('jump'));\n  364  \t\t\t}, 700);\n  365      },\n  ...\n  376        }\n  377      },\n  378:     jump: function(obj, cell){\n  379        let from = obj.offset().top + 200;\n  380        let item = obj.attr('id');\n  381        if(obj.offset().top < contentHeight / 2){\n  382:         $('.jump .active').removeClass('active');\n  383:         $('.jump').find('[jump=' + item + ']').parent().addClass('active');\n  384        }\n  385      },\n  ...\n  402        for(key in o.paralaxObj) {\n  403          this.paralaxEngine(o.paralaxObj[key], cell);\n  404:         this.jump(o.paralaxObj[key], cell);\n  405        }\n  406        for(key in o.twinkObj){\n\n148 matches across 24 files\n\n\nSearching 357 files for \"bind\"\n\n/opt/lampp/htdocs/uzbek/ftp/engine/layout/menu.php:\n  457  \t\t\t\t// Script for Circlebox links\n  458  \t\t\t\t$(document).ready(function(){\n  459: \t\t\t\t\t$(\".circleBox a\").bind(\"click\", function(e){\n  460  \t\t\t\t\t\te.preventDefault();\n  461  \t\t\t\t\t\tvar scr = jQuery.Event( \"DOMMouseScroll\",{delta: -650} );\n\n/opt/lampp/htdocs/uzbek/ftp/highslide/highslide-full.js:\n  210  sleeping : [],\n  211  preloadTheseAjax : [],\n  212: cacheBindings : [],\n  213  cachedGets : {},\n  214  clones : {},\n  ...\n  408  },\n  409  \n  410: getCacheBinding : function (a) {\n  411: \tfor (var i = 0; i < hs.cacheBindings.length; i++) {\n  412: \t\tif (hs.cacheBindings[i][0] == a) {\n  413: \t\t\tvar c = hs.cacheBindings[i][1];\n  414: \t\t\ths.cacheBindings[i][1] = c.cloneNode(1);\n  415  \t\t\treturn c;\n  416  \t\t}\n  ...\n  438     \tajax.onError = function () { };\n  439     \tajax.onLoad = function () {\n  440:    \t\ths.push(hs.cacheBindings, [a, cache]);\n  441     \t\ths.preloadAjaxElement(i + 1);\n  442     \t};\n  ...\n 1491  \tif (!hs.fireEvent(this, 'onBeforeGetContent')) return;\n 1492  \t\n 1493: \tthis.content = hs.getCacheBinding(this.a);\n 1494  \tif (!this.content) \n 1495  \t\tthis.content = hs.getNode(this.contentId);\n ....\n 1543  \t\n 1544      \n 1545: \tif (this.objectType == 'ajax' && !hs.getCacheBinding(this.a)) {\n 1546  \t\tthis.showLoading();\n 1547      \tvar exp = this;\n\n/opt/lampp/htdocs/uzbek/ftp/img/enter_background2.mp4:\n    <binary>\n\n/opt/lampp/htdocs/uzbek/ftp/js/appRefactor.js:\n   67        o.enter.css({transform: 'translateY(' + (scroll * -2) + 'vh) translateZ(0)'});\n   68        if(scroll >= 3){\n   69:         o.enter.unbind();\n   70          hideEnter();\n   71        } else {\n   ..\n   79  \t\t\t\tscroll++;\n   80  \t\t\t\to.enter.css({transform: 'translateY('+ (scroll * -2) + 'vh) translateZ(0)'});\n   81: \t\t\t\to.enter.unbind();\n   82  \t\t\t\thideEnter();\n   83  \t\t\t},\n   ..\n   86      $('#run').on('click', function(){\n   87        hideEnter();\n   88:       o.enter.unbind();\n   89      });\n   90      o.enter.attr('show', '');\n\n/opt/lampp/htdocs/uzbek/ftp/js/bootstrap.min.js:\n    4   * Licensed under the MIT license\n    5   */\n    6: if(\"undefined\"==typeof jQuery)throw new Error(\"Bootstrap's JavaScript requires jQuery\");+function(a){\"use strict\";var b=a.fn.jquery.split(\" \")[0].split(\".\");if(b[0]<2&&b[1]<9||1==b[0]&&9==b[1]&&b[2]<1||b[0]>3)throw new Error(\"Bootstrap's JavaScript requires jQuery version 1.9.1 or higher, but lower than version 4\")}(jQuery),+function(a){\"use strict\";function b(){var a=document.createElement(\"bootstrap\"),b={WebkitTransition:\"webkitTransitionEnd\",MozTransition:\"transitionend\",OTransition:\"oTransitionEnd otransitionend\",transition:\"transitionend\"};for(var c in b)if(void 0!==a.style[c])return{end:b[c]};return!1}a.fn.emulateTransitionEnd=function(b){var c=!1,d=this;a(this).one(\"bsTransitionEnd\",function(){c=!0});var e=function(){c||a(d).trigger(a.support.transition.end)};return setTimeout(e,b),this},a(function(){a.support.transition=b(),a.support.transition&&(a.event.special.bsTransitionEnd={bindType:a.support.transition.end,delegateType:a.support.transition.end,handle:function(b){if(a(b.target).is(this))return b.handleObj.handler.apply(this,arguments)}})})}(jQuery),+function(a){\"use strict\";function b(b){return this.each(function(){var c=a(this),e=c.data(\"bs.alert\");e||c.data(\"bs.alert\",e=new d(this)),\"string\"==typeof b&&e[b].call(c)})}var c='[data-dismiss=\"alert\"]',d=function(b){a(b).on(\"click\",c,this.close)};d.VERSION=\"3.3.7\",d.TRANSITION_DURATION=150,d.prototype.close=function(b){function c(){g.detach().trigger(\"closed.bs.alert\").remove()}var e=a(this),f=e.attr(\"data-target\");f||(f=e.attr(\"href\"),f=f&&f.replace(/.*(?=#[^\\s]*$)/,\"\"));var g=a(\"#\"===f?[]:f);b&&b.preventDefault(),g.length||(g=e.closest(\".alert\")),g.trigger(b=a.Event(\"close.bs.alert\")),b.isDefaultPrevented()||(g.removeClass(\"in\"),a.support.transition&&g.hasClass(\"fade\")?g.one(\"bsTransitionEnd\",c).emulateTransitionEnd(d.TRANSITION_DURATION):c())};var e=a.fn.alert;a.fn.alert=b,a.fn.alert.Constructor=d,a.fn.alert.noConflict=function(){return a.fn.alert=e,this},a(document).on(\"click.bs.alert.data-api\",c,d.prototype.close)}(jQuery),+function(a){\"use strict\";function b(b){return this.each(function(){var d=a(this),e=d.data(\"bs.button\"),f=\"object\"==typeof b&&b;e||d.data(\"bs.button\",e=new c(this,f)),\"toggle\"==b?e.toggle():b&&e.setState(b)})}var c=function(b,d){this.$element=a(b),this.options=a.extend({},c.DEFAULTS,d),this.isLoading=!1};c.VERSION=\"3.3.7\",c.DEFAULTS={loadingText:\"loading...\"},c.prototype.setState=function(b){var c=\"disabled\",d=this.$element,e=d.is(\"input\")?\"val\":\"html\",f=d.data();b+=\"Text\",null==f.resetText&&d.data(\"resetText\",d[e]()),setTimeout(a.proxy(function(){d[e](null==f[b]?this.options[b]:f[b]),\"loadingText\"==b?(this.isLoading=!0,d.addClass(c).attr(c,c).prop(c,!0)):this.isLoading&&(this.isLoading=!1,d.removeClass(c).removeAttr(c).prop(c,!1))},this),0)},c.prototype.toggle=function(){var a=!0,b=this.$element.closest('[data-toggle=\"buttons\"]');if(b.length){var c=this.$element.find(\"input\");\"radio\"==c.prop(\"type\")?(c.prop(\"checked\")&&(a=!1),b.find(\".active\").removeClass(\"active\"),this.$element.addClass(\"active\")):\"checkbox\"==c.prop(\"type\")&&(c.prop(\"checked\")!==this.$element.hasClass(\"active\")&&(a=!1),this.$element.toggleClass(\"active\")),c.prop(\"checked\",this.$element.hasClass(\"active\")),a&&c.trigger(\"change\")}else this.$element.attr(\"aria-pressed\",!this.$element.hasClass(\"active\")),this.$element.toggleClass(\"active\")};var d=a.fn.button;a.fn.button=b,a.fn.button.Constructor=c,a.fn.button.noConflict=function(){return a.fn.button=d,this},a(document).on(\"click.bs.button.data-api\",'[data-toggle^=\"button\"]',function(c){var d=a(c.target).closest(\".btn\");b.call(d,\"toggle\"),a(c.target).is('input[type=\"radio\"], input[type=\"checkbox\"]')||(c.preventDefault(),d.is(\"input,button\")?d.trigger(\"focus\"):d.find(\"input:visible,button:visible\").first().trigger(\"focus\"))}).on(\"focus.bs.button.data-api blur.bs.button.data-api\",'[data-toggle^=\"button\"]',function(b){a(b.target).closest(\".btn\").toggleClass(\"focus\",/^focus(in)?$/.test(b.type))})}(jQuery),+function(a){\"use strict\";function b(b){return this.each(function(){var d=a(this),e=d.data(\"bs.carousel\"),f=a.extend({},c.DEFAULTS,d.data(),\"object\"==typeof b&&b),g=\"string\"==typeof b?b:f.slide;e||d.data(\"bs.carousel\",e=new c(this,f)),\"number\"==typeof b?e.to(b):g?e[g]():f.interval&&e.pause().cycle()})}var c=function(b,c){this.$element=a(b),this.$indicators=this.$element.find(\".carousel-indicators\"),this.options=c,this.paused=null,this.sliding=null,this.interval=null,this.$active=null,this.$items=null,this.options.keyboard&&this.$element.on(\"keydown.bs.carousel\",a.proxy(this.keydown,this)),\"hover\"==this.options.pause&&!(\"ontouchstart\"in document.documentElement)&&this.$element.on(\"mouseenter.bs.carousel\",a.proxy(this.pause,this)).on(\"mouseleave.bs.carousel\",a.proxy(this.cycle,this))};c.VERSION=\"3.3.7\",c.TRANSITION_DURATION=600,c.DEFAULTS={interval:5e3,pause:\"hover\",wrap:!0,keyboard:!0},c.prototype.keydown=function(a){if(!/input|textarea/i.test(a.target.tagName)){switch(a.which){case 37:this.prev();break;case 39:this.next();break;default:return}a.preventDefault()}},c.prototype.cycle=function(b){return b||(this.paused=!1),this.interval&&clearInterval(this.interval),this.options.interval&&!this.paused&&(this.interval=setInterval(a.proxy(this.next,this),this.options.interval)),this},c.prototype.getItemIndex=function(a){return this.$items=a.parent().children(\".item\"),this.$items.index(a||this.$active)},c.prototype.getItemForDirection=function(a,b){var c=this.getItemIndex(b),d=\"prev\"==a&&0===c||\"next\"==a&&c==this.$items.length-1;if(d&&!this.options.wrap)return b;var e=\"prev\"==a?-1:1,f=(c+e)%this.$items.length;return this.$items.eq(f)},c.prototype.to=function(a){var b=this,c=this.getItemIndex(this.$active=this.$element.find(\".item.active\"));if(!(a>this.$items.length-1||a<0))return this.sliding?this.$element.one(\"slid.bs.carousel\",function(){b.to(a)}):c==a?this.pause().cycle():this.slide(a>c?\"next\":\"prev\",this.$items.eq(a))},c.prototype.pause=function(b){return b||(this.paused=!0),this.$element.find(\".next, .prev\").length&&a.support.transition&&(this.$element.trigger(a.support.transition.end),this.cycle(!0)),this.interval=clearInterval(this.interval),this},c.prototype.next=function(){if(!this.sliding)return this.slide(\"next\")},c.prototype.prev=function(){if(!this.sliding)return this.slide(\"prev\")},c.prototype.slide=function(b,d){var e=this.$element.find(\".item.active\"),f=d||this.getItemForDirection(b,e),g=this.interval,h=\"next\"==b?\"left\":\"right\",i=this;if(f.hasClass(\"active\"))return this.sliding=!1;var j=f[0],k=a.Event(\"slide.bs.carousel\",{relatedTarget:j,direction:h});if(this.$element.trigger(k),!k.isDefaultPrevented()){if(this.sliding=!0,g&&this.pause(),this.$indicators.length){this.$indicators.find(\".active\").removeClass(\"active\");var l=a(this.$indicators.children()[this.getItemIndex(f)]);l&&l.addClass(\"active\")}var m=a.Event(\"slid.bs.carousel\",{relatedTarget:j,direction:h});return a.support.transition&&this.$element.hasClass(\"slide\")?(f.addClass(b),f[0].offsetWidth,e.addClass(h),f.addClass(h),e.one(\"bsTransitionEnd\",function(){f.removeClass([b,h].join(\" \")).addClass(\"active\"),e.removeClass([\"active\",h].join(\" \")),i.sliding=!1,setTimeout(function(){i.$element.trigger(m)},0)}).emulateTransitionEnd(c.TRANSITION_DURATION)):(e.removeClass(\"active\"),f.addClass(\"active\"),this.sliding=!1,this.$element.trigger(m)),g&&this.cycle(),this}};var d=a.fn.carousel;a.fn.carousel=b,a.fn.carousel.Constructor=c,a.fn.carousel.noConflict=function(){return a.fn.carousel=d,this};var e=function(c){var d,e=a(this),f=a(e.attr(\"data-target\")||(d=e.attr(\"href\"))&&d.replace(/.*(?=#[^\\s]+$)/,\"\"));if(f.hasClass(\"carousel\")){var g=a.extend({},f.data(),e.data()),h=e.attr(\"data-slide-to\");h&&(g.interval=!1),b.call(f,g),h&&f.data(\"bs.carousel\").to(h),c.preventDefault()}};a(document).on(\"click.bs.carousel.data-api\",\"[data-slide]\",e).on(\"click.bs.carousel.data-api\",\"[data-slide-to]\",e),a(window).on(\"load\",function(){a('[data-ride=\"carousel\"]').each(function(){var c=a(this);b.call(c,c.data())})})}(jQuery),+function(a){\"use strict\";function b(b){var c,d=b.attr(\"data-target\")||(c=b.attr(\"href\"))&&c.replace(/.*(?=#[^\\s]+$)/,\"\");return a(d)}function c(b){return this.each(function(){var c=a(this),e=c.data(\"bs.collapse\"),f=a.extend({},d.DEFAULTS,c.data(),\"object\"==typeof b&&b);!e&&f.toggle&&/show|hide/.test(b)&&(f.toggle=!1),e||c.data(\"bs.collapse\",e=new d(this,f)),\"string\"==typeof b&&e[b]()})}var d=function(b,c){this.$element=a(b),this.options=a.extend({},d.DEFAULTS,c),this.$trigger=a('[data-toggle=\"collapse\"][href=\"#'+b.id+'\"],[data-toggle=\"collapse\"][data-target=\"#'+b.id+'\"]'),this.transitioning=null,this.options.parent?this.$parent=this.getParent():this.addAriaAndCollapsedClass(this.$element,this.$trigger),this.options.toggle&&this.toggle()};d.VERSION=\"3.3.7\",d.TRANSITION_DURATION=350,d.DEFAULTS={toggle:!0},d.prototype.dimension=function(){var a=this.$element.hasClass(\"width\");return a?\"width\":\"height\"},d.prototype.show=function(){if(!this.transitioning&&!this.$element.hasClass(\"in\")){var b,e=this.$parent&&this.$parent.children(\".panel\").children(\".in, .collapsing\");if(!(e&&e.length&&(b=e.data(\"bs.collapse\"),b&&b.transitioning))){var f=a.Event(\"show.bs.collapse\");if(this.$element.trigger(f),!f.isDefaultPrevented()){e&&e.length&&(c.call(e,\"hide\"),b||e.data(\"bs.collapse\",null));var g=this.dimension();this.$element.removeClass(\"collapse\").addClass(\"collapsing\")[g](0).attr(\"aria-expanded\",!0),this.$trigger.removeClass(\"collapsed\").attr(\"aria-expanded\",!0),this.transitioning=1;var h=function(){this.$element.removeClass(\"collapsing\").addClass(\"collapse in\")[g](\"\"),this.transitioning=0,this.$element.trigger(\"shown.bs.collapse\")};if(!a.support.transition)return h.call(this);var i=a.camelCase([\"scroll\",g].join(\"-\"));this.$element.one(\"bsTransitionEnd\",a.proxy(h,this)).emulateTransitionEnd(d.TRANSITION_DURATION)[g](this.$element[0][i])}}}},d.prototype.hide=function(){if(!this.transitioning&&this.$element.hasClass(\"in\")){var b=a.Event(\"hide.bs.collapse\");if(this.$element.trigger(b),!b.isDefaultPrevented()){var c=this.dimension();this.$element[c](this.$element[c]())[0].offsetHeight,this.$element.addClass(\"collapsing\").removeClass(\"collapse in\").attr(\"aria-expanded\",!1),this.$trigger.addClass(\"collapsed\").attr(\"aria-expanded\",!1),this.transitioning=1;var e=function(){this.transitioning=0,this.$element.removeClass(\"collapsing\").addClass(\"collapse\").trigger(\"hidden.bs.collapse\")};return a.support.transition?void this.$element[c](0).one(\"bsTransitionEnd\",a.proxy(e,this)).emulateTransitionEnd(d.TRANSITION_DURATION):e.call(this)}}},d.prototype.toggle=function(){this[this.$element.hasClass(\"in\")?\"hide\":\"show\"]()},d.prototype.getParent=function(){return a(this.options.parent).find('[data-toggle=\"collapse\"][data-parent=\"'+this.options.parent+'\"]').each(a.proxy(function(c,d){var e=a(d);this.addAriaAndCollapsedClass(b(e),e)},this)).end()},d.prototype.addAriaAndCollapsedClass=function(a,b){var c=a.hasClass(\"in\");a.attr(\"aria-expanded\",c),b.toggleClass(\"collapsed\",!c).attr(\"aria-expanded\",c)};var e=a.fn.collapse;a.fn.collapse=c,a.fn.collapse.Constructor=d,a.fn.collapse.noConflict=function(){return a.fn.collapse=e,this},a(document).on(\"click.bs.collapse.data-api\",'[data-toggle=\"collapse\"]',function(d){var e=a(this);e.attr(\"data-target\")||d.preventDefault();var f=b(e),g=f.data(\"bs.collapse\"),h=g?\"toggle\":e.data();c.call(f,h)})}(jQuery),+function(a){\"use strict\";function b(b){var c=b.attr(\"data-target\");c||(c=b.attr(\"href\"),c=c&&/#[A-Za-z]/.test(c)&&c.replace(/.*(?=#[^\\s]*$)/,\"\"));var d=c&&a(c);return d&&d.length?d:b.parent()}function c(c){c&&3===c.which||(a(e).remove(),a(f).each(function(){var d=a(this),e=b(d),f={relatedTarget:this};e.hasClass(\"open\")&&(c&&\"click\"==c.type&&/input|textarea/i.test(c.target.tagName)&&a.contains(e[0],c.target)||(e.trigger(c=a.Event(\"hide.bs.dropdown\",f)),c.isDefaultPrevented()||(d.attr(\"aria-expanded\",\"false\"),e.removeClass(\"open\").trigger(a.Event(\"hidden.bs.dropdown\",f)))))}))}function d(b){return this.each(function(){var c=a(this),d=c.data(\"bs.dropdown\");d||c.data(\"bs.dropdown\",d=new g(this)),\"string\"==typeof b&&d[b].call(c)})}var e=\".dropdown-backdrop\",f='[data-toggle=\"dropdown\"]',g=function(b){a(b).on(\"click.bs.dropdown\",this.toggle)};g.VERSION=\"3.3.7\",g.prototype.toggle=function(d){var e=a(this);if(!e.is(\".disabled, :disabled\")){var f=b(e),g=f.hasClass(\"open\");if(c(),!g){\"ontouchstart\"in document.documentElement&&!f.closest(\".navbar-nav\").length&&a(document.createElement(\"div\")).addClass(\"dropdown-backdrop\").insertAfter(a(this)).on(\"click\",c);var h={relatedTarget:this};if(f.trigger(d=a.Event(\"show.bs.dropdown\",h)),d.isDefaultPrevented())return;e.trigger(\"focus\").attr(\"aria-expanded\",\"true\"),f.toggleClass(\"open\").trigger(a.Event(\"shown.bs.dropdown\",h))}return!1}},g.prototype.keydown=function(c){if(/(38|40|27|32)/.test(c.which)&&!/input|textarea/i.test(c.target.tagName)){var d=a(this);if(c.preventDefault(),c.stopPropagation(),!d.is(\".disabled, :disabled\")){var e=b(d),g=e.hasClass(\"open\");if(!g&&27!=c.which||g&&27==c.which)return 27==c.which&&e.find(f).trigger(\"focus\"),d.trigger(\"click\");var h=\" li:not(.disabled):visible a\",i=e.find(\".dropdown-menu\"+h);if(i.length){var j=i.index(c.target);38==c.which&&j>0&&j--,40==c.which&&j<i.length-1&&j++,~j||(j=0),i.eq(j).trigger(\"focus\")}}}};var h=a.fn.dropdown;a.fn.dropdown=d,a.fn.dropdown.Constructor=g,a.fn.dropdown.noConflict=function(){return a.fn.dropdown=h,this},a(document).on(\"click.bs.dropdown.data-api\",c).on(\"click.bs.dropdown.data-api\",\".dropdown form\",function(a){a.stopPropagation()}).on(\"click.bs.dropdown.data-api\",f,g.prototype.toggle).on(\"keydown.bs.dropdown.data-api\",f,g.prototype.keydown).on(\"keydown.bs.dropdown.data-api\",\".dropdown-menu\",g.prototype.keydown)}(jQuery),+function(a){\"use strict\";function b(b,d){return this.each(function(){var e=a(this),f=e.data(\"bs.modal\"),g=a.extend({},c.DEFAULTS,e.data(),\"object\"==typeof b&&b);f||e.data(\"bs.modal\",f=new c(this,g)),\"string\"==typeof b?f[b](d):g.show&&f.show(d)})}var c=function(b,c){this.options=c,this.$body=a(document.body),this.$element=a(b),this.$dialog=this.$element.find(\".modal-dialog\"),this.$backdrop=null,this.isShown=null,this.originalBodyPad=null,this.scrollbarWidth=0,this.ignoreBackdropClick=!1,this.options.remote&&this.$element.find(\".modal-content\").load(this.options.remote,a.proxy(function(){this.$element.trigger(\"loaded.bs.modal\")},this))};c.VERSION=\"3.3.7\",c.TRANSITION_DURATION=300,c.BACKDROP_TRANSITION_DURATION=150,c.DEFAULTS={backdrop:!0,keyboard:!0,show:!0},c.prototype.toggle=function(a){return this.isShown?this.hide():this.show(a)},c.prototype.show=function(b){var d=this,e=a.Event(\"show.bs.modal\",{relatedTarget:b});this.$element.trigger(e),this.isShown||e.isDefaultPrevented()||(this.isShown=!0,this.checkScrollbar(),this.setScrollbar(),this.$body.addClass(\"modal-open\"),this.escape(),this.resize(),this.$element.on(\"click.dismiss.bs.modal\",'[data-dismiss=\"modal\"]',a.proxy(this.hide,this)),this.$dialog.on(\"mousedown.dismiss.bs.modal\",function(){d.$element.one(\"mouseup.dismiss.bs.modal\",function(b){a(b.target).is(d.$element)&&(d.ignoreBackdropClick=!0)})}),this.backdrop(function(){var e=a.support.transition&&d.$element.hasClass(\"fade\");d.$element.parent().length||d.$element.appendTo(d.$body),d.$element.show().scrollTop(0),d.adjustDialog(),e&&d.$element[0].offsetWidth,d.$element.addClass(\"in\"),d.enforceFocus();var f=a.Event(\"shown.bs.modal\",{relatedTarget:b});e?d.$dialog.one(\"bsTransitionEnd\",function(){d.$element.trigger(\"focus\").trigger(f)}).emulateTransitionEnd(c.TRANSITION_DURATION):d.$element.trigger(\"focus\").trigger(f)}))},c.prototype.hide=function(b){b&&b.preventDefault(),b=a.Event(\"hide.bs.modal\"),this.$element.trigger(b),this.isShown&&!b.isDefaultPrevented()&&(this.isShown=!1,this.escape(),this.resize(),a(document).off(\"focusin.bs.modal\"),this.$element.removeClass(\"in\").off(\"click.dismiss.bs.modal\").off(\"mouseup.dismiss.bs.modal\"),this.$dialog.off(\"mousedown.dismiss.bs.modal\"),a.support.transition&&this.$element.hasClass(\"fade\")?this.$element.one(\"bsTransitionEnd\",a.proxy(this.hideModal,this)).emulateTransitionEnd(c.TRANSITION_DURATION):this.hideModal())},c.prototype.enforceFocus=function(){a(document).off(\"focusin.bs.modal\").on(\"focusin.bs.modal\",a.proxy(function(a){document===a.target||this.$element[0]===a.target||this.$element.has(a.target).length||this.$element.trigger(\"focus\")},this))},c.prototype.escape=function(){this.isShown&&this.options.keyboard?this.$element.on(\"keydown.dismiss.bs.modal\",a.proxy(function(a){27==a.which&&this.hide()},this)):this.isShown||this.$element.off(\"keydown.dismiss.bs.modal\")},c.prototype.resize=function(){this.isShown?a(window).on(\"resize.bs.modal\",a.proxy(this.handleUpdate,this)):a(window).off(\"resize.bs.modal\")},c.prototype.hideModal=function(){var a=this;this.$element.hide(),this.backdrop(function(){a.$body.removeClass(\"modal-open\"),a.resetAdjustments(),a.resetScrollbar(),a.$element.trigger(\"hidden.bs.modal\")})},c.prototype.removeBackdrop=function(){this.$backdrop&&this.$backdrop.remove(),this.$backdrop=null},c.prototype.backdrop=function(b){var d=this,e=this.$element.hasClass(\"fade\")?\"fade\":\"\";if(this.isShown&&this.options.backdrop){var f=a.support.transition&&e;if(this.$backdrop=a(document.createElement(\"div\")).addClass(\"modal-backdrop \"+e).appendTo(this.$body),this.$element.on(\"click.dismiss.bs.modal\",a.proxy(function(a){return this.ignoreBackdropClick?void(this.ignoreBackdropClick=!1):void(a.target===a.currentTarget&&(\"static\"==this.options.backdrop?this.$element[0].focus():this.hide()))},this)),f&&this.$backdrop[0].offsetWidth,this.$backdrop.addClass(\"in\"),!b)return;f?this.$backdrop.one(\"bsTransitionEnd\",b).emulateTransitionEnd(c.BACKDROP_TRANSITION_DURATION):b()}else if(!this.isShown&&this.$backdrop){this.$backdrop.removeClass(\"in\");var g=function(){d.removeBackdrop(),b&&b()};a.support.transition&&this.$element.hasClass(\"fade\")?this.$backdrop.one(\"bsTransitionEnd\",g).emulateTransitionEnd(c.BACKDROP_TRANSITION_DURATION):g()}else b&&b()},c.prototype.handleUpdate=function(){this.adjustDialog()},c.prototype.adjustDialog=function(){var a=this.$element[0].scrollHeight>document.documentElement.clientHeight;this.$element.css({paddingLeft:!this.bodyIsOverflowing&&a?this.scrollbarWidth:\"\",paddingRight:this.bodyIsOverflowing&&!a?this.scrollbarWidth:\"\"})},c.prototype.resetAdjustments=function(){this.$element.css({paddingLeft:\"\",paddingRight:\"\"})},c.prototype.checkScrollbar=function(){var a=window.innerWidth;if(!a){var b=document.documentElement.getBoundingClientRect();a=b.right-Math.abs(b.left)}this.bodyIsOverflowing=document.body.clientWidth<a,this.scrollbarWidth=this.measureScrollbar()},c.prototype.setScrollbar=function(){var a=parseInt(this.$body.css(\"padding-right\")||0,10);this.originalBodyPad=document.body.style.paddingRight||\"\",this.bodyIsOverflowing&&this.$body.css(\"padding-right\",a+this.scrollbarWidth)},c.prototype.resetScrollbar=function(){this.$body.css(\"padding-right\",this.originalBodyPad)},c.prototype.measureScrollbar=function(){var a=document.createElement(\"div\");a.className=\"modal-scrollbar-measure\",this.$body.append(a);var b=a.offsetWidth-a.clientWidth;return this.$body[0].removeChild(a),b};var d=a.fn.modal;a.fn.modal=b,a.fn.modal.Constructor=c,a.fn.modal.noConflict=function(){return a.fn.modal=d,this},a(document).on(\"click.bs.modal.data-api\",'[data-toggle=\"modal\"]',function(c){var d=a(this),e=d.attr(\"href\"),f=a(d.attr(\"data-target\")||e&&e.replace(/.*(?=#[^\\s]+$)/,\"\")),g=f.data(\"bs.modal\")?\"toggle\":a.extend({remote:!/#/.test(e)&&e},f.data(),d.data());d.is(\"a\")&&c.preventDefault(),f.one(\"show.bs.modal\",function(a){a.isDefaultPrevented()||f.one(\"hidden.bs.modal\",function(){d.is(\":visible\")&&d.trigger(\"focus\")})}),b.call(f,g,this)})}(jQuery),+function(a){\"use strict\";function b(b){return this.each(function(){var d=a(this),e=d.data(\"bs.tooltip\"),f=\"object\"==typeof b&&b;!e&&/destroy|hide/.test(b)||(e||d.data(\"bs.tooltip\",e=new c(this,f)),\"string\"==typeof b&&e[b]())})}var c=function(a,b){this.type=null,this.options=null,this.enabled=null,this.timeout=null,this.hoverState=null,this.$element=null,this.inState=null,this.init(\"tooltip\",a,b)};c.VERSION=\"3.3.7\",c.TRANSITION_DURATION=150,c.DEFAULTS={animation:!0,placement:\"top\",selector:!1,template:'<div class=\"tooltip\" role=\"tooltip\"><div class=\"tooltip-arrow\"></div><div class=\"tooltip-inner\"></div></div>',trigger:\"hover focus\",title:\"\",delay:0,html:!1,container:!1,viewport:{selector:\"body\",padding:0}},c.prototype.init=function(b,c,d){if(this.enabled=!0,this.type=b,this.$element=a(c),this.options=this.getOptions(d),this.$viewport=this.options.viewport&&a(a.isFunction(this.options.viewport)?this.options.viewport.call(this,this.$element):this.options.viewport.selector||this.options.viewport),this.inState={click:!1,hover:!1,focus:!1},this.$element[0]instanceof document.constructor&&!this.options.selector)throw new Error(\"`selector` option must be specified when initializing \"+this.type+\" on the window.document object!\");for(var e=this.options.trigger.split(\" \"),f=e.length;f--;){var g=e[f];if(\"click\"==g)this.$element.on(\"click.\"+this.type,this.options.selector,a.proxy(this.toggle,this));else if(\"manual\"!=g){var h=\"hover\"==g?\"mouseenter\":\"focusin\",i=\"hover\"==g?\"mouseleave\":\"focusout\";this.$element.on(h+\".\"+this.type,this.options.selector,a.proxy(this.enter,this)),this.$element.on(i+\".\"+this.type,this.options.selector,a.proxy(this.leave,this))}}this.options.selector?this._options=a.extend({},this.options,{trigger:\"manual\",selector:\"\"}):this.fixTitle()},c.prototype.getDefaults=function(){return c.DEFAULTS},c.prototype.getOptions=function(b){return b=a.extend({},this.getDefaults(),this.$element.data(),b),b.delay&&\"number\"==typeof b.delay&&(b.delay={show:b.delay,hide:b.delay}),b},c.prototype.getDelegateOptions=function(){var b={},c=this.getDefaults();return this._options&&a.each(this._options,function(a,d){c[a]!=d&&(b[a]=d)}),b},c.prototype.enter=function(b){var c=b instanceof this.constructor?b:a(b.currentTarget).data(\"bs.\"+this.type);return c||(c=new this.constructor(b.currentTarget,this.getDelegateOptions()),a(b.currentTarget).data(\"bs.\"+this.type,c)),b instanceof a.Event&&(c.inState[\"focusin\"==b.type?\"focus\":\"hover\"]=!0),c.tip().hasClass(\"in\")||\"in\"==c.hoverState?void(c.hoverState=\"in\"):(clearTimeout(c.timeout),c.hoverState=\"in\",c.options.delay&&c.options.delay.show?void(c.timeout=setTimeout(function(){\"in\"==c.hoverState&&c.show()},c.options.delay.show)):c.show())},c.prototype.isInStateTrue=function(){for(var a in this.inState)if(this.inState[a])return!0;return!1},c.prototype.leave=function(b){var c=b instanceof this.constructor?b:a(b.currentTarget).data(\"bs.\"+this.type);if(c||(c=new this.constructor(b.currentTarget,this.getDelegateOptions()),a(b.currentTarget).data(\"bs.\"+this.type,c)),b instanceof a.Event&&(c.inState[\"focusout\"==b.type?\"focus\":\"hover\"]=!1),!c.isInStateTrue())return clearTimeout(c.timeout),c.hoverState=\"out\",c.options.delay&&c.options.delay.hide?void(c.timeout=setTimeout(function(){\"out\"==c.hoverState&&c.hide()},c.options.delay.hide)):c.hide()},c.prototype.show=function(){var b=a.Event(\"show.bs.\"+this.type);if(this.hasContent()&&this.enabled){this.$element.trigger(b);var d=a.contains(this.$element[0].ownerDocument.documentElement,this.$element[0]);if(b.isDefaultPrevented()||!d)return;var e=this,f=this.tip(),g=this.getUID(this.type);this.setContent(),f.attr(\"id\",g),this.$element.attr(\"aria-describedby\",g),this.options.animation&&f.addClass(\"fade\");var h=\"function\"==typeof this.options.placement?this.options.placement.call(this,f[0],this.$element[0]):this.options.placement,i=/\\s?auto?\\s?/i,j=i.test(h);j&&(h=h.replace(i,\"\")||\"top\"),f.detach().css({top:0,left:0,display:\"block\"}).addClass(h).data(\"bs.\"+this.type,this),this.options.container?f.appendTo(this.options.container):f.insertAfter(this.$element),this.$element.trigger(\"inserted.bs.\"+this.type);var k=this.getPosition(),l=f[0].offsetWidth,m=f[0].offsetHeight;if(j){var n=h,o=this.getPosition(this.$viewport);h=\"bottom\"==h&&k.bottom+m>o.bottom?\"top\":\"top\"==h&&k.top-m<o.top?\"bottom\":\"right\"==h&&k.right+l>o.width?\"left\":\"left\"==h&&k.left-l<o.left?\"right\":h,f.removeClass(n).addClass(h)}var p=this.getCalculatedOffset(h,k,l,m);this.applyPlacement(p,h);var q=function(){var a=e.hoverState;e.$element.trigger(\"shown.bs.\"+e.type),e.hoverState=null,\"out\"==a&&e.leave(e)};a.support.transition&&this.$tip.hasClass(\"fade\")?f.one(\"bsTransitionEnd\",q).emulateTransitionEnd(c.TRANSITION_DURATION):q()}},c.prototype.applyPlacement=function(b,c){var d=this.tip(),e=d[0].offsetWidth,f=d[0].offsetHeight,g=parseInt(d.css(\"margin-top\"),10),h=parseInt(d.css(\"margin-left\"),10);isNaN(g)&&(g=0),isNaN(h)&&(h=0),b.top+=g,b.left+=h,a.offset.setOffset(d[0],a.extend({using:function(a){d.css({top:Math.round(a.top),left:Math.round(a.left)})}},b),0),d.addClass(\"in\");var i=d[0].offsetWidth,j=d[0].offsetHeight;\"top\"==c&&j!=f&&(b.top=b.top+f-j);var k=this.getViewportAdjustedDelta(c,b,i,j);k.left?b.left+=k.left:b.top+=k.top;var l=/top|bottom/.test(c),m=l?2*k.left-e+i:2*k.top-f+j,n=l?\"offsetWidth\":\"offsetHeight\";d.offset(b),this.replaceArrow(m,d[0][n],l)},c.prototype.replaceArrow=function(a,b,c){this.arrow().css(c?\"left\":\"top\",50*(1-a/b)+\"%\").css(c?\"top\":\"left\",\"\")},c.prototype.setContent=function(){var a=this.tip(),b=this.getTitle();a.find(\".tooltip-inner\")[this.options.html?\"html\":\"text\"](b),a.removeClass(\"fade in top bottom left right\")},c.prototype.hide=function(b){function d(){\"in\"!=e.hoverState&&f.detach(),e.$element&&e.$element.removeAttr(\"aria-describedby\").trigger(\"hidden.bs.\"+e.type),b&&b()}var e=this,f=a(this.$tip),g=a.Event(\"hide.bs.\"+this.type);if(this.$element.trigger(g),!g.isDefaultPrevented())return f.removeClass(\"in\"),a.support.transition&&f.hasClass(\"fade\")?f.one(\"bsTransitionEnd\",d).emulateTransitionEnd(c.TRANSITION_DURATION):d(),this.hoverState=null,this},c.prototype.fixTitle=function(){var a=this.$element;(a.attr(\"title\")||\"string\"!=typeof a.attr(\"data-original-title\"))&&a.attr(\"data-original-title\",a.attr(\"title\")||\"\").attr(\"title\",\"\")},c.prototype.hasContent=function(){return this.getTitle()},c.prototype.getPosition=function(b){b=b||this.$element;var c=b[0],d=\"BODY\"==c.tagName,e=c.getBoundingClientRect();null==e.width&&(e=a.extend({},e,{width:e.right-e.left,height:e.bottom-e.top}));var f=window.SVGElement&&c instanceof window.SVGElement,g=d?{top:0,left:0}:f?null:b.offset(),h={scroll:d?document.documentElement.scrollTop||document.body.scrollTop:b.scrollTop()},i=d?{width:a(window).width(),height:a(window).height()}:null;return a.extend({},e,h,i,g)},c.prototype.getCalculatedOffset=function(a,b,c,d){return\"bottom\"==a?{top:b.top+b.height,left:b.left+b.width/2-c/2}:\"top\"==a?{top:b.top-d,left:b.left+b.width/2-c/2}:\"left\"==a?{top:b.top+b.height/2-d/2,left:b.left-c}:{top:b.top+b.height/2-d/2,left:b.left+b.width}},c.prototype.getViewportAdjustedDelta=function(a,b,c,d){var e={top:0,left:0};if(!this.$viewport)return e;var f=this.options.viewport&&this.options.viewport.padding||0,g=this.getPosition(this.$viewport);if(/right|left/.test(a)){var h=b.top-f-g.scroll,i=b.top+f-g.scroll+d;h<g.top?e.top=g.top-h:i>g.top+g.height&&(e.top=g.top+g.height-i)}else{var j=b.left-f,k=b.left+f+c;j<g.left?e.left=g.left-j:k>g.right&&(e.left=g.left+g.width-k)}return e},c.prototype.getTitle=function(){var a,b=this.$element,c=this.options;return a=b.attr(\"data-original-title\")||(\"function\"==typeof c.title?c.title.call(b[0]):c.title)},c.prototype.getUID=function(a){do a+=~~(1e6*Math.random());while(document.getElementById(a));return a},c.prototype.tip=function(){if(!this.$tip&&(this.$tip=a(this.options.template),1!=this.$tip.length))throw new Error(this.type+\" `template` option must consist of exactly 1 top-level element!\");return this.$tip},c.prototype.arrow=function(){return this.$arrow=this.$arrow||this.tip().find(\".tooltip-arrow\")},c.prototype.enable=function(){this.enabled=!0},c.prototype.disable=function(){this.enabled=!1},c.prototype.toggleEnabled=function(){this.enabled=!this.enabled},c.prototype.toggle=function(b){var c=this;b&&(c=a(b.currentTarget).data(\"bs.\"+this.type),c||(c=new this.constructor(b.currentTarget,this.getDelegateOptions()),a(b.currentTarget).data(\"bs.\"+this.type,c))),b?(c.inState.click=!c.inState.click,c.isInStateTrue()?c.enter(c):c.leave(c)):c.tip().hasClass(\"in\")?c.leave(c):c.enter(c)},c.prototype.destroy=function(){var a=this;clearTimeout(this.timeout),this.hide(function(){a.$element.off(\".\"+a.type).removeData(\"bs.\"+a.type),a.$tip&&a.$tip.detach(),a.$tip=null,a.$arrow=null,a.$viewport=null,a.$element=null})};var d=a.fn.tooltip;a.fn.tooltip=b,a.fn.tooltip.Constructor=c,a.fn.tooltip.noConflict=function(){return a.fn.tooltip=d,this}}(jQuery),+function(a){\"use strict\";function b(b){return this.each(function(){var d=a(this),e=d.data(\"bs.popover\"),f=\"object\"==typeof b&&b;!e&&/destroy|hide/.test(b)||(e||d.data(\"bs.popover\",e=new c(this,f)),\"string\"==typeof b&&e[b]())})}var c=function(a,b){this.init(\"popover\",a,b)};if(!a.fn.tooltip)throw new Error(\"Popover requires tooltip.js\");c.VERSION=\"3.3.7\",c.DEFAULTS=a.extend({},a.fn.tooltip.Constructor.DEFAULTS,{placement:\"right\",trigger:\"click\",content:\"\",template:'<div class=\"popover\" role=\"tooltip\"><div class=\"arrow\"></div><h3 class=\"popover-title\"></h3><div class=\"popover-content\"></div></div>'}),c.prototype=a.extend({},a.fn.tooltip.Constructor.prototype),c.prototype.constructor=c,c.prototype.getDefaults=function(){return c.DEFAULTS},c.prototype.setContent=function(){var a=this.tip(),b=this.getTitle(),c=this.getContent();a.find(\".popover-title\")[this.options.html?\"html\":\"text\"](b),a.find(\".popover-content\").children().detach().end()[this.options.html?\"string\"==typeof c?\"html\":\"append\":\"text\"](c),a.removeClass(\"fade top bottom left right in\"),a.find(\".popover-title\").html()||a.find(\".popover-title\").hide()},c.prototype.hasContent=function(){return this.getTitle()||this.getContent()},c.prototype.getContent=function(){var a=this.$element,b=this.options;return a.attr(\"data-content\")||(\"function\"==typeof b.content?b.content.call(a[0]):b.content)},c.prototype.arrow=function(){return this.$arrow=this.$arrow||this.tip().find(\".arrow\")};var d=a.fn.popover;a.fn.popover=b,a.fn.popover.Constructor=c,a.fn.popover.noConflict=function(){return a.fn.popover=d,this}}(jQuery),+function(a){\"use strict\";function b(c,d){this.$body=a(document.body),this.$scrollElement=a(a(c).is(document.body)?window:c),this.options=a.extend({},b.DEFAULTS,d),this.selector=(this.options.target||\"\")+\" .nav li > a\",this.offsets=[],this.targets=[],this.activeTarget=null,this.scrollHeight=0,this.$scrollElement.on(\"scroll.bs.scrollspy\",a.proxy(this.process,this)),this.refresh(),this.process()}function c(c){return this.each(function(){var d=a(this),e=d.data(\"bs.scrollspy\"),f=\"object\"==typeof c&&c;e||d.data(\"bs.scrollspy\",e=new b(this,f)),\"string\"==typeof c&&e[c]()})}b.VERSION=\"3.3.7\",b.DEFAULTS={offset:10},b.prototype.getScrollHeight=function(){return this.$scrollElement[0].scrollHeight||Math.max(this.$body[0].scrollHeight,document.documentElement.scrollHeight)},b.prototype.refresh=function(){var b=this,c=\"offset\",d=0;this.offsets=[],this.targets=[],this.scrollHeight=this.getScrollHeight(),a.isWindow(this.$scrollElement[0])||(c=\"position\",d=this.$scrollElement.scrollTop()),this.$body.find(this.selector).map(function(){var b=a(this),e=b.data(\"target\")||b.attr(\"href\"),f=/^#./.test(e)&&a(e);return f&&f.length&&f.is(\":visible\")&&[[f[c]().top+d,e]]||null}).sort(function(a,b){return a[0]-b[0]}).each(function(){b.offsets.push(this[0]),b.targets.push(this[1])})},b.prototype.process=function(){var a,b=this.$scrollElement.scrollTop()+this.options.offset,c=this.getScrollHeight(),d=this.options.offset+c-this.$scrollElement.height(),e=this.offsets,f=this.targets,g=this.activeTarget;if(this.scrollHeight!=c&&this.refresh(),b>=d)return g!=(a=f[f.length-1])&&this.activate(a);if(g&&b<e[0])return this.activeTarget=null,this.clear();for(a=e.length;a--;)g!=f[a]&&b>=e[a]&&(void 0===e[a+1]||b<e[a+1])&&this.activate(f[a])},b.prototype.activate=function(b){\n    7  this.activeTarget=b,this.clear();var c=this.selector+'[data-target=\"'+b+'\"],'+this.selector+'[href=\"'+b+'\"]',d=a(c).parents(\"li\").addClass(\"active\");d.parent(\".dropdown-menu\").length&&(d=d.closest(\"li.dropdown\").addClass(\"active\")),d.trigger(\"activate.bs.scrollspy\")},b.prototype.clear=function(){a(this.selector).parentsUntil(this.options.target,\".active\").removeClass(\"active\")};var d=a.fn.scrollspy;a.fn.scrollspy=c,a.fn.scrollspy.Constructor=b,a.fn.scrollspy.noConflict=function(){return a.fn.scrollspy=d,this},a(window).on(\"load.bs.scrollspy.data-api\",function(){a('[data-spy=\"scroll\"]').each(function(){var b=a(this);c.call(b,b.data())})})}(jQuery),+function(a){\"use strict\";function b(b){return this.each(function(){var d=a(this),e=d.data(\"bs.tab\");e||d.data(\"bs.tab\",e=new c(this)),\"string\"==typeof b&&e[b]()})}var c=function(b){this.element=a(b)};c.VERSION=\"3.3.7\",c.TRANSITION_DURATION=150,c.prototype.show=function(){var b=this.element,c=b.closest(\"ul:not(.dropdown-menu)\"),d=b.data(\"target\");if(d||(d=b.attr(\"href\"),d=d&&d.replace(/.*(?=#[^\\s]*$)/,\"\")),!b.parent(\"li\").hasClass(\"active\")){var e=c.find(\".active:last a\"),f=a.Event(\"hide.bs.tab\",{relatedTarget:b[0]}),g=a.Event(\"show.bs.tab\",{relatedTarget:e[0]});if(e.trigger(f),b.trigger(g),!g.isDefaultPrevented()&&!f.isDefaultPrevented()){var h=a(d);this.activate(b.closest(\"li\"),c),this.activate(h,h.parent(),function(){e.trigger({type:\"hidden.bs.tab\",relatedTarget:b[0]}),b.trigger({type:\"shown.bs.tab\",relatedTarget:e[0]})})}}},c.prototype.activate=function(b,d,e){function f(){g.removeClass(\"active\").find(\"> .dropdown-menu > .active\").removeClass(\"active\").end().find('[data-toggle=\"tab\"]').attr(\"aria-expanded\",!1),b.addClass(\"active\").find('[data-toggle=\"tab\"]').attr(\"aria-expanded\",!0),h?(b[0].offsetWidth,b.addClass(\"in\")):b.removeClass(\"fade\"),b.parent(\".dropdown-menu\").length&&b.closest(\"li.dropdown\").addClass(\"active\").end().find('[data-toggle=\"tab\"]').attr(\"aria-expanded\",!0),e&&e()}var g=d.find(\"> .active\"),h=e&&a.support.transition&&(g.length&&g.hasClass(\"fade\")||!!d.find(\"> .fade\").length);g.length&&h?g.one(\"bsTransitionEnd\",f).emulateTransitionEnd(c.TRANSITION_DURATION):f(),g.removeClass(\"in\")};var d=a.fn.tab;a.fn.tab=b,a.fn.tab.Constructor=c,a.fn.tab.noConflict=function(){return a.fn.tab=d,this};var e=function(c){c.preventDefault(),b.call(a(this),\"show\")};a(document).on(\"click.bs.tab.data-api\",'[data-toggle=\"tab\"]',e).on(\"click.bs.tab.data-api\",'[data-toggle=\"pill\"]',e)}(jQuery),+function(a){\"use strict\";function b(b){return this.each(function(){var d=a(this),e=d.data(\"bs.affix\"),f=\"object\"==typeof b&&b;e||d.data(\"bs.affix\",e=new c(this,f)),\"string\"==typeof b&&e[b]()})}var c=function(b,d){this.options=a.extend({},c.DEFAULTS,d),this.$target=a(this.options.target).on(\"scroll.bs.affix.data-api\",a.proxy(this.checkPosition,this)).on(\"click.bs.affix.data-api\",a.proxy(this.checkPositionWithEventLoop,this)),this.$element=a(b),this.affixed=null,this.unpin=null,this.pinnedOffset=null,this.checkPosition()};c.VERSION=\"3.3.7\",c.RESET=\"affix affix-top affix-bottom\",c.DEFAULTS={offset:0,target:window},c.prototype.getState=function(a,b,c,d){var e=this.$target.scrollTop(),f=this.$element.offset(),g=this.$target.height();if(null!=c&&\"top\"==this.affixed)return e<c&&\"top\";if(\"bottom\"==this.affixed)return null!=c?!(e+this.unpin<=f.top)&&\"bottom\":!(e+g<=a-d)&&\"bottom\";var h=null==this.affixed,i=h?e:f.top,j=h?g:b;return null!=c&&e<=c?\"top\":null!=d&&i+j>=a-d&&\"bottom\"},c.prototype.getPinnedOffset=function(){if(this.pinnedOffset)return this.pinnedOffset;this.$element.removeClass(c.RESET).addClass(\"affix\");var a=this.$target.scrollTop(),b=this.$element.offset();return this.pinnedOffset=b.top-a},c.prototype.checkPositionWithEventLoop=function(){setTimeout(a.proxy(this.checkPosition,this),1)},c.prototype.checkPosition=function(){if(this.$element.is(\":visible\")){var b=this.$element.height(),d=this.options.offset,e=d.top,f=d.bottom,g=Math.max(a(document).height(),a(document.body).height());\"object\"!=typeof d&&(f=e=d),\"function\"==typeof e&&(e=d.top(this.$element)),\"function\"==typeof f&&(f=d.bottom(this.$element));var h=this.getState(g,b,e,f);if(this.affixed!=h){null!=this.unpin&&this.$element.css(\"top\",\"\");var i=\"affix\"+(h?\"-\"+h:\"\"),j=a.Event(i+\".bs.affix\");if(this.$element.trigger(j),j.isDefaultPrevented())return;this.affixed=h,this.unpin=\"bottom\"==h?this.getPinnedOffset():null,this.$element.removeClass(c.RESET).addClass(i).trigger(i.replace(\"affix\",\"affixed\")+\".bs.affix\")}\"bottom\"==h&&this.$element.offset({top:g-b-f})}};var d=a.fn.affix;a.fn.affix=b,a.fn.affix.Constructor=c,a.fn.affix.noConflict=function(){return a.fn.affix=d,this},a(window).on(\"load\",function(){a('[data-spy=\"affix\"]').each(function(){var c=a(this),d=c.data();d.offset=d.offset||{},null!=d.offsetBottom&&(d.offset.bottom=d.offsetBottom),null!=d.offsetTop&&(d.offset.top=d.offsetTop),b.call(c,d)})})}(jQuery);\n\n/opt/lampp/htdocs/uzbek/ftp/js/jquery.mCustomScrollbar.js:\n  227  \t\t\t\tscrollAmount:\"auto\"\n  228  \t\t\t\t/*\n  229: \t\t\t\ttabindex of the scrollbar buttons\n  230  \t\t\t\tvalues: false, integer\n  231  \t\t\t\t\toption\t\t\t\t\t\tdefault\n  232  \t\t\t\t\t-------------------------------------\n  233: \t\t\t\t\ttabindex\t\t\t\t\tnull\n  234  \t\t\t\t*/\n  235  \t\t\t},\n  ...\n  278  \t\t\t\tauto-scroll to elements with focus\n  279  \t\t\t\t*/\n  280: \t\t\t\tautoScrollOnFocus:\"input,textarea,select,button,datalist,keygen,a[tabindex],area,object,[contenteditable='true']\",\n  281  \t\t\t\t/*\n  282  \t\t\t\tauto-update scrollbars on content, element or viewport resize \n  ...\n  461  \t\t\t\t\t\t\toverflowed:null, /* overflowed axis */\n  462  \t\t\t\t\t\t\tcontentReset:{y:null,x:null}, /* object to check when content resets */\n  463: \t\t\t\t\t\t\tbindEvents:false, /* object to check if events are bound */\n  464  \t\t\t\t\t\t\ttweenRunning:false, /* object to check if tween is running */\n  465  \t\t\t\t\t\t\tsequential:{}, /* sequential scrolling object */\n  ...\n  557  \t\t\t\t\t\t_scrollRatio.call(this); /* calculate and store scrollbar to content ratio */\n  558  \t\t\t\t\t\t\n  559: \t\t\t\t\t\t_bindEvents.call(this); /* bind scrollbar events */\n  560  \t\t\t\t\t\t\n  561  \t\t\t\t\t\t/* reset scrolling position and/or events */\n  ...\n  565  \t\t\t\t\t\t\t\t_resetContentPosition.call(this); /* reset content position */\n  566  \t\t\t\t\t\t\t\tif(o.axis===\"y\"){\n  567: \t\t\t\t\t\t\t\t\t_unbindEvents.call(this);\n  568  \t\t\t\t\t\t\t\t}else if(o.axis===\"yx\" && d.overflowed[1]){\n  569  \t\t\t\t\t\t\t\t\t_scrollTo($this,to[1].toString(),{dir:\"x\",dur:0,overwrite:\"none\"});\n  ...\n  580  \t\t\t\t\t\t\t\t_resetContentPosition.call(this); /* reset content position */\n  581  \t\t\t\t\t\t\t\tif(o.axis===\"x\"){\n  582: \t\t\t\t\t\t\t\t\t_unbindEvents.call(this);\n  583  \t\t\t\t\t\t\t\t}else if(o.axis===\"yx\" && d.overflowed[0]){\n  584  \t\t\t\t\t\t\t\t\t_scrollTo($this,to[0].toString(),{dir:\"y\",dur:0,overwrite:\"none\"});\n  ...\n  736  \t\t\t\t\t\t_autoUpdate.call(this,\"remove\"); /* remove automatic updating */\n  737  \t\t\t\t\t\t\n  738: \t\t\t\t\t\t_unbindEvents.call(this); /* unbind events */\n  739  \t\t\t\t\t\t\n  740  \t\t\t\t\t\tif(r){_resetContentPosition.call(this);} /* reset content position */\n  ...\n  778  \t\t\t\t\t\t_autoUpdate.call(this,\"remove\"); /* remove automatic updating */\n  779  \t\t\t\t\t\t\n  780: \t\t\t\t\t\t_unbindEvents.call(this); /* unbind events */\n  781  \t\t\t\t\t\t\n  782  \t\t\t\t\t\t_resetContentPosition.call(this); /* reset content position */\n  ...\n  942  \t\t\tvar $this=$(this),d=$this.data(pluginPfx),o=d.opt,\n  943  \t\t\t\tmCSB_scrollTools=$(\".mCSB_\"+d.idx+\"_scrollbar:first\"),\n  944: \t\t\t\ttabindex=!_isNumeric(o.scrollButtons.tabindex) ? \"\" : \"tabindex='\"+o.scrollButtons.tabindex+\"'\",\n  945  \t\t\t\tbtnHTML=[\n  946: \t\t\t\t\t\"<a href='#' class='\"+classes[13]+\"' \"+tabindex+\" />\",\n  947: \t\t\t\t\t\"<a href='#' class='\"+classes[14]+\"' \"+tabindex+\" />\",\n  948: \t\t\t\t\t\"<a href='#' class='\"+classes[15]+\"' \"+tabindex+\" />\",\n  949: \t\t\t\t\t\"<a href='#' class='\"+classes[16]+\"' \"+tabindex+\" />\"\n  950  \t\t\t\t],\n  951  \t\t\t\tbtn=[(o.axis===\"x\" ? btnHTML[2] : btnHTML[0]),(o.axis===\"x\" ? btnHTML[3] : btnHTML[1]),btnHTML[2],btnHTML[3]];\n  ...\n 1055  \t\t\n 1056  \t\t\n 1057: \t\t/* binds scrollbar events */\n 1058: \t\t_bindEvents=function(){\n 1059  \t\t\tvar $this=$(this),d=$this.data(pluginPfx),o=d.opt;\n 1060: \t\t\tif(!d.bindEvents){ /* check if events are already bound */\n 1061  \t\t\t\t_draggable.call(this);\n 1062  \t\t\t\tif(o.contentTouchScroll){_contentDraggable.call(this);}\n 1063  \t\t\t\t_selectable.call(this);\n 1064: \t\t\t\tif(o.mouseWheel.enable){ /* bind mousewheel fn when plugin is available */\n 1065  \t\t\t\t\tfunction _mwt(){\n 1066  \t\t\t\t\t\tmousewheelTimeout=setTimeout(function(){\n ....\n 1081  \t\t\t\tif(o.scrollButtons.enable){_buttons.call(this);}\n 1082  \t\t\t\tif(o.keyboard.enable){_keyboard.call(this);}\n 1083: \t\t\t\td.bindEvents=true;\n 1084  \t\t\t}\n 1085  \t\t},\n ....\n 1087  \t\t\n 1088  \t\t\n 1089: \t\t/* unbinds scrollbar events */\n 1090: \t\t_unbindEvents=function(){\n 1091  \t\t\tvar $this=$(this),d=$this.data(pluginPfx),o=d.opt,\n 1092  \t\t\t\tnamespace=pluginPfx+\"_\"+d.idx,\n ....\n 1096  \t\t\tif(o.advanced.releaseDraggableSelectors){sel.add($(o.advanced.releaseDraggableSelectors));}\n 1097  \t\t\tif(o.advanced.extraDraggableSelectors){sel.add($(o.advanced.extraDraggableSelectors));}\n 1098: \t\t\tif(d.bindEvents){ /* check if events are bound */\n 1099: \t\t\t\t/* unbind namespaced events from document/selectors */\n 1100: \t\t\t\t$(document).add($(!_canAccessIFrame() || top.document)).unbind(\".\"+namespace);\n 1101  \t\t\t\tsel.each(function(){\n 1102: \t\t\t\t\t$(this).unbind(\".\"+namespace);\n 1103  \t\t\t\t});\n 1104  \t\t\t\t/* clear and delete timeouts/objects */\n ....\n 1106  \t\t\t\tclearTimeout(d.sequential.step); _delete(d.sequential,\"step\");\n 1107  \t\t\t\tclearTimeout(mCSB_container[0].onCompleteTimeout); _delete(mCSB_container[0],\"onCompleteTimeout\");\n 1108: \t\t\t\td.bindEvents=false;\n 1109  \t\t\t}\n 1110  \t\t},\n ....\n 1191  \t\t\t\trds=o.advanced.releaseDraggableSelectors ? mCSB_dragger.add($(o.advanced.releaseDraggableSelectors)) : mCSB_dragger,\n 1192  \t\t\t\teds=o.advanced.extraDraggableSelectors ? $(!_canAccessIFrame() || top.document).add($(o.advanced.extraDraggableSelectors)) : $(!_canAccessIFrame() || top.document);\n 1193: \t\t\tmCSB_dragger.bind(\"contextmenu.\"+namespace,function(e){\n 1194  \t\t\t\te.preventDefault(); //prevent right click\n 1195: \t\t\t}).bind(\"mousedown.\"+namespace+\" touchstart.\"+namespace+\" pointerdown.\"+namespace+\" MSPointerDown.\"+namespace,function(e){\n 1196  \t\t\t\te.stopImmediatePropagation();\n 1197  \t\t\t\te.preventDefault();\n ....\n 1209  \t\t\t\t}\n 1210  \t\t\t\t_onDragClasses(draggable,\"active\",o.autoExpandScrollbar); \n 1211: \t\t\t}).bind(\"touchmove.\"+namespace,function(e){\n 1212  \t\t\t\te.stopImmediatePropagation();\n 1213  \t\t\t\te.preventDefault();\n ....\n 1215  \t\t\t\t_drag(dragY,dragX,y,x);\n 1216  \t\t\t});\n 1217: \t\t\t$(document).add(eds).bind(\"mousemove.\"+namespace+\" pointermove.\"+namespace+\" MSPointerMove.\"+namespace,function(e){\n 1218  \t\t\t\tif(draggable){\n 1219  \t\t\t\t\tvar offset=draggable.offset(),y=_coordinates(e)[0]-offset.top,x=_coordinates(e)[1]-offset.left;\n ....\n 1221  \t\t\t\t\t_drag(dragY,dragX,y,x);\n 1222  \t\t\t\t}\n 1223: \t\t\t}).add(rds).bind(\"mouseup.\"+namespace+\" touchend.\"+namespace+\" pointerup.\"+namespace+\" MSPointerUp.\"+namespace,function(e){\n 1224  \t\t\t\tif(draggable){\n 1225  \t\t\t\t\t_onDragClasses(draggable,\"active\",o.autoExpandScrollbar); \n ....\n 1263  \t\t\t\t],\n 1264  \t\t\t\ttouchAction=document.body.style.touchAction!==undefined && document.body.style.touchAction!==\"\";\n 1265: \t\t\tmCSB_container.bind(events[0],function(e){\n 1266  \t\t\t\t_onTouchstart(e);\n 1267: \t\t\t}).bind(events[1],function(e){\n 1268  \t\t\t\t_onTouchmove(e);\n 1269  \t\t\t});\n 1270: \t\t\tmCustomScrollBox.bind(events[0],function(e){\n 1271  \t\t\t\t_onTouchstart2(e);\n 1272: \t\t\t}).bind(events[2],function(e){\n 1273  \t\t\t\t_onTouchend(e);\n 1274  \t\t\t});\n 1275  \t\t\tif(iframe.length){\n 1276  \t\t\t\tiframe.each(function(){\n 1277: \t\t\t\t\t$(this).bind(\"load\",function(){\n 1278: \t\t\t\t\t\t/* bind events on accessible iframes */\n 1279  \t\t\t\t\t\tif(_canAccessIFrame(this)){\n 1280: \t\t\t\t\t\t\t$(this.contentDocument || this.contentWindow.document).bind(events[0],function(e){\n 1281  \t\t\t\t\t\t\t\t_onTouchstart(e);\n 1282  \t\t\t\t\t\t\t\t_onTouchstart2(e);\n 1283: \t\t\t\t\t\t\t}).bind(events[1],function(e){\n 1284  \t\t\t\t\t\t\t\t_onTouchmove(e);\n 1285: \t\t\t\t\t\t\t}).bind(events[2],function(e){\n 1286  \t\t\t\t\t\t\t\t_onTouchend(e);\n 1287  \t\t\t\t\t\t\t});\n ....\n 1400  \t\t\t\twrapper=mCSB_container.parent(),\n 1401  \t\t\t\taction;\n 1402: \t\t\tmCSB_container.bind(\"mousedown.\"+namespace,function(e){\n 1403  \t\t\t\tif(touchable){return;}\n 1404  \t\t\t\tif(!action){action=1; touchActive=true;}\n 1405: \t\t\t}).add(document).bind(\"mousemove.\"+namespace,function(e){\n 1406  \t\t\t\tif(!touchable && action && _sel()){\n 1407  \t\t\t\t\tvar offset=mCSB_container.offset(),\n ....\n 1426  \t\t\t\t\t}\n 1427  \t\t\t\t}\n 1428: \t\t\t}).bind(\"mouseup.\"+namespace+\" dragend.\"+namespace,function(e){\n 1429  \t\t\t\tif(touchable){return;}\n 1430  \t\t\t\tif(action){action=0; _seq(\"off\",null);}\n ....\n 1458  \t\t\tif(iframe.length){\n 1459  \t\t\t\tiframe.each(function(){\n 1460: \t\t\t\t\t$(this).bind(\"load\",function(){\n 1461: \t\t\t\t\t\t/* bind events on accessible iframes */\n 1462  \t\t\t\t\t\tif(_canAccessIFrame(this)){\n 1463: \t\t\t\t\t\t\t$(this.contentDocument || this.contentWindow.document).bind(\"mousewheel.\"+namespace,function(e,delta){\n 1464  \t\t\t\t\t\t\t\t_onMousewheel(e,delta);\n 1465  \t\t\t\t\t\t\t});\n ....\n 1468  \t\t\t\t});\n 1469  \t\t\t}\n 1470: \t\t\tmCustomScrollBox.bind(\"mousewheel.\"+namespace,function(e,delta){\n 1471  \t\t\t\t_onMousewheel(e,delta);\n 1472  \t\t\t});\n ....\n 1573  \t\t\t\tmCSB_draggerContainer=$(\".mCSB_\"+d.idx+\"_scrollbar .\"+classes[12]),\n 1574  \t\t\t\tclickable;\n 1575: \t\t\tmCSB_draggerContainer.bind(\"mousedown.\"+namespace+\" touchstart.\"+namespace+\" pointerdown.\"+namespace+\" MSPointerDown.\"+namespace,function(e){\n 1576  \t\t\t\ttouchActive=true;\n 1577  \t\t\t\tif(!$(e.target).hasClass(\"mCSB_dragger\")){clickable=1;}\n 1578: \t\t\t}).bind(\"touchend.\"+namespace+\" pointerup.\"+namespace+\" MSPointerUp.\"+namespace,function(e){\n 1579  \t\t\t\ttouchActive=false;\n 1580: \t\t\t}).bind(\"click.\"+namespace,function(e){\n 1581  \t\t\t\tif(!clickable){return;}\n 1582  \t\t\t\tclickable=0;\n ....\n 1611  \t\t\t\tmCSB_container=$(\"#mCSB_\"+d.idx+\"_container\"),\n 1612  \t\t\t\twrapper=mCSB_container.parent();\n 1613: \t\t\tmCSB_container.bind(\"focusin.\"+namespace,function(e){\n 1614  \t\t\t\tvar el=$(document.activeElement),\n 1615  \t\t\t\t\tnested=mCSB_container.find(\".mCustomScrollBox\").length,\n ....\n 1644  \t\t\t\tnamespace=pluginPfx+\"_\"+d.idx,\n 1645  \t\t\t\twrapper=$(\"#mCSB_\"+d.idx+\"_container\").parent();\n 1646: \t\t\twrapper.bind(\"scroll.\"+namespace,function(e){\n 1647  \t\t\t\tif(wrapper.scrollTop()!==0 || wrapper.scrollLeft()!==0){\n 1648  \t\t\t\t\t$(\".mCSB_\"+d.idx+\"_scrollbar\").css(\"visibility\",\"hidden\"); /* hide scrollbar(s) */\n ....\n 1662  \t\t\t\tsel=\".mCSB_\"+d.idx+\"_scrollbar\",\n 1663  \t\t\t\tbtn=$(sel+\">a\");\n 1664: \t\t\tbtn.bind(\"contextmenu.\"+namespace,function(e){\n 1665  \t\t\t\te.preventDefault(); //prevent right click\n 1666: \t\t\t}).bind(\"mousedown.\"+namespace+\" touchstart.\"+namespace+\" pointerdown.\"+namespace+\" MSPointerDown.\"+namespace+\" mouseup.\"+namespace+\" touchend.\"+namespace+\" pointerup.\"+namespace+\" MSPointerUp.\"+namespace+\" mouseout.\"+namespace+\" pointerout.\"+namespace+\" MSPointerOut.\"+namespace+\" click.\"+namespace,function(e){\n 1667  \t\t\t\te.preventDefault();\n 1668  \t\t\t\tif(!_mouseBtnLeft(e)){return;} /* left mouse button only */\n ....\n 1712  \t\t\tif(iframe.length){\n 1713  \t\t\t\tiframe.each(function(){\n 1714: \t\t\t\t\t$(this).bind(\"load\",function(){\n 1715: \t\t\t\t\t\t/* bind events on accessible iframes */\n 1716  \t\t\t\t\t\tif(_canAccessIFrame(this)){\n 1717: \t\t\t\t\t\t\t$(this.contentDocument || this.contentWindow.document).bind(events[0],function(e){\n 1718  \t\t\t\t\t\t\t\t_onKeyboard(e);\n 1719  \t\t\t\t\t\t\t});\n ....\n 1722  \t\t\t\t});\n 1723  \t\t\t}\n 1724: \t\t\tmCustomScrollBox.attr(\"tabindex\",\"0\").bind(events[0],function(e){\n 1725  \t\t\t\t_onKeyboard(e);\n 1726  \t\t\t});\n ....\n 2419  \twindow[pluginNS]=true;\n 2420  \t\n 2421: \t$(window).bind(\"load\",function(){\n 2422  \t\t\n 2423  \t\t$(defaultSelector)[pluginNS](); /* add scrollbars automatically on default selector */\n\n/opt/lampp/htdocs/uzbek/ftp/js/jquery.mousewheel.js:\n   21  \n   22      var toFix  = ['wheel', 'mousewheel', 'DOMMouseScroll', 'MozMousePixelScroll'],\n   23:         toBind = ( 'onwheel' in document || document.documentMode >= 9 ) ?\n   24                      ['wheel'] : ['mousewheel', 'DomMouseScroll', 'MozMousePixelScroll'],\n   25          slice  = Array.prototype.slice,\n   ..\n   37          setup: function() {\n   38              if ( this.addEventListener ) {\n   39:                 for ( var i = toBind.length; i; ) {\n   40:                     this.addEventListener( toBind[--i], handler, false );\n   41                  }\n   42              } else {\n   ..\n   50          teardown: function() {\n   51              if ( this.removeEventListener ) {\n   52:                 for ( var i = toBind.length; i; ) {\n   53:                     this.removeEventListener( toBind[--i], handler, false );\n   54                  }\n   55              } else {\n   ..\n   82      $.fn.extend({\n   83          mousewheel: function(fn) {\n   84:             return fn ? this.bind('mousewheel', fn) : this.trigger('mousewheel');\n   85          },\n   86  \n   87          unmousewheel: function(fn) {\n   88:             return this.unbind('mousewheel', fn);\n   89          }\n   90      });\n\n/opt/lampp/htdocs/uzbek/ftp/js/jquery.touchSwipe.min.js:\n   12   *\n   13   */\n   14: !function(factory){\"function\"==typeof define&&define.amd&&define.amd.jQuery?define([\"jquery\"],factory):factory(\"undefined\"!=typeof module&&module.exports?require(\"jquery\"):jQuery)}(function($){\"use strict\";function init(options){return!options||void 0!==options.allowPageScroll||void 0===options.swipe&&void 0===options.swipeStatus||(options.allowPageScroll=NONE),void 0!==options.click&&void 0===options.tap&&(options.tap=options.click),options||(options={}),options=$.extend({},$.fn.swipe.defaults,options),this.each(function(){var $this=$(this),plugin=$this.data(PLUGIN_NS);plugin||(plugin=new TouchSwipe(this,options),$this.data(PLUGIN_NS,plugin))})}function TouchSwipe(element,options){function touchStart(jqEvent){if(!(getTouchInProgress()||$(jqEvent.target).closest(options.excludedElements,$element).length>0)){var event=jqEvent.originalEvent?jqEvent.originalEvent:jqEvent;if(!event.pointerType||\"mouse\"!=event.pointerType||0!=options.fallbackToMouseEvents){var ret,touches=event.touches,evt=touches?touches[0]:event;return phase=PHASE_START,touches?fingerCount=touches.length:options.preventDefaultEvents!==!1&&jqEvent.preventDefault(),distance=0,direction=null,currentDirection=null,pinchDirection=null,duration=0,startTouchesDistance=0,endTouchesDistance=0,pinchZoom=1,pinchDistance=0,maximumsMap=createMaximumsData(),cancelMultiFingerRelease(),createFingerData(0,evt),!touches||fingerCount===options.fingers||options.fingers===ALL_FINGERS||hasPinches()?(startTime=getTimeStamp(),2==fingerCount&&(createFingerData(1,touches[1]),startTouchesDistance=endTouchesDistance=calculateTouchesDistance(fingerData[0].start,fingerData[1].start)),(options.swipeStatus||options.pinchStatus)&&(ret=triggerHandler(event,phase))):ret=!1,ret===!1?(phase=PHASE_CANCEL,triggerHandler(event,phase),ret):(options.hold&&(holdTimeout=setTimeout($.proxy(function(){$element.trigger(\"hold\",[event.target]),options.hold&&(ret=options.hold.call($element,event,event.target))},this),options.longTapThreshold)),setTouchInProgress(!0),null)}}}function touchMove(jqEvent){var event=jqEvent.originalEvent?jqEvent.originalEvent:jqEvent;if(phase!==PHASE_END&&phase!==PHASE_CANCEL&&!inMultiFingerRelease()){var ret,touches=event.touches,evt=touches?touches[0]:event,currentFinger=updateFingerData(evt);if(endTime=getTimeStamp(),touches&&(fingerCount=touches.length),options.hold&&clearTimeout(holdTimeout),phase=PHASE_MOVE,2==fingerCount&&(0==startTouchesDistance?(createFingerData(1,touches[1]),startTouchesDistance=endTouchesDistance=calculateTouchesDistance(fingerData[0].start,fingerData[1].start)):(updateFingerData(touches[1]),endTouchesDistance=calculateTouchesDistance(fingerData[0].end,fingerData[1].end),pinchDirection=calculatePinchDirection(fingerData[0].end,fingerData[1].end)),pinchZoom=calculatePinchZoom(startTouchesDistance,endTouchesDistance),pinchDistance=Math.abs(startTouchesDistance-endTouchesDistance)),fingerCount===options.fingers||options.fingers===ALL_FINGERS||!touches||hasPinches()){if(direction=calculateDirection(currentFinger.start,currentFinger.end),currentDirection=calculateDirection(currentFinger.last,currentFinger.end),validateDefaultEvent(jqEvent,currentDirection),distance=calculateDistance(currentFinger.start,currentFinger.end),duration=calculateDuration(),setMaxDistance(direction,distance),ret=triggerHandler(event,phase),!options.triggerOnTouchEnd||options.triggerOnTouchLeave){var inBounds=!0;if(options.triggerOnTouchLeave){var bounds=getbounds(this);inBounds=isInBounds(currentFinger.end,bounds)}!options.triggerOnTouchEnd&&inBounds?phase=getNextPhase(PHASE_MOVE):options.triggerOnTouchLeave&&!inBounds&&(phase=getNextPhase(PHASE_END)),phase!=PHASE_CANCEL&&phase!=PHASE_END||triggerHandler(event,phase)}}else phase=PHASE_CANCEL,triggerHandler(event,phase);ret===!1&&(phase=PHASE_CANCEL,triggerHandler(event,phase))}}function touchEnd(jqEvent){var event=jqEvent.originalEvent?jqEvent.originalEvent:jqEvent,touches=event.touches;if(touches){if(touches.length&&!inMultiFingerRelease())return startMultiFingerRelease(event),!0;if(touches.length&&inMultiFingerRelease())return!0}return inMultiFingerRelease()&&(fingerCount=fingerCountAtRelease),endTime=getTimeStamp(),duration=calculateDuration(),didSwipeBackToCancel()||!validateSwipeDistance()?(phase=PHASE_CANCEL,triggerHandler(event,phase)):options.triggerOnTouchEnd||options.triggerOnTouchEnd===!1&&phase===PHASE_MOVE?(options.preventDefaultEvents!==!1&&jqEvent.cancelable!==!1&&jqEvent.preventDefault(),phase=PHASE_END,triggerHandler(event,phase)):!options.triggerOnTouchEnd&&hasTap()?(phase=PHASE_END,triggerHandlerForGesture(event,phase,TAP)):phase===PHASE_MOVE&&(phase=PHASE_CANCEL,triggerHandler(event,phase)),setTouchInProgress(!1),null}function touchCancel(){fingerCount=0,endTime=0,startTime=0,startTouchesDistance=0,endTouchesDistance=0,pinchZoom=1,cancelMultiFingerRelease(),setTouchInProgress(!1)}function touchLeave(jqEvent){var event=jqEvent.originalEvent?jqEvent.originalEvent:jqEvent;options.triggerOnTouchLeave&&(phase=getNextPhase(PHASE_END),triggerHandler(event,phase))}function removeListeners(){$element.unbind(START_EV,touchStart),$element.unbind(CANCEL_EV,touchCancel),$element.unbind(MOVE_EV,touchMove),$element.unbind(END_EV,touchEnd),LEAVE_EV&&$element.unbind(LEAVE_EV,touchLeave),setTouchInProgress(!1)}function getNextPhase(currentPhase){var nextPhase=currentPhase,validTime=validateSwipeTime(),validDistance=validateSwipeDistance(),didCancel=didSwipeBackToCancel();return!validTime||didCancel?nextPhase=PHASE_CANCEL:!validDistance||currentPhase!=PHASE_MOVE||options.triggerOnTouchEnd&&!options.triggerOnTouchLeave?!validDistance&&currentPhase==PHASE_END&&options.triggerOnTouchLeave&&(nextPhase=PHASE_CANCEL):nextPhase=PHASE_END,nextPhase}function triggerHandler(event,phase){var ret,touches=event.touches;return(didSwipe()||hasSwipes())&&(ret=triggerHandlerForGesture(event,phase,SWIPE)),(didPinch()||hasPinches())&&ret!==!1&&(ret=triggerHandlerForGesture(event,phase,PINCH)),didDoubleTap()&&ret!==!1?ret=triggerHandlerForGesture(event,phase,DOUBLE_TAP):didLongTap()&&ret!==!1?ret=triggerHandlerForGesture(event,phase,LONG_TAP):didTap()&&ret!==!1&&(ret=triggerHandlerForGesture(event,phase,TAP)),phase===PHASE_CANCEL&&touchCancel(event),phase===PHASE_END&&(touches?touches.length||touchCancel(event):touchCancel(event)),ret}function triggerHandlerForGesture(event,phase,gesture){var ret;if(gesture==SWIPE){if($element.trigger(\"swipeStatus\",[phase,direction||null,distance||0,duration||0,fingerCount,fingerData,currentDirection]),options.swipeStatus&&(ret=options.swipeStatus.call($element,event,phase,direction||null,distance||0,duration||0,fingerCount,fingerData,currentDirection),ret===!1))return!1;if(phase==PHASE_END&&validateSwipe()){if(clearTimeout(singleTapTimeout),clearTimeout(holdTimeout),$element.trigger(\"swipe\",[direction,distance,duration,fingerCount,fingerData,currentDirection]),options.swipe&&(ret=options.swipe.call($element,event,direction,distance,duration,fingerCount,fingerData,currentDirection),ret===!1))return!1;switch(direction){case LEFT:$element.trigger(\"swipeLeft\",[direction,distance,duration,fingerCount,fingerData,currentDirection]),options.swipeLeft&&(ret=options.swipeLeft.call($element,event,direction,distance,duration,fingerCount,fingerData,currentDirection));break;case RIGHT:$element.trigger(\"swipeRight\",[direction,distance,duration,fingerCount,fingerData,currentDirection]),options.swipeRight&&(ret=options.swipeRight.call($element,event,direction,distance,duration,fingerCount,fingerData,currentDirection));break;case UP:$element.trigger(\"swipeUp\",[direction,distance,duration,fingerCount,fingerData,currentDirection]),options.swipeUp&&(ret=options.swipeUp.call($element,event,direction,distance,duration,fingerCount,fingerData,currentDirection));break;case DOWN:$element.trigger(\"swipeDown\",[direction,distance,duration,fingerCount,fingerData,currentDirection]),options.swipeDown&&(ret=options.swipeDown.call($element,event,direction,distance,duration,fingerCount,fingerData,currentDirection))}}}if(gesture==PINCH){if($element.trigger(\"pinchStatus\",[phase,pinchDirection||null,pinchDistance||0,duration||0,fingerCount,pinchZoom,fingerData]),options.pinchStatus&&(ret=options.pinchStatus.call($element,event,phase,pinchDirection||null,pinchDistance||0,duration||0,fingerCount,pinchZoom,fingerData),ret===!1))return!1;if(phase==PHASE_END&&validatePinch())switch(pinchDirection){case IN:$element.trigger(\"pinchIn\",[pinchDirection||null,pinchDistance||0,duration||0,fingerCount,pinchZoom,fingerData]),options.pinchIn&&(ret=options.pinchIn.call($element,event,pinchDirection||null,pinchDistance||0,duration||0,fingerCount,pinchZoom,fingerData));break;case OUT:$element.trigger(\"pinchOut\",[pinchDirection||null,pinchDistance||0,duration||0,fingerCount,pinchZoom,fingerData]),options.pinchOut&&(ret=options.pinchOut.call($element,event,pinchDirection||null,pinchDistance||0,duration||0,fingerCount,pinchZoom,fingerData))}}return gesture==TAP?phase!==PHASE_CANCEL&&phase!==PHASE_END||(clearTimeout(singleTapTimeout),clearTimeout(holdTimeout),hasDoubleTap()&&!inDoubleTap()?(doubleTapStartTime=getTimeStamp(),singleTapTimeout=setTimeout($.proxy(function(){doubleTapStartTime=null,$element.trigger(\"tap\",[event.target]),options.tap&&(ret=options.tap.call($element,event,event.target))},this),options.doubleTapThreshold)):(doubleTapStartTime=null,$element.trigger(\"tap\",[event.target]),options.tap&&(ret=options.tap.call($element,event,event.target)))):gesture==DOUBLE_TAP?phase!==PHASE_CANCEL&&phase!==PHASE_END||(clearTimeout(singleTapTimeout),clearTimeout(holdTimeout),doubleTapStartTime=null,$element.trigger(\"doubletap\",[event.target]),options.doubleTap&&(ret=options.doubleTap.call($element,event,event.target))):gesture==LONG_TAP&&(phase!==PHASE_CANCEL&&phase!==PHASE_END||(clearTimeout(singleTapTimeout),doubleTapStartTime=null,$element.trigger(\"longtap\",[event.target]),options.longTap&&(ret=options.longTap.call($element,event,event.target)))),ret}function validateSwipeDistance(){var valid=!0;return null!==options.threshold&&(valid=distance>=options.threshold),valid}function didSwipeBackToCancel(){var cancelled=!1;return null!==options.cancelThreshold&&null!==direction&&(cancelled=getMaxDistance(direction)-distance>=options.cancelThreshold),cancelled}function validatePinchDistance(){return null===options.pinchThreshold||pinchDistance>=options.pinchThreshold}function validateSwipeTime(){var result;return result=!options.maxTimeThreshold||!(duration>=options.maxTimeThreshold)}function validateDefaultEvent(jqEvent,direction){if(options.preventDefaultEvents!==!1)if(options.allowPageScroll===NONE)jqEvent.preventDefault();else{var auto=options.allowPageScroll===AUTO;switch(direction){case LEFT:(options.swipeLeft&&auto||!auto&&options.allowPageScroll!=HORIZONTAL)&&jqEvent.preventDefault();break;case RIGHT:(options.swipeRight&&auto||!auto&&options.allowPageScroll!=HORIZONTAL)&&jqEvent.preventDefault();break;case UP:(options.swipeUp&&auto||!auto&&options.allowPageScroll!=VERTICAL)&&jqEvent.preventDefault();break;case DOWN:(options.swipeDown&&auto||!auto&&options.allowPageScroll!=VERTICAL)&&jqEvent.preventDefault();break;case NONE:}}}function validatePinch(){var hasCorrectFingerCount=validateFingers(),hasEndPoint=validateEndPoint(),hasCorrectDistance=validatePinchDistance();return hasCorrectFingerCount&&hasEndPoint&&hasCorrectDistance}function hasPinches(){return!!(options.pinchStatus||options.pinchIn||options.pinchOut)}function didPinch(){return!(!validatePinch()||!hasPinches())}function validateSwipe(){var hasValidTime=validateSwipeTime(),hasValidDistance=validateSwipeDistance(),hasCorrectFingerCount=validateFingers(),hasEndPoint=validateEndPoint(),didCancel=didSwipeBackToCancel(),valid=!didCancel&&hasEndPoint&&hasCorrectFingerCount&&hasValidDistance&&hasValidTime;return valid}function hasSwipes(){return!!(options.swipe||options.swipeStatus||options.swipeLeft||options.swipeRight||options.swipeUp||options.swipeDown)}function didSwipe(){return!(!validateSwipe()||!hasSwipes())}function validateFingers(){return fingerCount===options.fingers||options.fingers===ALL_FINGERS||!SUPPORTS_TOUCH}function validateEndPoint(){return 0!==fingerData[0].end.x}function hasTap(){return!!options.tap}function hasDoubleTap(){return!!options.doubleTap}function hasLongTap(){return!!options.longTap}function validateDoubleTap(){if(null==doubleTapStartTime)return!1;var now=getTimeStamp();return hasDoubleTap()&&now-doubleTapStartTime<=options.doubleTapThreshold}function inDoubleTap(){return validateDoubleTap()}function validateTap(){return(1===fingerCount||!SUPPORTS_TOUCH)&&(isNaN(distance)||distance<options.threshold)}function validateLongTap(){return duration>options.longTapThreshold&&distance<DOUBLE_TAP_THRESHOLD}function didTap(){return!(!validateTap()||!hasTap())}function didDoubleTap(){return!(!validateDoubleTap()||!hasDoubleTap())}function didLongTap(){return!(!validateLongTap()||!hasLongTap())}function startMultiFingerRelease(event){previousTouchEndTime=getTimeStamp(),fingerCountAtRelease=event.touches.length+1}function cancelMultiFingerRelease(){previousTouchEndTime=0,fingerCountAtRelease=0}function inMultiFingerRelease(){var withinThreshold=!1;if(previousTouchEndTime){var diff=getTimeStamp()-previousTouchEndTime;diff<=options.fingerReleaseThreshold&&(withinThreshold=!0)}return withinThreshold}function getTouchInProgress(){return!($element.data(PLUGIN_NS+\"_intouch\")!==!0)}function setTouchInProgress(val){$element&&(val===!0?($element.bind(MOVE_EV,touchMove),$element.bind(END_EV,touchEnd),LEAVE_EV&&$element.bind(LEAVE_EV,touchLeave)):($element.unbind(MOVE_EV,touchMove,!1),$element.unbind(END_EV,touchEnd,!1),LEAVE_EV&&$element.unbind(LEAVE_EV,touchLeave,!1)),$element.data(PLUGIN_NS+\"_intouch\",val===!0))}function createFingerData(id,evt){var f={start:{x:0,y:0},last:{x:0,y:0},end:{x:0,y:0}};return f.start.x=f.last.x=f.end.x=evt.pageX||evt.clientX,f.start.y=f.last.y=f.end.y=evt.pageY||evt.clientY,fingerData[id]=f,f}function updateFingerData(evt){var id=void 0!==evt.identifier?evt.identifier:0,f=getFingerData(id);return null===f&&(f=createFingerData(id,evt)),f.last.x=f.end.x,f.last.y=f.end.y,f.end.x=evt.pageX||evt.clientX,f.end.y=evt.pageY||evt.clientY,f}function getFingerData(id){return fingerData[id]||null}function setMaxDistance(direction,distance){direction!=NONE&&(distance=Math.max(distance,getMaxDistance(direction)),maximumsMap[direction].distance=distance)}function getMaxDistance(direction){if(maximumsMap[direction])return maximumsMap[direction].distance}function createMaximumsData(){var maxData={};return maxData[LEFT]=createMaximumVO(LEFT),maxData[RIGHT]=createMaximumVO(RIGHT),maxData[UP]=createMaximumVO(UP),maxData[DOWN]=createMaximumVO(DOWN),maxData}function createMaximumVO(dir){return{direction:dir,distance:0}}function calculateDuration(){return endTime-startTime}function calculateTouchesDistance(startPoint,endPoint){var diffX=Math.abs(startPoint.x-endPoint.x),diffY=Math.abs(startPoint.y-endPoint.y);return Math.round(Math.sqrt(diffX*diffX+diffY*diffY))}function calculatePinchZoom(startDistance,endDistance){var percent=endDistance/startDistance*1;return percent.toFixed(2)}function calculatePinchDirection(){return pinchZoom<1?OUT:IN}function calculateDistance(startPoint,endPoint){return Math.round(Math.sqrt(Math.pow(endPoint.x-startPoint.x,2)+Math.pow(endPoint.y-startPoint.y,2)))}function calculateAngle(startPoint,endPoint){var x=startPoint.x-endPoint.x,y=endPoint.y-startPoint.y,r=Math.atan2(y,x),angle=Math.round(180*r/Math.PI);return angle<0&&(angle=360-Math.abs(angle)),angle}function calculateDirection(startPoint,endPoint){if(comparePoints(startPoint,endPoint))return NONE;var angle=calculateAngle(startPoint,endPoint);return angle<=45&&angle>=0?LEFT:angle<=360&&angle>=315?LEFT:angle>=135&&angle<=225?RIGHT:angle>45&&angle<135?DOWN:UP}function getTimeStamp(){var now=new Date;return now.getTime()}function getbounds(el){el=$(el);var offset=el.offset(),bounds={left:offset.left,right:offset.left+el.outerWidth(),top:offset.top,bottom:offset.top+el.outerHeight()};return bounds}function isInBounds(point,bounds){return point.x>bounds.left&&point.x<bounds.right&&point.y>bounds.top&&point.y<bounds.bottom}function comparePoints(pointA,pointB){return pointA.x==pointB.x&&pointA.y==pointB.y}var options=$.extend({},options),useTouchEvents=SUPPORTS_TOUCH||SUPPORTS_POINTER||!options.fallbackToMouseEvents,START_EV=useTouchEvents?SUPPORTS_POINTER?SUPPORTS_POINTER_IE10?\"MSPointerDown\":\"pointerdown\":\"touchstart\":\"mousedown\",MOVE_EV=useTouchEvents?SUPPORTS_POINTER?SUPPORTS_POINTER_IE10?\"MSPointerMove\":\"pointermove\":\"touchmove\":\"mousemove\",END_EV=useTouchEvents?SUPPORTS_POINTER?SUPPORTS_POINTER_IE10?\"MSPointerUp\":\"pointerup\":\"touchend\":\"mouseup\",LEAVE_EV=useTouchEvents?SUPPORTS_POINTER?\"mouseleave\":null:\"mouseleave\",CANCEL_EV=SUPPORTS_POINTER?SUPPORTS_POINTER_IE10?\"MSPointerCancel\":\"pointercancel\":\"touchcancel\",distance=0,direction=null,currentDirection=null,duration=0,startTouchesDistance=0,endTouchesDistance=0,pinchZoom=1,pinchDistance=0,pinchDirection=0,maximumsMap=null,$element=$(element),phase=\"start\",fingerCount=0,fingerData={},startTime=0,endTime=0,previousTouchEndTime=0,fingerCountAtRelease=0,doubleTapStartTime=0,singleTapTimeout=null,holdTimeout=null;try{$element.bind(START_EV,touchStart),$element.bind(CANCEL_EV,touchCancel)}catch(e){$.error(\"events not supported \"+START_EV+\",\"+CANCEL_EV+\" on jQuery.swipe\")}this.enable=function(){return this.disable(),$element.bind(START_EV,touchStart),$element.bind(CANCEL_EV,touchCancel),$element},this.disable=function(){return removeListeners(),$element},this.destroy=function(){removeListeners(),$element.data(PLUGIN_NS,null),$element=null},this.option=function(property,value){if(\"object\"==typeof property)options=$.extend(options,property);else if(void 0!==options[property]){if(void 0===value)return options[property];options[property]=value}else{if(!property)return options;$.error(\"Option \"+property+\" does not exist on jQuery.swipe.options\")}return null}}var VERSION=\"1.6.18\",LEFT=\"left\",RIGHT=\"right\",UP=\"up\",DOWN=\"down\",IN=\"in\",OUT=\"out\",NONE=\"none\",AUTO=\"auto\",SWIPE=\"swipe\",PINCH=\"pinch\",TAP=\"tap\",DOUBLE_TAP=\"doubletap\",LONG_TAP=\"longtap\",HORIZONTAL=\"horizontal\",VERTICAL=\"vertical\",ALL_FINGERS=\"all\",DOUBLE_TAP_THRESHOLD=10,PHASE_START=\"start\",PHASE_MOVE=\"move\",PHASE_END=\"end\",PHASE_CANCEL=\"cancel\",SUPPORTS_TOUCH=\"ontouchstart\"in window,SUPPORTS_POINTER_IE10=window.navigator.msPointerEnabled&&!window.navigator.pointerEnabled&&!SUPPORTS_TOUCH,SUPPORTS_POINTER=(window.navigator.pointerEnabled||window.navigator.msPointerEnabled)&&!SUPPORTS_TOUCH,PLUGIN_NS=\"TouchSwipe\",defaults={fingers:1,threshold:75,cancelThreshold:null,pinchThreshold:20,maxTimeThreshold:null,fingerReleaseThreshold:250,longTapThreshold:500,doubleTapThreshold:200,swipe:null,swipeLeft:null,swipeRight:null,swipeUp:null,swipeDown:null,swipeStatus:null,pinchIn:null,pinchOut:null,pinchStatus:null,click:null,tap:null,doubleTap:null,longTap:null,hold:null,triggerOnTouchEnd:!0,triggerOnTouchLeave:!1,allowPageScroll:\"auto\",fallbackToMouseEvents:!0,excludedElements:\".noSwipe\",preventDefaultEvents:!0};$.fn.swipe=function(method){var $this=$(this),plugin=$this.data(PLUGIN_NS);if(plugin&&\"string\"==typeof method){if(plugin[method])return plugin[method].apply(plugin,Array.prototype.slice.call(arguments,1));$.error(\"Method \"+method+\" does not exist on jQuery.swipe\")}else if(plugin&&\"object\"==typeof method)plugin.option.apply(plugin,arguments);else if(!(plugin||\"object\"!=typeof method&&method))return init.apply(this,arguments);return $this},$.fn.swipe.version=VERSION,$.fn.swipe.defaults=defaults,$.fn.swipe.phases={PHASE_START:PHASE_START,PHASE_MOVE:PHASE_MOVE,PHASE_END:PHASE_END,PHASE_CANCEL:PHASE_CANCEL},$.fn.swipe.directions={LEFT:LEFT,RIGHT:RIGHT,UP:UP,DOWN:DOWN,IN:IN,OUT:OUT},$.fn.swipe.pageScroll={NONE:NONE,HORIZONTAL:HORIZONTAL,VERTICAL:VERTICAL,AUTO:AUTO},$.fn.swipe.fingers={ONE:1,TWO:2,THREE:3,FOUR:4,FIVE:5,ALL:ALL_FINGERS}});\n\n/opt/lampp/htdocs/uzbek/ftp/js/linksFix.js:\n    9  \t\t\t$(this).attr(\"href\", attrHref);\n   10  \t\t\t// $(this).addClass(\"scroll\");\n   11: \t\t\t$(this).bind(\"click\", function(){\n   12  \t\t\t\tvar hash = window.location.hash;\n   13  \t\t\t\tif (hash == \"#bar\"){\n   ..\n   30  \t\t\tattrHref += \"#\" + attrJump;\n   31  \t\t\t$(this).attr(\"href\", attrHref);\n   32: \t\t\t$(this).bind(\"click\", function(){\n   33  \t\t\t\twindow.location = attrHref;\n   34  \t\t\t});\n   ..\n   39  \t$(\".gotop-streaks a\").each(function(){\n   40  \t\tvar attrHref = $(this).attr(\"href\");\n   41: \t\t$(this).bind(\"click\", function(){\n   42  \t\t\t$(\".gotop-streaks\").slideUp();\n   43  \t\t\twindow.location = attrHref;\n   ..\n   48  \t$(\"enter.visible-sm .language a\").each(function(){\n   49  \t\tvar attrHref = $(this).attr(\"href\");\n   50: \t\t$(this).bind(\"click\", function(){\n   51  \t\t\t$(\".gotop-streaks\").slideUp();\n   52  \t\t\twindow.location = attrHref;\n   ..\n   56      $(\"#coolinary a\").each(function(){\n   57      \tvar attrHref = $(this).attr(\"href\");\n   58: \t\t$(this).bind(\"click\", function(){\n   59  \t\t\twindow.location = attrHref;\n   60  \t\t});\t\n   ..\n   62      $(\".download a\").each(function(){\n   63      \tvar attrHref = $(this).attr(\"href\");\n   64: \t\t$(this).bind(\"click\", function(){\n   65  \t\t\twindow.location = attrHref;\n   66  \t\t});\t\n   ..\n   79  \t$(\"#halls .textBox ul a\").each(function(){\n   80  \t\tvar attrAttitude = $(this).attr(\"attitude\");\n   81: \t\t$(this).bind(\"click\", function(){\n   82  \t\t\tswitch(attrAttitude){\n   83  \t\t\t\tcase \"gallery-1\":\n\n110 matches across 9 files\n",
+			"settings":
+			{
+				"buffer_size": 93282,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "ftp/js/appRefactor.js",
+			"settings":
+			{
+				"buffer_size": 15360,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -160,16 +208,15 @@
 		"/opt/lampp/htdocs/uzbek/ftp/engine",
 		"/opt/lampp/htdocs/uzbek/ftp/engine/core",
 		"/opt/lampp/htdocs/uzbek/ftp/engine/layout",
-		"/opt/lampp/htdocs/uzbek/ftp/img",
 		"/opt/lampp/htdocs/uzbek/ftp/js"
 	],
 	"file_history":
 	[
+		"/opt/lampp/htdocs/uzbek/ftp/css/media.css",
+		"/opt/lampp/htdocs/uzbek/ftp/engine/layout/menu.php",
 		"/opt/lampp/htdocs/uzbek/ftp/engine/layout/header.php",
 		"/opt/lampp/htdocs/uzbek/ftp/js/linksFix.js",
-		"/opt/lampp/htdocs/uzbek/ftp/css/media.css",
 		"/opt/lampp/htdocs/uzbek/ftp/css/style.css",
-		"/opt/lampp/htdocs/uzbek/ftp/engine/layout/menu.php",
 		"/opt/lampp/htdocs/uzbek/ftp/index.phtml",
 		"/opt/lampp/htdocs/uzbek/index.phtml",
 		"/opt/lampp/htdocs/uzbek/ftp/engine/menu.php",
@@ -218,6 +265,8 @@
 		"where_history":
 		[
 			"/opt/lampp/htdocs/uzbek/ftp",
+			"/opt/lampp/htdocs/uzbek",
+			"/opt/lampp/htdocs/uzbek/ftp",
 			"/opt/lampp/htdocs/uzbek/engine",
 			"/opt/lampp/htdocs/uzbek",
 			"/opt/lampp/htdocs/uzbek/engine",
@@ -229,6 +278,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"bind",
+			"jump",
 			"leftside",
 			"background:",
 			"background",
@@ -333,24 +384,1531 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "ftp/css/media.css",
+					"file": "ftp/engine/layout/main.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7267,
+						"buffer_size": 1569,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6267,
-								6267
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"incomplete_sync": null,
+							"last_modified_indicator": true,
+							"last_modified_indicator_file_save_clear": false,
+							"last_modified_indicator_multiline": true,
+							"origPos":
+							[
+								0.0,
+								648.0
+							],
+							"remote_loading": false,
+							"syncScroll": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 648.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "ftp/engine/layout/menu.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15013,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14890,
+								14890
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"incomplete_sync": null,
+							"last_modified_indicator": true,
+							"last_modified_indicator_file_save_clear": false,
+							"last_modified_indicator_multiline": true,
+							"origPos":
+							[
+								0.0,
+								8046.0
+							],
+							"remote_loading": false,
+							"syncScroll": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 5778.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "ftp/engine/layout/header.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 52749,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"incomplete_sync": null,
+							"last_modified_indicator": true,
+							"last_modified_indicator_file_save_clear": false,
+							"last_modified_indicator_multiline": true,
+							"origPos":
+							[
+								0.0,
+								0.0
+							],
+							"remote_loading": false,
+							"syncScroll": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 93282,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										156,
+										160
+									],
+									[
+										310,
+										314
+									],
+									[
+										443,
+										447
+									],
+									[
+										556,
+										560
+									],
+									[
+										649,
+										653
+									],
+									[
+										777,
+										781
+									],
+									[
+										898,
+										902
+									],
+									[
+										1007,
+										1011
+									],
+									[
+										1127,
+										1131
+									],
+									[
+										1247,
+										1251
+									],
+									[
+										1328,
+										1332
+									],
+									[
+										1533,
+										1537
+									],
+									[
+										1684,
+										1688
+									],
+									[
+										1799,
+										1803
+									],
+									[
+										1914,
+										1918
+									],
+									[
+										2079,
+										2083
+									],
+									[
+										2473,
+										2477
+									],
+									[
+										2826,
+										2830
+									],
+									[
+										3038,
+										3042
+									],
+									[
+										3368,
+										3372
+									],
+									[
+										3660,
+										3664
+									],
+									[
+										3693,
+										3697
+									],
+									[
+										3859,
+										3863
+									],
+									[
+										4011,
+										4015
+									],
+									[
+										4117,
+										4121
+									],
+									[
+										4480,
+										4484
+									],
+									[
+										4815,
+										4819
+									],
+									[
+										5120,
+										5124
+									],
+									[
+										5482,
+										5486
+									],
+									[
+										5934,
+										5938
+									],
+									[
+										6159,
+										6163
+									],
+									[
+										6297,
+										6301
+									],
+									[
+										6391,
+										6395
+									],
+									[
+										6485,
+										6489
+									],
+									[
+										6630,
+										6634
+									],
+									[
+										6724,
+										6728
+									],
+									[
+										6818,
+										6822
+									],
+									[
+										6912,
+										6916
+									],
+									[
+										7066,
+										7070
+									],
+									[
+										7230,
+										7234
+									],
+									[
+										7343,
+										7347
+									],
+									[
+										7456,
+										7460
+									],
+									[
+										7630,
+										7634
+									],
+									[
+										7743,
+										7747
+									],
+									[
+										7856,
+										7860
+									],
+									[
+										7969,
+										7973
+									],
+									[
+										8184,
+										8188
+									],
+									[
+										8368,
+										8372
+									],
+									[
+										8581,
+										8585
+									],
+									[
+										8797,
+										8801
+									],
+									[
+										8935,
+										8939
+									],
+									[
+										9029,
+										9033
+									],
+									[
+										9123,
+										9127
+									],
+									[
+										9268,
+										9272
+									],
+									[
+										9362,
+										9366
+									],
+									[
+										9456,
+										9460
+									],
+									[
+										9550,
+										9554
+									],
+									[
+										9748,
+										9752
+									],
+									[
+										9902,
+										9906
+									],
+									[
+										10035,
+										10039
+									],
+									[
+										10148,
+										10152
+									],
+									[
+										10241,
+										10245
+									],
+									[
+										10369,
+										10373
+									],
+									[
+										10490,
+										10494
+									],
+									[
+										10599,
+										10603
+									],
+									[
+										10719,
+										10723
+									],
+									[
+										10839,
+										10843
+									],
+									[
+										10920,
+										10924
+									],
+									[
+										11129,
+										11133
+									],
+									[
+										11280,
+										11284
+									],
+									[
+										11395,
+										11399
+									],
+									[
+										11510,
+										11514
+									],
+									[
+										11679,
+										11683
+									],
+									[
+										11893,
+										11897
+									],
+									[
+										12057,
+										12061
+									],
+									[
+										12170,
+										12174
+									],
+									[
+										12283,
+										12287
+									],
+									[
+										12457,
+										12461
+									],
+									[
+										12570,
+										12574
+									],
+									[
+										12683,
+										12687
+									],
+									[
+										12796,
+										12800
+									],
+									[
+										12969,
+										12973
+									],
+									[
+										13141,
+										13145
+									],
+									[
+										13260,
+										13264
+									],
+									[
+										13379,
+										13383
+									],
+									[
+										13563,
+										13567
+									],
+									[
+										13682,
+										13686
+									],
+									[
+										13801,
+										13805
+									],
+									[
+										13920,
+										13924
+									],
+									[
+										14143,
+										14147
+									],
+									[
+										14331,
+										14335
+									],
+									[
+										14544,
+										14548
+									],
+									[
+										14764,
+										14768
+									],
+									[
+										14902,
+										14906
+									],
+									[
+										14996,
+										15000
+									],
+									[
+										15090,
+										15094
+									],
+									[
+										15235,
+										15239
+									],
+									[
+										15329,
+										15333
+									],
+									[
+										15423,
+										15427
+									],
+									[
+										15517,
+										15521
+									],
+									[
+										15722,
+										15726
+									],
+									[
+										15769,
+										15773
+									],
+									[
+										15925,
+										15929
+									],
+									[
+										16004,
+										16008
+									],
+									[
+										16123,
+										16127
+									],
+									[
+										16242,
+										16246
+									],
+									[
+										16355,
+										16359
+									],
+									[
+										16586,
+										16590
+									],
+									[
+										16687,
+										16691
+									],
+									[
+										16720,
+										16724
+									],
+									[
+										16806,
+										16810
+									],
+									[
+										16868,
+										16872
+									],
+									[
+										16929,
+										16933
+									],
+									[
+										17043,
+										17047
+									],
+									[
+										17072,
+										17076
+									],
+									[
+										17160,
+										17164
+									],
+									[
+										17349,
+										17353
+									],
+									[
+										17406,
+										17410
+									],
+									[
+										17420,
+										17424
+									],
+									[
+										17625,
+										17629
+									],
+									[
+										17846,
+										17850
+									],
+									[
+										17867,
+										17871
+									],
+									[
+										17938,
+										17942
+									],
+									[
+										17983,
+										17987
+									],
+									[
+										18164,
+										18168
+									],
+									[
+										18185,
+										18189
+									],
+									[
+										18256,
+										18260
+									],
+									[
+										18301,
+										18305
+									],
+									[
+										18524,
+										18528
+									],
+									[
+										18571,
+										18575
+									],
+									[
+										18727,
+										18731
+									],
+									[
+										18806,
+										18810
+									],
+									[
+										18925,
+										18929
+									],
+									[
+										19044,
+										19048
+									],
+									[
+										19157,
+										19161
+									],
+									[
+										19388,
+										19392
+									],
+									[
+										19489,
+										19493
+									],
+									[
+										19522,
+										19526
+									],
+									[
+										19608,
+										19612
+									],
+									[
+										19670,
+										19674
+									],
+									[
+										19731,
+										19735
+									],
+									[
+										19845,
+										19849
+									],
+									[
+										19874,
+										19878
+									],
+									[
+										19962,
+										19966
+									],
+									[
+										20151,
+										20155
+									],
+									[
+										20208,
+										20212
+									],
+									[
+										20222,
+										20226
+									],
+									[
+										20427,
+										20431
+									],
+									[
+										20737,
+										20741
+									],
+									[
+										20990,
+										20994
+									],
+									[
+										21088,
+										21092
+									],
+									[
+										21149,
+										21153
+									],
+									[
+										21194,
+										21198
+									],
+									[
+										21243,
+										21247
+									],
+									[
+										21277,
+										21281
+									],
+									[
+										21457,
+										21461
+									],
+									[
+										21648,
+										21652
+									],
+									[
+										21825,
+										21829
+									],
+									[
+										22165,
+										22169
+									],
+									[
+										22360,
+										22364
+									],
+									[
+										22505,
+										22509
+									],
+									[
+										23574,
+										23578
+									],
+									[
+										59720,
+										59724
+									],
+									[
+										59882,
+										59886
+									],
+									[
+										60070,
+										60074
+									],
+									[
+										60364,
+										60368
+									],
+									[
+										60688,
+										60692
+									],
+									[
+										60714,
+										60718
+									],
+									[
+										60947,
+										60951
+									],
+									[
+										61249,
+										61253
+									],
+									[
+										61529,
+										61533
+									],
+									[
+										61557,
+										61561
+									],
+									[
+										61783,
+										61787
+									],
+									[
+										61811,
+										61815
+									],
+									[
+										62062,
+										62066
+									],
+									[
+										62099,
+										62103
+									],
+									[
+										62117,
+										62121
+									],
+									[
+										62145,
+										62149
+									],
+									[
+										62231,
+										62235
+									],
+									[
+										62298,
+										62302
+									],
+									[
+										62365,
+										62369
+									],
+									[
+										62432,
+										62436
+									],
+									[
+										62619,
+										62623
+									],
+									[
+										62655,
+										62659
+									],
+									[
+										62755,
+										62759
+									],
+									[
+										62983,
+										62987
+									],
+									[
+										63248,
+										63252
+									],
+									[
+										63329,
+										63333
+									],
+									[
+										63367,
+										63371
+									],
+									[
+										63714,
+										63718
+									],
+									[
+										63775,
+										63779
+									],
+									[
+										63894,
+										63898
+									],
+									[
+										63969,
+										63973
+									],
+									[
+										64259,
+										64263
+									],
+									[
+										64634,
+										64638
+									],
+									[
+										64743,
+										64747
+									],
+									[
+										65037,
+										65041
+									],
+									[
+										65236,
+										65240
+									],
+									[
+										65542,
+										65546
+									],
+									[
+										65904,
+										65908
+									],
+									[
+										65974,
+										65978
+									],
+									[
+										66071,
+										66075
+									],
+									[
+										66142,
+										66146
+									],
+									[
+										66295,
+										66299
+									],
+									[
+										66335,
+										66339
+									],
+									[
+										66482,
+										66486
+									],
+									[
+										66594,
+										66598
+									],
+									[
+										66671,
+										66675
+									],
+									[
+										66842,
+										66846
+									],
+									[
+										66996,
+										67000
+									],
+									[
+										67178,
+										67182
+									],
+									[
+										67414,
+										67418
+									],
+									[
+										67454,
+										67458
+									],
+									[
+										67601,
+										67605
+									],
+									[
+										67766,
+										67770
+									],
+									[
+										68002,
+										68006
+									],
+									[
+										68231,
+										68235
+									],
+									[
+										68364,
+										68368
+									],
+									[
+										68593,
+										68597
+									],
+									[
+										68871,
+										68875
+									],
+									[
+										69164,
+										69168
+									],
+									[
+										69273,
+										69277
+									],
+									[
+										69775,
+										69779
+									],
+									[
+										69815,
+										69819
+									],
+									[
+										69962,
+										69966
+									],
+									[
+										70107,
+										70111
+									],
+									[
+										70120,
+										70124
+									],
+									[
+										70253,
+										70257
+									],
+									[
+										70552,
+										70556
+									],
+									[
+										70890,
+										70894
+									],
+									[
+										70962,
+										70966
+									],
+									[
+										71180,
+										71184
+									],
+									[
+										71255,
+										71259
+									],
+									[
+										71446,
+										71450
+									],
+									[
+										71602,
+										71606
+									],
+									[
+										76844,
+										76848
+									],
+									[
+										76881,
+										76885
+									],
+									[
+										76920,
+										76924
+									],
+									[
+										76955,
+										76959
+									],
+									[
+										76998,
+										77002
+									],
+									[
+										85265,
+										85269
+									],
+									[
+										85298,
+										85302
+									],
+									[
+										85339,
+										85343
+									],
+									[
+										85378,
+										85382
+									],
+									[
+										85416,
+										85420
+									],
+									[
+										85462,
+										85466
+									],
+									[
+										89057,
+										89061
+									],
+									[
+										89092,
+										89096
+									],
+									[
+										89258,
+										89262
+									],
+									[
+										89293,
+										89297
+									],
+									[
+										91909,
+										91913
+									],
+									[
+										92115,
+										92119
+									],
+									[
+										92310,
+										92314
+									],
+									[
+										92543,
+										92547
+									],
+									[
+										92766,
+										92770
+									],
+									[
+										92961,
+										92965
+									],
+									[
+										93167,
+										93171
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								20541,
+								20541
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+									"1":
+									[
+										20508,
+										20509
+									]
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"detect_indentation": false,
+							"incomplete_sync": null,
+							"last_modified_indicator": true,
+							"last_modified_indicator_file_save_clear": false,
+							"last_modified_indicator_multiline": true,
+							"line_numbers": false,
+							"origPos":
+							[
+								0.0,
+								21006.0
+							],
+							"output_tag": 2,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syncScroll": false,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 21006.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "ftp/js/appRefactor.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15360,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6219,
+								6219
 							]
 						],
 						"settings":
@@ -362,8 +1920,8 @@
 								{
 									"1":
 									[
-										6289,
-										6290
+										6257,
+										6258
 									]
 								},
 								"icon":
@@ -378,8 +1936,8 @@
 								{
 									"1":
 									[
-										6266,
-										6267
+										6166,
+										6167
 									]
 								},
 								"unmatched":
@@ -388,21 +1946,16 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
@@ -413,6 +1966,16 @@
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
@@ -423,26 +1986,21 @@
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
 							],
 							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
 							"incomplete_sync": null,
@@ -452,19 +2010,20 @@
 							"origPos":
 							[
 								0.0,
-								5778.0
+								3047.0
 							],
 							"remote_loading": false,
 							"syncScroll": false,
 							"synced": false,
-							"syntax": "Packages/LESS/LESS.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5778.0,
+						"translation.y": 3047.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]

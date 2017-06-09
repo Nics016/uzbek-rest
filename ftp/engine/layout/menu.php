@@ -1,5 +1,5 @@
 	<paralax class="hidden-sm">
-		<div src="img/page/<?=$menupath[1]?>.jpg" apply="none"></div>
+		<div src="/img/page/<?=$menupath[1]?>.jpg" apply="none"></div>
 	</paralax>
 
 	<div class="circleBox hidden-sm">
@@ -77,7 +77,7 @@ END;
 echo <<<END
 											</ul>
 											<div class="download">
-												<a href="../../menu/menu_uzbek${nameadd}.pdf" style='color:#966'>$dl</a>
+												<a href="/menu/menu_uzbek${nameadd}.pdf" style='color:#966'>$dl</a>
 											</div>
 										</div>
 										<div tabsbody="tabs-${m[0]}" class="rightBox">
@@ -129,11 +129,11 @@ echo <<<END
 						<div class="circle">
 							<a hook href="#"></a>
 							<div class="titleBox">
-								<div class="circleTitle" style="background: url(../../img/circle/${row['ClassMenu']}${nameadd}.svg);"></div>
+								<div class="circleTitle" style="background: url(/img/circle/${row['ClassMenu']}${nameadd}.svg);"></div>
 								<div class="title">${row['NameLong'.$nameadd]}</div>
 							</div>
 							<div class="image">
-								<img src="../../img/menu/${row['ClassMenu']}.jpg">
+								<img src="/img/menu/${row['ClassMenu']}.jpg">
 							</div>
 						</div>
 					</li>
@@ -146,6 +146,19 @@ END;
 			</div>
 		</div>
 <?php include("engine/layout/footer.php"); ?>
+	<script>
+		// Script for Circlebox links
+		$(document).ready(function(){
+			$(".circleBox a").each(function(index){
+				$(this).bind("click", function(e){
+					e.preventDefault();
+					// $("div.circle a").click();
+					$('.circleBox').addClass('hide');
+					$('li[type=circleMenu]').eq(index).click();
+				});
+			});
+		});
+	</script>
 	</div>
 
 	<?php 
@@ -453,6 +466,7 @@ END;
 						plusIndex = dishes_count[cur_cat - 1][subcats_count[cur_cat - 1] - 1];
 					$(".dishes-tab_item").eq($(this).index()+plusIndex).show();
 				});
+
 			</script>
 
 		 </div>
