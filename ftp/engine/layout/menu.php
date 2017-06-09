@@ -146,19 +146,36 @@ END;
 			</div>
 		</div>
 <?php include("engine/layout/footer.php"); ?>
-	<script>
-		// Script for Circlebox links
-		$(document).ready(function(){
-			$(".circleBox a").each(function(index){
-				$(this).bind("click", function(e){
-					e.preventDefault();
-					// $("div.circle a").click();
-					$('.circleBox').addClass('hide');
-					$('li[type=circleMenu]').eq(index).click();
+
+		<script>
+			// Script for fixing Bar && Kitchen links
+			$(document).ready(function(){
+				// circle
+				$(".circleBox a").each(function(index){
+					$(this).bind("click", function(e){
+						e.preventDefault();
+						// $("div.circle a").click();
+						$('.circleBox').addClass('hide');
+						$('li[type=circleMenu]').eq(index).click();
+					});
 				});
+
+				clickCircleHappened();
 			});
-		});
-	</script>
+
+			function clickCircleHappened(){
+				var curHash = location.hash;
+				if (curHash == "#bar"){
+					$('.circleBox').addClass('hide');
+					$('li[type=circleMenu]').eq(1).click();
+				} else if(curHash == "#kitchen"){
+					$('.circleBox').addClass('hide');
+					$('li[type=circleMenu]').eq(0).click();
+				}
+			}
+
+		</script>
+
 	</div>
 
 	<?php 

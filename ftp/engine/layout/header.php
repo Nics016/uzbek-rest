@@ -10,6 +10,31 @@
           this.play(); 
         });
       }
+
+      // fixing bar && kitchen
+      $(document).ready(function(){
+        // menu
+        $(".menuBox .menu li a").each(function(){
+          var attrJump = $(this).attr("jump");
+          if (attrJump == "kitchen" || attrJump == "bar"){
+            var curHref = $(this).attr("href");
+            $(this).attr("href", curHref + "#" + attrJump);
+            $(this).bind("click", function(){
+              setTimeout(function(){
+                var curHash = location.hash;
+                if (curHash == "#bar"){
+                  $('.circleBox').addClass('hide');
+                  $('li[type=circleMenu]').eq(1).click();
+                } else if(curHash == "#kitchen"){
+                  $('.circleBox').addClass('hide');
+                  $('li[type=circleMenu]').eq(0).click();
+                }
+              }, 100);
+              
+            }); 
+          }
+        });
+      });
     </script>
     <div class="menuBox">
       <div class="logo">
